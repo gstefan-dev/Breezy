@@ -1,0 +1,6 @@
+@Breezy_HostAddress = http://localhost:5182
+
+GET {{Breezy_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

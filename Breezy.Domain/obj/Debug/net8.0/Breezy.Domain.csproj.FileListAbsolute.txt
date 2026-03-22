@@ -1,0 +1,11 @@
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\bin\Debug\net8.0\Breezy.Domain.deps.json
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\bin\Debug\net8.0\Breezy.Domain.dll
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\bin\Debug\net8.0\Breezy.Domain.pdb
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\obj\Debug\net8.0\Breezy.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\obj\Debug\net8.0\Breezy.Domain.AssemblyInfoInputs.cache
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\obj\Debug\net8.0\Breezy.Domain.AssemblyInfo.cs
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\obj\Debug\net8.0\Breezy.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\obj\Debug\net8.0\Breezy.Domain.dll
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\obj\Debug\net8.0\refint\Breezy.Domain.dll
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\obj\Debug\net8.0\Breezy.Domain.pdb
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Domain\obj\Debug\net8.0\ref\Breezy.Domain.dll

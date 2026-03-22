@@ -1,0 +1,56 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Breezy.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Breezy.Application": "1.0.0",
+          "Breezy.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Breezy.Infrastructure.dll": {}
+        }
+      },
+      "Breezy.Application/1.0.0": {
+        "dependencies": {
+          "Breezy.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Breezy.Application.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Breezy.Domain/1.0.0": {
+        "runtime": {
+          "Breezy.Domain.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Breezy.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Breezy.Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Breezy.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

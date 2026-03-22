@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breezy.Api", "Breezy.Api\Breezy.Api.csproj", "{4D4980B7-2505-4BAB-B126-E1753C769B63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breezy.Infrastructure", "Breezy.Infrastructure\Breezy.Infrastructure.csproj", "{81648B7A-1217-4DAA-A51B-832C5B524FA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breezy.Application", "Breezy.Application\Breezy.Application.csproj", "{AF1F599D-A07B-4A1B-91B2-0D0229D5AE27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breezy.Domain", "Breezy.Domain\Breezy.Domain.csproj", "{592F3BA5-79D9-448B-BEA1-22270152ECDA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4D4980B7-2505-4BAB-B126-E1753C769B63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D4980B7-2505-4BAB-B126-E1753C769B63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D4980B7-2505-4BAB-B126-E1753C769B63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D4980B7-2505-4BAB-B126-E1753C769B63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81648B7A-1217-4DAA-A51B-832C5B524FA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81648B7A-1217-4DAA-A51B-832C5B524FA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81648B7A-1217-4DAA-A51B-832C5B524FA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81648B7A-1217-4DAA-A51B-832C5B524FA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF1F599D-A07B-4A1B-91B2-0D0229D5AE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF1F599D-A07B-4A1B-91B2-0D0229D5AE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF1F599D-A07B-4A1B-91B2-0D0229D5AE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF1F599D-A07B-4A1B-91B2-0D0229D5AE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{592F3BA5-79D9-448B-BEA1-22270152ECDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{592F3BA5-79D9-448B-BEA1-22270152ECDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{592F3BA5-79D9-448B-BEA1-22270152ECDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{592F3BA5-79D9-448B-BEA1-22270152ECDA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

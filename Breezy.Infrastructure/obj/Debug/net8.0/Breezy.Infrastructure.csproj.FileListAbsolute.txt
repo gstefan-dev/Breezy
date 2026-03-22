@@ -1,0 +1,17 @@
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\bin\Debug\net8.0\Breezy.Infrastructure.deps.json
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\bin\Debug\net8.0\Breezy.Infrastructure.dll
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\bin\Debug\net8.0\Breezy.Infrastructure.pdb
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\bin\Debug\net8.0\Breezy.Application.dll
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\bin\Debug\net8.0\Breezy.Domain.dll
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\bin\Debug\net8.0\Breezy.Application.pdb
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\bin\Debug\net8.0\Breezy.Domain.pdb
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.AssemblyInfo.cs
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.I.138BD589.Up2Date
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.dll
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\refint\Breezy.Infrastructure.dll
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.pdb
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\ref\Breezy.Infrastructure.dll
