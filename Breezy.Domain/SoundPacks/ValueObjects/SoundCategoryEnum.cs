@@ -12,9 +12,9 @@ public enum SoundCategoryEnum
     Synth,
     Percussion,
     Vocal,
-    Beats,      // ← NEW - Full instrumental tracks
-    Loop,       // ← NEW - Melodic or rhythmic loops
-    OneShot,    // ← NEW - Individual drum hits
+    Beats,     
+    Loop,       
+    OneShot,    
     Pad,
     String,
     Horn,

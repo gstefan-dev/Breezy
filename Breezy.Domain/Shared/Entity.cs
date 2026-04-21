@@ -57,4 +57,8 @@ public abstract class Entity : IEquatable<Entity>
     {
         return Equals((object)other);
     }
+    protected void UpdateTimestamp()
+    {
+        UpdatedAt = DateTime.UtcNow;
+    }
 }
