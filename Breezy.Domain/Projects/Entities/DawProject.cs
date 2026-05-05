@@ -41,6 +41,11 @@ public class DawProject : Entity
 
         var initialVersion = new ProjectVersion(Id, 1, initialHash, blobUrl);
         _versions.Add(initialVersion);
+        OwnerUserId = ownerUserId;    
+        ProjectName = projectName;    
+        LocalPath = localPath;        
+        CurrentHash = initialHash;    
+        CurrentVersionNumber = 1;
 
     }
 
@@ -57,7 +62,19 @@ public class DawProject : Entity
 
         var newVersion = new ProjectVersion(Id, CurrentVersionNumber, newHash, blobUrl);
         _versions.Add(newVersion);
+        CurrentVersionNumber++; 
+        CurrentHash = newHash; 
         UpdatedAt = DateTime.UtcNow;
+    }
+
+    public static DawProject Create(
+        Guid ownerUserId,
+        string projectName,
+        string localPath,
+        ProjectHash initialHash,
+        string blobUrl)
+    {
+        return new DawProject(ownerUserId, projectName, localPath, initialHash, 1, blobUrl);
     }
 
     public ProjectVersion GetVersion(int versionNumber)
