@@ -32,7 +32,7 @@ public class SubmitLoopCommandValidator : AbstractValidator<SubmitLoopCommand>
         RuleFor(x => x.DurationSeconds)
             .GreaterThan(0)
             .WithMessage("DurationSeconds must be greater than 0");
-
+        
         RuleFor(x => x.BPM)
             .GreaterThanOrEqualTo(40)
             .WithMessage("BPM must be between 40 and 300")
