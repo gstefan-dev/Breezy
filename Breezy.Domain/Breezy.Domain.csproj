@@ -9,9 +9,7 @@
     <ItemGroup>
       <Folder Include="Exceptions\" />
       <Folder Include="Projects\Exceptions\" />
-      <Folder Include="Users\Entities\" />
       <Folder Include="Users\Exceptions\" />
-      <Folder Include="Users\ValueObjects\" />
     </ItemGroup>
 
 </Project>

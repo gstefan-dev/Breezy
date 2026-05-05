@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Breezy.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9534dca25d2670e72d24904061b5beb808906d42")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee8d4d86d6632b33c3f6283b0de37e8c93ac1d0b")]
 [assembly: System.Reflection.AssemblyProductAttribute("Breezy.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Breezy.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

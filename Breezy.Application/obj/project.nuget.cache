@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "dAPuIzVgjC4=",
+  "dgSpecHash": "Whfo78T1Q1w=",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Documents\\Practica\\Backend\\Breezy\\Breezy.Application\\Breezy.Application.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.0\\microsoft.extensions.dependencyinjection.abstractions.8.0.0.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\8.0.0\\microsoft.extensions.logging.abstractions.8.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

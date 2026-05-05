@@ -37,3 +37,4 @@ C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api\obj\Debug\ne
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api\obj\Debug\net8.0\Breezy.Api.pdb
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api\obj\Debug\net8.0\Breezy.Api.genruntimeconfig.cache
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api\obj\Debug\net8.0\ref\Breezy.Api.dll
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api\obj\Debug\net8.0\Breezy.Api.sourcelink.json

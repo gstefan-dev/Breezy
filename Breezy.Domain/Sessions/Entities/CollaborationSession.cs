@@ -54,6 +54,17 @@ public class CollaborationSession : Entity
         _participants.Add(new SessionParticipant(Id, ownerUserId, ownerName));
 
     }
+    
+    public static CollaborationSession Create(
+        Guid ownerUserId,
+        string ownerName,
+        string name,
+        int maxParticipants = -1,
+        DateTime? expiresAt = null)
+    {
+        var code = SessionCode.Generate();
+        return new CollaborationSession(ownerUserId, ownerName, code, name, expiresAt, maxParticipants);
+    }
 
     public bool IsExpired => ExpiresAt.HasValue && DateTime.UtcNow > ExpiresAt.Value;
     public bool IsActive => !IsExpired && !IsClosedByOwner;
