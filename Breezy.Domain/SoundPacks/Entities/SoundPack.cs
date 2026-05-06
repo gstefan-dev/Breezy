@@ -12,6 +12,8 @@ public class SoundPack : Entity
     public string Genre { get; private set; }
     public string Mood { get; private set; }
     
+    public string PackCategory { get; private set; }
+    
     private readonly List<SoundPackFile> _files = new();
     private SoundPackExport _lastExport;
     
@@ -20,7 +22,7 @@ public class SoundPack : Entity
     
     private SoundPack(){}
     
-    public SoundPack(Guid ownerUserId, string ownerName, string packName, string description = "", string genre = "Unknown", string mood = "Unknown") : base(Guid.NewGuid())
+    public SoundPack(Guid ownerUserId, string ownerName, string packName, string description = "", string genre = "Unknown", string mood = "Unknown", string packCategory = "General") : base(Guid.NewGuid())
     {
         if (ownerUserId == Guid.Empty)
             throw new DomainException("OwnerUserId cannot be empty");
@@ -37,8 +39,13 @@ public class SoundPack : Entity
         Description = !string.IsNullOrWhiteSpace(description) ? description.Trim() : string.Empty;
         Genre = !string.IsNullOrWhiteSpace(genre) ? genre.Trim() : string.Empty;
         Mood = !string.IsNullOrWhiteSpace(mood) ? mood.Trim() : string.Empty;
+        PackCategory = !string.IsNullOrWhiteSpace(packCategory) ? packCategory.Trim() : "General";
     }
 
+    public static SoundPack Create(Guid ownerUserId, string ownerName, string packName, string description = "", string genre = "Unknown", string mood = "Unknown", string packCategory = "General")
+    {
+        return new SoundPack(ownerUserId, ownerName, packName, description, genre, mood, packCategory);
+    }
     public void AddFile(SoundPackFile file)
     {
         if (file.SoundPackId != Id)
