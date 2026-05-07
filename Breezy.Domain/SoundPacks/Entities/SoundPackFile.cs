@@ -12,10 +12,12 @@ public class SoundPackFile : Entity
     public int DurationInSeconds { get; private set; }
     public int Bpm { get; private set; }
     public string Key { get; private set; }
+    public long FileSize { get; private set; }
+
     
     private SoundPackFile(){}
     
-    public SoundPackFile(Guid soundPackId, string fileName, SoundCategoryEnum category, string blobUrl, int durationInSeconds, int bpm, string key) : base(Guid.NewGuid())
+    public SoundPackFile(Guid soundPackId, string fileName, SoundCategoryEnum category, string blobUrl, int durationInSeconds, int bpm, string key, long fileSize) : base(Guid.NewGuid())
     {
         if (soundPackId == Guid.Empty)
             throw new DomainException("SoundPackId cannot be empty");
@@ -33,6 +35,11 @@ public class SoundPackFile : Entity
 
         if (bpm <= 0)
             throw new DomainException("Bpm cannot be less than or equal to zero");
+
+        if (fileSize <= 0)
+        {
+            throw new DomainException("FileSize cannot be less than or equal to zero");
+        }
         
         SoundPackId = soundPackId;
         FileName = fileName;
@@ -41,11 +48,12 @@ public class SoundPackFile : Entity
         DurationInSeconds = durationInSeconds;
         Bpm = bpm;
         Key = !string.IsNullOrWhiteSpace(key) ? key.Trim() : "Unknown";
+        FileSize = fileSize;
     }
 
-    public static SoundPackFile Create(Guid soundPackId, string fileName, SoundCategoryEnum category, string blobUrl, int durationInSeconds, int bpm, string key)
+    public static SoundPackFile Create(Guid soundPackId, string fileName, SoundCategoryEnum category, string blobUrl, int durationInSeconds, int bpm, string key, long fileSize)
     {
-        return new SoundPackFile(soundPackId, fileName, category, blobUrl, durationInSeconds, bpm, key);
+        return new SoundPackFile(soundPackId, fileName, category, blobUrl, durationInSeconds, bpm, key, fileSize);
     }
     public string GetDisplayName() => $"{FileName} ({Bpm}BPM, {Key})";
 }

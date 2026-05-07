@@ -66,7 +66,7 @@ public class AddFileToSoundPackCommandHandler
         }
 
         var soundPackFile = SoundPackFile.Create(soundPack.Id, command.FileName, command.SoundCategory, url,
-            command.DurationSeconds, command.BPM, command.Key);
+            command.DurationSeconds, command.BPM, command.Key, command.FileSize);
         
         soundPack.AddFile(soundPackFile);
         user.UseStorage(command.FileSize);
