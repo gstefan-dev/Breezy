@@ -41,7 +41,11 @@ public class SoundPackFile : Entity
         DurationInSeconds = durationInSeconds;
         Bpm = bpm;
         Key = !string.IsNullOrWhiteSpace(key) ? key.Trim() : "Unknown";
-    }    
-    
+    }
+
+    public static SoundPackFile Create(Guid soundPackId, string fileName, SoundCategoryEnum category, string blobUrl, int durationInSeconds, int bpm, string key)
+    {
+        return new SoundPackFile(soundPackId, fileName, category, blobUrl, durationInSeconds, bpm, key);
+    }
     public string GetDisplayName() => $"{FileName} ({Bpm}BPM, {Key})";
 }
