@@ -21,7 +21,7 @@ public class UpdateSubscriptionCommandHandler
         _logger.LogInformation("Updating subscription for UserId: {UserId}", command.UserId);
 
         var user = await _userRepository.GetUserByIdAsync(command.UserId);
-
+        
         if (user == null)
         {
             _logger.LogWarning("User {UserId} not found", command.UserId);
