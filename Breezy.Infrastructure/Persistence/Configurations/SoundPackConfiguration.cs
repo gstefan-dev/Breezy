@@ -29,19 +29,17 @@ public class SoundPackConfiguration : IEntityTypeConfiguration<SoundPack>
         builder.OwnsOne(x => x.LastExport, export =>
         {
             export.Property(e => e.Format)
-                .IsRequired()
                 .HasMaxLength(10)
                 .HasConversion<string>();
 
-            export.Property(e => e.BlobUrl)
-                .IsRequired();
+            export.Property(e => e.BlobUrl);
 
-            export.Property(x => x.ExportedAt)
-                .IsRequired();
+            export.Property(x => x.ExportedAt);
 
-            export.Property(x => x.SoundPackId)
-                .IsRequired();
+            export.Property(x => x.SoundPackId);
+
         });
+        builder.Navigation(x => x.LastExport).IsRequired(false);
         
         builder.Property(x => x.Mood)
             .HasMaxLength(50);
