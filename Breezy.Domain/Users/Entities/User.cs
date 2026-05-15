@@ -5,14 +5,15 @@ namespace Breezy.Domain.Users.Entities;
 
 public class User : Entity
 {
-    public Email Email { get; }
-    public string PasswordHash { get; }
-    public string UserName { get; }
-    public UserRole Role { get; }
+    public Email Email { get; private set; }
+    public string PasswordHash { get; private set; }
+    public string UserName { get; private set; }
+    public UserRole Role { get; private set; }
     public SubscriptionPlan Plan { get; private set; }
     public StorageQuota Quota { get; private set; }
     public long UsedStorageBytes { get; private set; }
 
+    private User() { }
     private User(Guid id,
         Email email,
         string passwordHash,
