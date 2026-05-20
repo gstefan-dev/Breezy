@@ -2,11 +2,12 @@
 using Breezy.Application.Sessions.DTOs;
 using Breezy.Domain.Sessions.ValueObjects;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Sessions.Commands;
 
-public class AddParticipantCommandHandler
+public class AddParticipantCommandHandler : IRequestHandler<AddParticipantCommand, ParticipantResponse>
 {
     private readonly ISessionRepository _sessionRepository;
     private readonly IUserRepository _userRepository;
@@ -19,11 +20,11 @@ public class AddParticipantCommandHandler
         _logger = logger;
     }
 
-    public async Task<ParticipantResponse> Handle(AddParticipantCommand command)
+    public async Task<ParticipantResponse> Handle(AddParticipantCommand request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Joining new participant at session: {SessionCode}", command.SessionCode);
+        _logger.LogInformation("Joining new participant at session: {SessionCode}", request.SessionCode);
 
-        var code = new SessionCode(command.SessionCode);
+        var code = new SessionCode(request.SessionCode);
         var session = await _sessionRepository.GetByCodeAsync(code);
 
         if (session == null)
@@ -32,7 +33,7 @@ public class AddParticipantCommandHandler
             throw new DomainException("Session not found");
         }
 
-        var user = await _userRepository.GetUserByIdAsync(command.UserId);
+        var user = await _userRepository.GetUserByIdAsync(request.UserId);
 
         if (user == null)
         {

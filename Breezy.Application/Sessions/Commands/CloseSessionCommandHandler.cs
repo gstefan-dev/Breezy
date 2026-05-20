@@ -2,11 +2,12 @@ using Breezy.Application.Interfaces;
 using Breezy.Application.Sessions.DTOs;
 using Breezy.Domain.Sessions.ValueObjects;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Sessions.Commands;
 
-public class CloseSessionCommandHandler
+public class CloseSessionCommandHandler : IRequestHandler<CloseSessionCommand, SessionResponse>
 {
     private readonly ISessionRepository _sessionRepository;
     private readonly ILogger<CloseSessionCommandHandler> _logger;
@@ -17,9 +18,9 @@ public class CloseSessionCommandHandler
         _logger = logger;
     }
 
-    public async Task<SessionResponse> Handle(CloseSessionCommand command)
+    public async Task<SessionResponse> Handle(CloseSessionCommand request, CancellationToken cancellationToken)
     {
-        var sessionCode = new SessionCode(command.SessionCode);
+        var sessionCode = new SessionCode(request.SessionCode);
 
         var session = await _sessionRepository.GetByCodeAsync(sessionCode);
 
@@ -29,11 +30,11 @@ public class CloseSessionCommandHandler
             throw new DomainException("Session not found");
         }
         
-        session.CloseByOwner(command.UserId);
+        session.CloseByOwner(request.UserId);
 
         await _sessionRepository.UpdateAsync(session);
         
-        _logger.LogInformation("Session is closed successfully by OwnerUser: {UserId}", command.UserId );
+        _logger.LogInformation("Session is closed successfully by OwnerUser: {UserId}", request.UserId );
 
         return new SessionResponse(session.Id, sessionCode.Value, session.Name, session.IsActive, session.OwnerUserId,
             session.CreatedAt);

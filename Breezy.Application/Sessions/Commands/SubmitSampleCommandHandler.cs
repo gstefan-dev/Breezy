@@ -3,21 +3,22 @@ using Breezy.Application.Sessions.DTOs;
 using Breezy.Domain.Sessions.Entities;
 using Breezy.Domain.Sessions.ValueObjects;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Sessions.Commands;
 
-public class SubmitLoopCommandHandler
+public class SubmitSampleCommandHandler : IRequestHandler<SubmitSampleCommand, SubmissionResponse>
 {
     private readonly ISessionRepository _sessionRepository;
     private readonly IAzureBlobService _azureBlobServiceRepo;
     private readonly IUserRepository _userRepository;
-    private readonly ILogger<SubmitLoopCommandHandler> _logger;
+    private readonly ILogger<SubmitSampleCommandHandler> _logger;
 
-    public SubmitLoopCommandHandler(ISessionRepository sessionRepository,
+    public SubmitSampleCommandHandler(ISessionRepository sessionRepository,
         IAzureBlobService azureBlobServiceRepo,
         IUserRepository userRepository,
-        ILogger<SubmitLoopCommandHandler> logger)
+        ILogger<SubmitSampleCommandHandler> logger)
     {
         _sessionRepository = sessionRepository;
         _azureBlobServiceRepo = azureBlobServiceRepo;
@@ -25,12 +26,12 @@ public class SubmitLoopCommandHandler
         _logger = logger;
     }
 
-    public async Task<SubmissionResponse> Handle(SubmitLoopCommand command)
+    public async Task<SubmissionResponse> Handle(SubmitSampleCommand request, CancellationToken cancellationToken)
     {
         _logger.LogInformation("User {UserId} submitting file {FileName} to session {SessionCode}", 
-            command.UserId, command.FileName, command.SessionCode);
+            request.UserId, request.FileName, request.SessionCode);
 
-        var sessionCode = new SessionCode(command.SessionCode);
+        var sessionCode = new SessionCode(request.SessionCode);
 
         var session = await _sessionRepository.GetByCodeAsync(sessionCode);
         if (session == null)
@@ -39,39 +40,39 @@ public class SubmitLoopCommandHandler
             throw new DomainException("Session not found");
         }
         
-        var user = await _userRepository.GetUserByIdAsync(command.UserId);
+        var user = await _userRepository.GetUserByIdAsync(request.UserId);
         if (user == null)
         {
-            _logger.LogWarning("User not found for UserId: {UserId}", command.UserId);
+            _logger.LogWarning("User not found for UserId: {UserId}", request.UserId);
             throw new DomainException("User not found");
         }
 
-        if (!user.HasAvailableStorage(command.FileSize))
+        if (!user.HasAvailableStorage(request.FileSize))
         {
-            _logger.LogWarning("User {UserId} has insufficient storage", command.UserId);
+            _logger.LogWarning("User {UserId} has insufficient storage", request.UserId);
             throw new DomainException("Insufficient storage space");
         }
-        var blobName = $"{command.UserId}/{Guid.NewGuid()}_{command.FileName}";
-        await _azureBlobServiceRepo.UploadAsync(blobName, command.FileContent, command.ContentType);
+        var blobName = $"{request.UserId}/{Guid.NewGuid()}_{request.FileName}";
+        await _azureBlobServiceRepo.UploadAsync(blobName, request.FileContent, request.ContentType);
 
         var url = await _azureBlobServiceRepo.GetUrlAsync(blobName);
         if (url == null)
             throw new DomainException("Failed to get file URL");
 
-        var submissionMetadata = new SubmissionMetadata(command.FileName, command.DurationSeconds, command.BPM, command.Genre,
-            command.Key, DateTime.UtcNow);
+        var submissionMetadata = new SubmissionMetadata(request.FileName, request.DurationSeconds, request.BPM, request.Genre,
+            request.Key, DateTime.UtcNow);
 
         var submission = new SessionSubmission(session.Id, user.Id, user.UserName, url, submissionMetadata);
         
         session.AddSubmission(submission);
-        user.UseStorage(command.FileSize);
+        user.UseStorage(request.FileSize);
         
         await _sessionRepository.UpdateAsync(session);
         await _userRepository.UpdateAsync(user);
 
         _logger.LogInformation("File {FileName} submitted successfully to session {SessionCode} by user {UserId}", 
-            command.FileName, command.SessionCode, command.UserId);
+            request.FileName, request.SessionCode, request.UserId);
 
-        return new SubmissionResponse(submission.Id, session.Id, user.Id, command.FileName, url, submission.CreatedAt);
+        return new SubmissionResponse(submission.Id, session.Id, user.Id, request.FileName, url, submission.CreatedAt);
     }
 }

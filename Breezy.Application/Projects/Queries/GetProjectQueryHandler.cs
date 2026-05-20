@@ -1,11 +1,12 @@
 using Breezy.Application.Interfaces;
 using Breezy.Application.Projects.DTOs;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Projects.Queries;
 
-public class GetProjectQueryHandler
+public class GetProjectQueryHandler : IRequestHandler<GetProjectQuery, ProjectResponse>
 {
     private readonly IProjectRepository _projectRepository;
     private readonly ILogger<GetProjectQueryHandler> _logger;
@@ -16,7 +17,7 @@ public class GetProjectQueryHandler
         _logger = logger;
     }
 
-    public async Task<ProjectResponse> Handle(GetProjectQuery query)
+    public async Task<ProjectResponse> Handle(GetProjectQuery query, CancellationToken cancellationToken)
     {
         _logger.LogInformation("Getting project {ProjectId}", query.ProjectId);
 

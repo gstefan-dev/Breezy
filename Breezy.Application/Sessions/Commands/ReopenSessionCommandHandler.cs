@@ -2,11 +2,12 @@ using Breezy.Application.Interfaces;
 using Breezy.Application.Sessions.DTOs;
 using Breezy.Domain.Sessions.ValueObjects;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Sessions.Commands;
 
-public class ReopenSessionCommandHandler
+public class ReopenSessionCommandHandler : IRequestHandler<ReopenSessionCommand, SessionResponse>
 {
     private readonly ISessionRepository _sessionRepository;
     private readonly ILogger<ReopenSessionCommandHandler> _logger;
@@ -17,9 +18,9 @@ public class ReopenSessionCommandHandler
         _logger = logger;
     }
 
-    public async Task<SessionResponse> Handle(ReopenSessionCommand command)
+    public async Task<SessionResponse> Handle(ReopenSessionCommand request, CancellationToken cancellationToken)
     {
-        var sessionCode = new SessionCode(command.SessionCode);
+        var sessionCode = new SessionCode(request.SessionCode);
 
         var session = await _sessionRepository.GetByCodeAsync(sessionCode);
 
@@ -29,11 +30,11 @@ public class ReopenSessionCommandHandler
             throw new DomainException("Session not found");
         }
         
-        session.Reopen(command.UserId);
+        session.Reopen(request.UserId);
 
         await _sessionRepository.UpdateAsync(session);
         
-        _logger.LogInformation("Session is reopened successfully by OwnerUser: {UserId}", command.UserId );
+        _logger.LogInformation("Session is reopened successfully by OwnerUser: {UserId}", request.UserId );
 
         return new SessionResponse(session.Id, sessionCode.Value, session.Name, session.IsActive, session.OwnerUserId,
             session.CreatedAt);

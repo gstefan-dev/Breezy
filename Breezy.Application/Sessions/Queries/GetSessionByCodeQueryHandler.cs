@@ -2,11 +2,12 @@ using Breezy.Application.Interfaces;
 using Breezy.Application.Sessions.DTOs;
 using Breezy.Domain.Sessions.ValueObjects;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Sessions.Queries;
 
-public class GetSessionByCodeQueryHandler
+public class GetSessionByCodeQueryHandler : IRequestHandler<GetSessionByCodeQuery, SessionResponse>
 {
     private readonly ISessionRepository _sessionRepository;
     private readonly ILogger<GetSessionByCodeQueryHandler> _logger;
@@ -18,7 +19,7 @@ public class GetSessionByCodeQueryHandler
         _logger = logger;
     }
 
-    public async Task<SessionResponse> Handle(GetSessionByCodeQuery query)
+    public async Task<SessionResponse> Handle(GetSessionByCodeQuery query, CancellationToken cancellationToken)
     {
         _logger.LogInformation("Getting session by code");
         var sessionCode = new SessionCode(query.SessionCode);

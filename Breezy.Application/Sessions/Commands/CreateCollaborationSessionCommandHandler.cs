@@ -2,12 +2,13 @@
 using Breezy.Application.Sessions.DTOs;
 using Breezy.Domain.Sessions.Entities;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 
 namespace Breezy.Application.Sessions.Commands;
 
-public class CreateCollaborationSessionCommandHandler
+public class CreateCollaborationSessionCommandHandler : IRequestHandler<CreateCollaborationSessionCommand, SessionResponse>
 {
     private readonly ISessionRepository _sessionRepository;
     private readonly IUserRepository _userRepository;
@@ -20,26 +21,26 @@ public class CreateCollaborationSessionCommandHandler
         _logger = logger;
     }
 
-    public async Task<SessionResponse> Handle(CreateCollaborationSessionCommand command)
+    public async Task<SessionResponse> Handle(CreateCollaborationSessionCommand request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Creating session for HostId: {HostId}", command.HostId);
-        var user = await _userRepository.GetUserByIdAsync(command.HostId);
+        _logger.LogInformation("Creating session for HostId: {HostId}", request.HostId);
+        var user = await _userRepository.GetUserByIdAsync(request.HostId);
 
         if (user == null)
         {
-            _logger.LogWarning("User not found for HostId: {HostId}", command.HostId);
+            _logger.LogWarning("User not found for HostId: {HostId}", request.HostId);
             throw new DomainException("Host user not found");
         }
 
         var session = CollaborationSession.Create(
             user.Id,
             user.UserName,
-            command.SessionName,
-            command.MaxParticipants);
+            request.SessionName,
+            request.MaxParticipants);
 
         await _sessionRepository.AddAsync(session);
         _logger.LogInformation("Session created successfully with Code: {Code} for HostId: {HostId}", 
-            session.Code.Value, command.HostId);
+            session.Code.Value, request.HostId);
         
         return new SessionResponse(session.Id, session.Code.Value, session.Name, session.IsActive, session.OwnerUserId, session.CreatedAt);
     }

@@ -2,11 +2,12 @@ using Breezy.Application.Interfaces;
 using Breezy.Application.SoundPacks.DTOs;
 using Breezy.Domain.Shared;
 using Breezy.Domain.SoundPacks.Entities;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.SoundPacks.Commands;
 
-public class CreateSoundPackCommandHandler
+public class CreateSoundPackCommandHandler : IRequestHandler<CreateSoundPackCommand, SoundPackResponse>
 {
     private readonly ISoundPackRepository _soundPackRepository;
     private readonly IUserRepository _userRepository;
@@ -21,22 +22,22 @@ public class CreateSoundPackCommandHandler
         _logger = logger;
     }
 
-    public async Task<SoundPackResponse> Handle(CreateSoundPackCommand command)
+    public async Task<SoundPackResponse> Handle(CreateSoundPackCommand request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Creating SoundPack {PackName} for UserId: {UserId}", command.PackName, command.UserId);
+        _logger.LogInformation("Creating SoundPack {PackName} for UserId: {UserId}", request.PackName, request.UserId);
 
 
 
-        var user = await _userRepository.GetUserByIdAsync(command.UserId);
+        var user = await _userRepository.GetUserByIdAsync(request.UserId);
 
         if (user == null)
         {
-            _logger.LogWarning("User with {OwnerId} not found", command.UserId);
+            _logger.LogWarning("User with {OwnerId} not found", request.UserId);
             throw new DomainException("User not found");
         }
 
-        var soundPack = SoundPack.Create(user.Id, user.UserName, command.PackName, command.Description, command.Genre,
-            command.Mood, command.PackCategory);
+        var soundPack = SoundPack.Create(user.Id, user.UserName, request.PackName, request.Description, request.Genre,
+            request.Mood, request.PackCategory);
 
         await _soundPackRepository.AddAsync(soundPack);
         

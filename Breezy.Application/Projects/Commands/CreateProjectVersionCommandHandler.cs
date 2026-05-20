@@ -3,11 +3,12 @@ using Breezy.Application.Projects.DTOs;
 using Breezy.Application.Sessions.Commands;
 using Breezy.Domain.Projects.ValueObjects;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Projects.Commands;
 
-public class CreateProjectVersionCommandHandler
+public class CreateProjectVersionCommandHandler : IRequestHandler<CreateProjectVersionCommand, ProjectVersionResponse>
 {
     private readonly IProjectRepository _projectRepository;
     private readonly IUserRepository _userRepository;
@@ -24,33 +25,33 @@ public class CreateProjectVersionCommandHandler
         _logger = logger;
     }
 
-    public async Task<ProjectVersionResponse> Handle(CreateProjectVersionCommand command)
+    public async Task<ProjectVersionResponse> Handle(CreateProjectVersionCommand request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Creating new version for ProjectId: {ProjectId}", command.ProjectId);
+        _logger.LogInformation("Creating new version for ProjectId: {ProjectId}", request.ProjectId);
 
-        var project = await _projectRepository.GetByIdAsync(command.ProjectId);
+        var project = await _projectRepository.GetByIdAsync(request.ProjectId);
         if (project is null)
         {
-            _logger.LogWarning("Project {ProjectId} not found", command.ProjectId);
+            _logger.LogWarning("Project {ProjectId} not found", request.ProjectId);
             throw new DomainException("Project doesnt exist");
         }
 
-        var user = await _userRepository.GetUserByIdAsync(command.UserId);
+        var user = await _userRepository.GetUserByIdAsync(request.UserId);
         if (user is null)
         {
-            _logger.LogWarning("User {UserId} not found", command.UserId);
+            _logger.LogWarning("User {UserId} not found", request.UserId);
             throw new DomainException("User doesnt exist");
         }
 
-        if (!user.HasAvailableStorage(command.FileSize))
+        if (!user.HasAvailableStorage(request.FileSize))
         {
             _logger.LogWarning("User {OwnerId} has insufficient storage", user.Id);
             throw new DomainException("User dont have storage");
         }
         
-        var blobName = $"{command.UserId}/{Guid.NewGuid()}_{project.ProjectName}";
+        var blobName = $"{request.UserId}/{Guid.NewGuid()}_{project.ProjectName}";
 
-        await _azureBlobService.UploadAsync(blobName, command.FileContent, command.FileType);
+        await _azureBlobService.UploadAsync(blobName, request.FileContent, request.FileType);
 
         var url = await _azureBlobService.GetUrlAsync(blobName);
         if (url == null)
@@ -59,12 +60,12 @@ public class CreateProjectVersionCommandHandler
             throw new DomainException("Failed to get file URL");
         }
         
-        var projectHash = new ProjectHash(command.NewHash);
+        var projectHash = new ProjectHash(request.NewHash);
 
         project.CreateNewVersionIfChanged(projectHash, url);
 
         await _projectRepository.UpdateAsync(project);
-        user.UseStorage(command.FileSize);
+        user.UseStorage(request.FileSize);
 
         await _userRepository.UpdateAsync(user);
         

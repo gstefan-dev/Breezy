@@ -1,11 +1,12 @@
 using Breezy.Application.Interfaces;
 using Breezy.Application.Projects.DTOs;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Projects.Queries;
 
-public class GetProjectVersionsQueryHandler
+public class GetProjectVersionsQueryHandler : IRequestHandler<GetProjectVersionsQuery, IEnumerable<ProjectVersionResponse>>
 {
     private readonly IProjectRepository _projectRepository;
     private readonly ILogger<GetProjectVersionsQueryHandler> _logger;
@@ -16,7 +17,7 @@ public class GetProjectVersionsQueryHandler
         _logger = logger;
     }
 
-    public async Task<IEnumerable<ProjectVersionResponse>> Handle(GetProjectVersionQuery query)
+    public async Task<IEnumerable<ProjectVersionResponse>> Handle(GetProjectVersionsQuery query, CancellationToken cancellationToken)
     {
         _logger.LogInformation("Getting all versions for ProjectId: {ProjectId}", query.ProjectId);
 
@@ -45,4 +46,6 @@ public class GetProjectVersionsQueryHandler
             version.Changelog?.Changes,
             version.CreatedAt));
     }
+
+  
 }
