@@ -1,11 +1,12 @@
 using Breezy.Application.Interfaces;
 using Breezy.Application.Users.DTOs;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Users.Queries;
 
-public class GetUserQueryHandler
+public class GetUserQueryHandler : IRequestHandler<GetUserQuery, UserResponse>
 {
     private readonly IUserRepository _userRepository;
     private readonly ILogger<GetUserQueryHandler> _logger;
@@ -16,7 +17,7 @@ public class GetUserQueryHandler
         _logger = logger;
     }
 
-    public async Task<UserResponse> Handle(GetUserQuery query)
+    public async Task<UserResponse> Handle(GetUserQuery query, CancellationToken cancellationToken)
     {
         _logger.LogInformation("Getting user {UserId}", query.UserId);
 

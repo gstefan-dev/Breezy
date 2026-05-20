@@ -3,9 +3,9 @@ using FluentValidation;
 
 namespace Breezy.Application.Sessions.Validators;
 
-public class SubmitLoopCommandValidator : AbstractValidator<SubmitLoopCommand>
+public class SubmitSampleCommandValidator : AbstractValidator<SubmitSampleCommand>
 {
-    public SubmitLoopCommandValidator()
+    public SubmitSampleCommandValidator()
     {
         RuleFor(x => x.SessionCode)
             .NotEmpty()

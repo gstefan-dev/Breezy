@@ -1,3 +1,6 @@
-﻿namespace Breezy.Application.Sessions.Commands;
+﻿using Breezy.Application.Sessions.DTOs;
+using MediatR;
 
-public record AddParticipantCommand(Guid UserId, string SessionCode);
+namespace Breezy.Application.Sessions.Commands;
+
+public record AddParticipantCommand(Guid UserId, string SessionCode) : IRequest<ParticipantResponse>;

@@ -1,4 +1,5 @@
 using System.Text;
+using Breezy.Application.Users.Commands;
 using Breezy.Infrastructure;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -6,6 +7,9 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddMediatR(cfg => 
+    cfg.RegisterServicesFromAssembly(
+        typeof(RegisterUserCommandHandler).Assembly));
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();

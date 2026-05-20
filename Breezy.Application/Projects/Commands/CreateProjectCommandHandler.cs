@@ -3,11 +3,12 @@ using Breezy.Application.Projects.DTOs;
 using Breezy.Domain.Projects.Entities;
 using Breezy.Domain.Projects.ValueObjects;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.Projects.Commands;
 
-public class CreateProjectCommandHandler
+public class CreateProjectCommandHandler : IRequestHandler<CreateProjectCommand, ProjectResponse>
 {
     private readonly IProjectRepository _projectRepository;
     private readonly IUserRepository _userRepository;
@@ -22,25 +23,25 @@ public class CreateProjectCommandHandler
         _logger = logger;
     }
 
-    public async Task<ProjectResponse> Handle(CreateProjectCommand command)
+    public async Task<ProjectResponse> Handle(CreateProjectCommand request, CancellationToken cancellationToken)
     {
-        _logger.LogInformation("Creating project {ProjectName} for OwnerId: {OwnerId}", command.ProjectName, command.OwnerId);
+        _logger.LogInformation("Creating project {ProjectName} for OwnerId: {OwnerId}", request.ProjectName, request.OwnerId);
 
-        var user = await _userRepository.GetUserByIdAsync(command.OwnerId);
+        var user = await _userRepository.GetUserByIdAsync(request.OwnerId);
         if (user == null)
         {
-            _logger.LogWarning("User with {OwnerId} not found", command.OwnerId);
+            _logger.LogWarning("User with {OwnerId} not found", request.OwnerId);
             throw new DomainException("User not found");
         }
 
-        if (!user.HasAvailableStorage(command.FileSize))
+        if (!user.HasAvailableStorage(request.FileSize))
         {
-            _logger.LogWarning("User {OwnerId} has insufficient storage", command.OwnerId);
+            _logger.LogWarning("User {OwnerId} has insufficient storage", request.OwnerId);
             throw new DomainException("User dont have storage");
         }
         
-        var blobName = $"{command.OwnerId}/{Guid.NewGuid()}_{command.ProjectName}";
-        await _azureBlobService.UploadAsync(blobName, command.FileContent, command.FileType);
+        var blobName = $"{request.OwnerId}/{Guid.NewGuid()}_{request.ProjectName}";
+        await _azureBlobService.UploadAsync(blobName, request.FileContent, request.FileType);
 
         var url = await _azureBlobService.GetUrlAsync(blobName);
 
@@ -50,16 +51,16 @@ public class CreateProjectCommandHandler
             throw new DomainException("Url is null");
         }
         
-        var projectHash = new ProjectHash(command.Hash);
+        var projectHash = new ProjectHash(request.Hash);
 
-        var project = DawProject.Create(command.OwnerId, command.ProjectName, command.LocalPath, projectHash, url);
+        var project = DawProject.Create(request.OwnerId, request.ProjectName, request.LocalPath, projectHash, url);
         await _projectRepository.AddAsync(project);
         
-        user.UseStorage(command.FileSize);
+        user.UseStorage(request.FileSize);
         await _userRepository.UpdateAsync(user);
         
         _logger.LogInformation("Project {ProjectName} created successfully for OwnerId: {OwnerId}", 
-            command.ProjectName, command.OwnerId);
+            request.ProjectName, request.OwnerId);
 
         return new ProjectResponse(project.Id, project.OwnerUserId, project.ProjectName, project.CreatedAt);
     }

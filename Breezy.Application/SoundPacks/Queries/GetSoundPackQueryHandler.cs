@@ -1,11 +1,12 @@
 using Breezy.Application.Interfaces;
 using Breezy.Application.SoundPacks.DTOs;
 using Breezy.Domain.Shared;
+using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.SoundPacks.Queries;
 
-public class GetSoundPackQueryHandler
+public class GetSoundPackQueryHandler : IRequestHandler<GetSoundPackQuery, SoundPackResponse>
 {
     private readonly ISoundPackRepository _soundPackRepository;
     private readonly ILogger<GetSoundPackQueryHandler> _logger;
@@ -16,7 +17,7 @@ public class GetSoundPackQueryHandler
         _logger = logger;
     }
 
-    public async Task<SoundPackResponse> Handle(GetSoundPackQuery query)
+    public async Task<SoundPackResponse> Handle(GetSoundPackQuery query, CancellationToken CancellationToken)
     {
         _logger.LogInformation("Getting SoundPack {SoundPackId} for UserId: {UserId}", query.SoundPackId, query.UserId);
 

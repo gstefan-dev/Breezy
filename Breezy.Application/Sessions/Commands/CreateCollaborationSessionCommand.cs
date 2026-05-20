@@ -1,3 +1,7 @@
-﻿namespace Breezy.Application.Sessions.Commands;
+﻿using Breezy.Application.Sessions.DTOs;
+using MediatR;
 
-public record CreateCollaborationSessionCommand(Guid HostId, string SessionName, int MaxParticipants);
+namespace Breezy.Application.Sessions.Commands;
+
+public record CreateCollaborationSessionCommand(Guid HostId, string SessionName, 
+    int MaxParticipants) : IRequest<SessionResponse>;

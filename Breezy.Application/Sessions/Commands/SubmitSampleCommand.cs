@@ -1,6 +1,9 @@
+using Breezy.Application.Sessions.DTOs;
+using MediatR;
+
 namespace Breezy.Application.Sessions.Commands;
 
-public record SubmitLoopCommand(string SessionCode, 
+public record SubmitSampleCommand(string SessionCode, 
     Guid UserId, 
     string FileName, 
     long FileSize, 
@@ -9,4 +12,4 @@ public record SubmitLoopCommand(string SessionCode,
     string Genre, 
     int BPM,
     Stream FileContent,
-    string ContentType);
+    string ContentType) : IRequest<SubmissionResponse>;
