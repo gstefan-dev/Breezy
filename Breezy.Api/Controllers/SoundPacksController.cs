@@ -1,11 +1,13 @@
 using Breezy.Application.SoundPacks.Commands;
 using Breezy.Application.SoundPacks.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Breezy.Controllers;
-[ApiController]
 
+[Authorize]
+[ApiController]
 [Route("api/[controller]")]
 public class SoundPacksController : ControllerBase
 {
