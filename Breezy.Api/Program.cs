@@ -1,6 +1,10 @@
 using System.Text;
 using Breezy.Application.Users.Commands;
+using Breezy.Application.Users.Validators;
 using Breezy.Infrastructure;
+using Breezy.Middleware;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using Serilog;
@@ -10,6 +14,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddMediatR(cfg => 
     cfg.RegisterServicesFromAssembly(
         typeof(RegisterUserCommandHandler).Assembly));
+
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddValidatorsFromAssembly(typeof(RegisterUserCommandValidator).Assembly);
+
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
@@ -50,6 +58,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseMiddleware<ErrorHandlingMiddleware>();
 app.UseAuthentication();
 app.UseAuthorization();
 app.MapControllers();

@@ -1,10 +1,12 @@
 using Breezy.Application.Sessions.Commands;
 using Breezy.Application.Sessions.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Breezy.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class SessionsController : ControllerBase

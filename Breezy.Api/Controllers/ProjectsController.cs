@@ -1,10 +1,12 @@
 using Breezy.Application.Projects.Commands;
 using Breezy.Application.Projects.Queries;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Breezy.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class ProjectsController : ControllerBase

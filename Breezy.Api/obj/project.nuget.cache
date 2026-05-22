@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "d35rVFQDqTQ=",
+  "dgSpecHash": "Q495O4t9CMI=",
   "success": true,
   "projectFilePath": "C:\\Users\\Administrator\\Documents\\Practica\\Backend\\Breezy\\Breezy.Api\\Breezy.Api.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,8 @@
     "C:\\Users\\Administrator\\.nuget\\packages\\azure.storage.common\\12.26.0\\azure.storage.common.12.26.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\bcrypt.net-next\\4.2.0\\bcrypt.net-next.4.2.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\fluentvalidation\\12.1.1\\fluentvalidation.12.1.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluentvalidation.aspnetcore\\11.3.1\\fluentvalidation.aspnetcore.11.3.1.nupkg.sha512",
+    "C:\\Users\\Administrator\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.11.0\\fluentvalidation.dependencyinjectionextensions.11.11.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\mediatr\\12.4.1\\mediatr.12.4.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\mediatr.contracts\\2.0.1\\mediatr.contracts.2.0.1.nupkg.sha512",

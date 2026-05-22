@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breezy.Application", "Breez
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breezy.Domain", "Breezy.Domain\Breezy.Domain.csproj", "{592F3BA5-79D9-448B-BEA1-22270152ECDA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Breezy.Tests", "Breezy.Tests\Breezy.Tests.csproj", "{30BE9441-03DF-48C4-A90D-97E5B714306A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{592F3BA5-79D9-448B-BEA1-22270152ECDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{592F3BA5-79D9-448B-BEA1-22270152ECDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{592F3BA5-79D9-448B-BEA1-22270152ECDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30BE9441-03DF-48C4-A90D-97E5B714306A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30BE9441-03DF-48C4-A90D-97E5B714306A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30BE9441-03DF-48C4-A90D-97E5B714306A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30BE9441-03DF-48C4-A90D-97E5B714306A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
