@@ -12,6 +12,7 @@ public class AddParticipantCommandHandler : IRequestHandler<AddParticipantComman
     private readonly ISessionRepository _sessionRepository;
     private readonly IUserRepository _userRepository;
     private readonly ILogger<AddParticipantCommandHandler> _logger;
+    
 
     public AddParticipantCommandHandler(ISessionRepository sessionRepository, IUserRepository userRepository, ILogger<AddParticipantCommandHandler> logger)
     {
