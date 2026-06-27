@@ -1,0 +1,220 @@
+2026-05-15 21:28:08.109 +03:00 [INF] Executed DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-05-15 21:28:08.166 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-05-15 21:28:08.407 +03:00 [INF] Executed DbCommand (77ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "__EFMigrationsHistory" (
+    "MigrationId" character varying(150) NOT NULL,
+    "ProductVersion" character varying(32) NOT NULL,
+    CONSTRAINT "PK___EFMigrationsHistory" PRIMARY KEY ("MigrationId")
+);
+2026-05-15 21:28:08.437 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-05-15 21:28:08.442 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-05-15 21:28:08.455 +03:00 [INF] Applying migration '20260515182735_Initial'.
+2026-05-15 21:28:08.499 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Projects" (
+    "Id" uuid NOT NULL,
+    "OwnerUserId" uuid NOT NULL,
+    "ProjectName" character varying(100) NOT NULL,
+    "LocalPath" text NOT NULL,
+    "CurrentHash" character varying(64) NOT NULL,
+    "CurrentVersionNumber" integer NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "UpdatedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_Projects" PRIMARY KEY ("Id")
+);
+2026-05-15 21:28:08.501 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Sessions" (
+    "Id" uuid NOT NULL,
+    "OwnerUserId" uuid NOT NULL,
+    "OwnerName" character varying(100) NOT NULL,
+    "Name" character varying(100) NOT NULL,
+    "ExpiresAt" timestamp with time zone,
+    "Code" character varying(10) NOT NULL,
+    "MaxParticipants" integer NOT NULL,
+    "IsClosedByOwner" boolean NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "UpdatedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_Sessions" PRIMARY KEY ("Id")
+);
+2026-05-15 21:28:08.504 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "SoundPacks" (
+    "Id" uuid NOT NULL,
+    "OwnerUserId" uuid NOT NULL,
+    "OwnerName" character varying(100) NOT NULL,
+    "PackName" character varying(100) NOT NULL,
+    "Description" character varying(500) NOT NULL,
+    "Genre" character varying(50) NOT NULL,
+    "Mood" character varying(50) NOT NULL,
+    "PackCategory" character varying(50) NOT NULL,
+    "LastExport_Format" character varying(10) NOT NULL,
+    "LastExport_BlobUrl" text NOT NULL,
+    "LastExport_ExportedAt" timestamp with time zone NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "UpdatedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_SoundPacks" PRIMARY KEY ("Id")
+);
+2026-05-15 21:28:08.507 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "Users" (
+    "Id" uuid NOT NULL,
+    "Email" character varying(255) NOT NULL,
+    "PasswordHash" text NOT NULL,
+    "UserName" character varying(100) NOT NULL,
+    "Role" character varying(50) NOT NULL,
+    "Plan" character varying(50) NOT NULL,
+    "StorageQuotaBytes" bigint NOT NULL,
+    "UsedStorageBytes" bigint NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "UpdatedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_Users" PRIMARY KEY ("Id")
+);
+2026-05-15 21:28:08.515 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "ProjectVersions" (
+    "Id" uuid NOT NULL,
+    "ProjectId" uuid NOT NULL,
+    "VersionNumber" integer NOT NULL,
+    "Hash" character varying(64) NOT NULL,
+    "BlobUrl" text NOT NULL,
+    "UploadedAt" timestamp with time zone NOT NULL,
+    "Changelog" text NOT NULL,
+    "Changelog_Id" uuid NOT NULL,
+    "Changelog_CreatedAt" timestamp with time zone NOT NULL,
+    "Changelog_UpdatedAt" timestamp with time zone NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "UpdatedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_ProjectVersions" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_ProjectVersions_Projects_ProjectId" FOREIGN KEY ("ProjectId") REFERENCES "Projects" ("Id") ON DELETE CASCADE
+);
+2026-05-15 21:28:08.518 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "SessionParticipants" (
+    "Id" uuid NOT NULL,
+    "SessionId" uuid NOT NULL,
+    "UserId" uuid NOT NULL,
+    "UserName" character varying(100) NOT NULL,
+    "JoinedAt" timestamp with time zone NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "UpdatedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_SessionParticipants" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_SessionParticipants_Sessions_SessionId" FOREIGN KEY ("SessionId") REFERENCES "Sessions" ("Id") ON DELETE CASCADE
+);
+2026-05-15 21:28:08.524 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "SessionSubmissions" (
+    "Id" uuid NOT NULL,
+    "SessionId" uuid NOT NULL,
+    "SubmittedByUserId" uuid NOT NULL,
+    "SubmitterName" character varying(100) NOT NULL,
+    "BlobUrl" text NOT NULL,
+    "FileName" text NOT NULL,
+    "DurationSeconds" integer NOT NULL,
+    "BPM" integer NOT NULL,
+    "Genre" text NOT NULL,
+    "Key" text NOT NULL,
+    "SubmittedAt" timestamp with time zone NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "UpdatedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_SessionSubmissions" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_SessionSubmissions_Sessions_SessionId" FOREIGN KEY ("SessionId") REFERENCES "Sessions" ("Id") ON DELETE CASCADE
+);
+2026-05-15 21:28:08.528 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE "SoundPackFile" (
+    "Id" uuid NOT NULL,
+    "SoundPackId" uuid NOT NULL,
+    "FileName" text NOT NULL,
+    "Category" integer NOT NULL,
+    "BlobUrl" text NOT NULL,
+    "DurationInSeconds" integer NOT NULL,
+    "Bpm" integer NOT NULL,
+    "Key" text NOT NULL,
+    "FileSize" bigint NOT NULL,
+    "CreatedAt" timestamp with time zone NOT NULL,
+    "UpdatedAt" timestamp with time zone NOT NULL,
+    CONSTRAINT "PK_SoundPackFile" PRIMARY KEY ("Id"),
+    CONSTRAINT "FK_SoundPackFile_SoundPacks_SoundPackId" FOREIGN KEY ("SoundPackId") REFERENCES "SoundPacks" ("Id") ON DELETE CASCADE
+);
+2026-05-15 21:28:08.531 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_ProjectVersions_ProjectId" ON "ProjectVersions" ("ProjectId");
+2026-05-15 21:28:08.533 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SessionParticipants_SessionId" ON "SessionParticipants" ("SessionId");
+2026-05-15 21:28:08.534 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SessionSubmissions_SessionId" ON "SessionSubmissions" ("SessionId");
+2026-05-15 21:28:08.536 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE INDEX "IX_SoundPackFile_SoundPackId" ON "SoundPackFile" ("SoundPackId");
+2026-05-15 21:28:08.537 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260515182735_Initial', '8.0.11');
+2026-05-15 21:37:32.188 +03:00 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-05-15 21:37:32.217 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-05-15 21:37:32.251 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-05-15 21:37:32.279 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2026-05-15 21:37:32.282 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2026-05-15 21:37:32.295 +03:00 [INF] Applying migration '20260515183701_FixFillesAndPacks'.
+2026-05-15 21:37:32.333 +03:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPackFile" DROP CONSTRAINT "FK_SoundPackFile_SoundPacks_SoundPackId";
+2026-05-15 21:37:32.336 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPackFile" DROP CONSTRAINT "PK_SoundPackFile";
+2026-05-15 21:37:32.338 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPackFile" RENAME TO "SoundPackFiles";
+2026-05-15 21:37:32.339 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER INDEX "IX_SoundPackFile_SoundPackId" RENAME TO "IX_SoundPackFiles_SoundPackId";
+2026-05-15 21:37:32.346 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPacks" ALTER COLUMN "LastExport_Format" DROP NOT NULL;
+2026-05-15 21:37:32.347 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPacks" ALTER COLUMN "LastExport_ExportedAt" DROP NOT NULL;
+2026-05-15 21:37:32.349 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPacks" ALTER COLUMN "LastExport_BlobUrl" DROP NOT NULL;
+2026-05-15 21:37:32.387 +03:00 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPackFiles" ALTER COLUMN "Key" TYPE character varying(10);
+2026-05-15 21:37:32.390 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPackFiles" ALTER COLUMN "FileName" TYPE character varying(255);
+2026-05-15 21:37:32.393 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPackFiles" ALTER COLUMN "Category" TYPE character varying(50);
+2026-05-15 21:37:32.394 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPackFiles" ADD CONSTRAINT "PK_SoundPackFiles" PRIMARY KEY ("Id");
+2026-05-15 21:37:32.397 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+ALTER TABLE "SoundPackFiles" ADD CONSTRAINT "FK_SoundPackFiles_SoundPacks_SoundPackId" FOREIGN KEY ("SoundPackId") REFERENCES "SoundPacks" ("Id") ON DELETE CASCADE;
+2026-05-15 21:37:32.399 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "__EFMigrationsHistory" ("MigrationId", "ProductVersion")
+VALUES ('20260515183701_FixFillesAndPacks', '8.0.11');
