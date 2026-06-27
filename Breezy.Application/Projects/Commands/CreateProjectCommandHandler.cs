@@ -33,7 +33,7 @@ public class CreateProjectCommandHandler : IRequestHandler<CreateProjectCommand,
             _logger.LogWarning("User with {OwnerId} not found", request.OwnerId);
             throw new DomainException("User not found");
         }
-
+        
         if (!user.HasAvailableStorage(request.FileSize))
         {
             _logger.LogWarning("User {OwnerId} has insufficient storage", request.OwnerId);
@@ -52,16 +52,16 @@ public class CreateProjectCommandHandler : IRequestHandler<CreateProjectCommand,
         }
         
         var projectHash = new ProjectHash(request.Hash);
-
+        
         var project = DawProject.Create(request.OwnerId, request.ProjectName, request.LocalPath, projectHash, url);
         await _projectRepository.AddAsync(project);
         
         user.UseStorage(request.FileSize);
         await _userRepository.UpdateAsync(user);
-        
+          
         _logger.LogInformation("Project {ProjectName} created successfully for OwnerId: {OwnerId}", 
             request.ProjectName, request.OwnerId);
-
+        
         return new ProjectResponse(project.Id, project.OwnerUserId, project.ProjectName, project.CreatedAt);
     }
 }

@@ -1,0 +1,34 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=11f2460e_002Ddc5e_002D4baf_002D9700_002D3a11af2ee9fb/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="All tests from RegisterUserCommandHandlerTests.cs" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Or&gt;&#xD;
+    &lt;ProjectFile&gt;30BE9441-03DF-48C4-A90D-97E5B714306A/d:Unit/d:Users/f:RegisterUserCommandHandlerTests.cs&lt;/ProjectFile&gt;&#xD;
+    &lt;TestAncestor&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Users.LoginCommandHandlerTests.Handle_WithNonExistentEmail_ThrowsDomainException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Users.LoginCommandHandlerTests.Handle_WithValidCredentials_ReturnsToken&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Sessions.CreateCollaborationSessionCommandHandlerTests.Handle_WithValidCommand_ReturnsSessionResponse&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Sessions.CreateCollaborationSessionCommandHandlerTests.Handle_WithNonExistentHost_ThrowsDomainException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Sessions.CreateCollaborationSessionCommandHandlerTests.Handle_WithValidCommand_SessionIsActive&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Sessions.AddParticipantCommandTests.Handle_WithValidCommand_ReturnsParticipantResponse&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Sessions.AddParticipantCommandTests.Handle_WithNonExistentSession_ThrowsDomainException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Sessions.AddParticipantCommandTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Sessions.CloseSessionCommandHandlerTests.Handle_WithValidCommand_ReturnsSessionResponse&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Sessions.CloseSessionCommandHandlerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.SoundPacks.CreateSoundPackCommandHandlerTests.Handle_WithValidCommand_ReturnsSoundPackResponse&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.SoundPacks.CreateSoundPackCommandHandlerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.SoundPacks.AddFileToSoundPackCommandHandlerTests.Handle_WithValidCommand_ReturnsSoundPackFileResponse&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.SoundPacks.AddFileToSoundPackCommandHandlerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.SoundPacks.ExportSoundPackCommandHandlerTests.Handle_WithValidCommand_ReturnsSoundPackResponse&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.SoundPacks.ExportSoundPackCommandHandlerTests.Handle_WithNonExistentSoundPack_ThrowsDomainException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.SoundPacks.ExportSoundPackCommandHandlerTests.Handle_WithNoFilesToExport_ThrowsDomainException&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.SoundPacks.ExportSoundPackCommandHandlerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Projects.CreateProjectCommandHandlerTests.Handle_WithValidCommand_ReturnsProjectResponse&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Unit.Projects.CreateProjectCommandHandlerTests&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Integration.Controllers.UsersControllerIntegrationTests.Register_WithValidData_Returns201&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Integration.Controllers.UsersControllerIntegrationTests.Register_WithExistingEmail_Returns400&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Integration.Controllers.UsersControllerIntegrationTests.Login_WithValidCredentials_Returns200&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Integration.Controllers.UsersControllerIntegrationTests.Login_WithWrongPassword_Return400&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Integration.Controllers.UsersControllerIntegrationTests.GetUser_WithoutToken_Returns401&lt;/TestId&gt;&#xD;
+      &lt;TestId&gt;xUnit::30BE9441-03DF-48C4-A90D-97E5B714306A::net8.0::Breezy.Tests.Integration.Controllers.UsersControllerIntegrationTests.GetUser_WithValidToken_Returns200&lt;/TestId&gt;&#xD;
+    &lt;/TestAncestor&gt;&#xD;
+  &lt;/Or&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>
