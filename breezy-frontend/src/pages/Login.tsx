@@ -1,11 +1,13 @@
 import { useState } from "react";
 import {useNavigate} from "react-router-dom";
+import {useAuth} from "../context/AuthContext.tsx";
 
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [error, setError] = useState("");
     const navigate = useNavigate();
+    const { login } = useAuth();
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -23,8 +25,9 @@ function Login() {
             }
 
             const token = await response.text();
-            navigate("/dashboard");
             console.log("Token received:", token);
+            login(token);
+            navigate("/dashboard");
         } catch (err) {
             console.error(err);
             setError("Invalid email or password.");
