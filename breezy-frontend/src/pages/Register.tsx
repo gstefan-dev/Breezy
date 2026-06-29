@@ -1,13 +1,38 @@
-import {useState} from "react";
+import { useState } from "react";
+
 function Register() {
     const [userEmail, setUserEmail] = useState("");
     const [userName, setUserName] = useState("");
     const [userPassword, setUserPassword] = useState("");
+    const [error, setError] = useState("");
 
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        console.log("Register attempt:", {userEmail, userName, userPassword});
+        setError("");
+
+        try {
+            const response = await fetch("https://localhost:44365/api/users/register", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                    UserEmail: userEmail,
+                    UserName: userName,
+                    Password: userPassword,
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error("Register failed");
+            }
+
+            const user = await response.json();
+            console.log("User registered:", user);
+        } catch (err) {
+            console.error(err);
+            setError("Could not register. Please check your details.");
+        }
     }
+
     return (
         <div>
             <h1>Register</h1>
@@ -39,6 +64,7 @@ function Register() {
                         onChange={(e: React.ChangeEvent<HTMLInputElement>) => setUserPassword(e.target.value)}
                     />
                 </div>
+                {error && <p style={{ color: "red" }}>{error}</p>}
                 <button type="submit">Register</button>
             </form>
         </div>

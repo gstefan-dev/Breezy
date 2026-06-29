@@ -1,35 +1,59 @@
-import {useState} from "react";
+import { useState } from "react";
+import {useNavigate} from "react-router-dom";
 
 function Login() {
-    const [userEmail, setUserEmail] = useState("");
-    const [userPassword, setUserPassword] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [error, setError] = useState("");
+    const navigate = useNavigate();
 
-    function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        console.log("Login attempt:", { email: userEmail, password: userPassword });
+        setError("");
+
+        try {
+            const response = await fetch("https://localhost:44365/api/users/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ Email: email, Password: password }),
+            });
+
+            if (!response.ok) {
+                throw new Error("Login failed");
+            }
+
+            const token = await response.text();
+            navigate("/dashboard");
+            console.log("Token received:", token);
+        } catch (err) {
+            console.error(err);
+            setError("Invalid email or password.");
+        }
     }
+
     return (
         <div>
             <h1>Login</h1>
             <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="userEmail">Email</label>
+                    <label htmlFor="email">Email</label>
                     <input
-                        id="userEmail"
+                        id="email"
                         type="email"
-                        value={userEmail}
-                        onChange={(e) => setUserEmail(e.target.value)}
-                        />
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                    />
                 </div>
                 <div>
-                    <label htmlFor="userPassword">Password</label>
+                    <label htmlFor="password">Password</label>
                     <input
-                        id="userPassword"
+                        id="password"
                         type="password"
-                        value={userPassword}
-                        onChange={(e) => setUserPassword(e.target.value)}
-                        />
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                    />
                 </div>
+                {error && <p style={{ color: "red" }}>{error}</p>}
                 <button type="submit">Login</button>
             </form>
         </div>
