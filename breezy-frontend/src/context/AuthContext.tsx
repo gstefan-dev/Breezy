@@ -1,7 +1,9 @@
 import {createContext, useContext, useState, ReactNode} from "react";
+import {decodeToken} from "../utils/jwt.ts";
 
 interface AuthContextType {
     token: string | null;
+    userId: string | null;
     login: (newToken: string) => void;
     logout: () => void;
 }
@@ -21,8 +23,9 @@ export function AuthProvider({ children }: { children: ReactNode }) {
         setToken(null);
     }
 
+    const userId = token ? (decodeToken(token)?.sub ?? null) : null;
     return (
-        <AuthContext.Provider value={{token, login, logout}}>
+        <AuthContext.Provider value={{token, userId, login, logout}}>
             {children}
         </AuthContext.Provider>
     );
