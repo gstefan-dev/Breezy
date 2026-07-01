@@ -8,7 +8,7 @@ namespace Breezy.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class UsersController : ControllerBase
+public class UsersController : ApiControllerBase
 {
     private readonly IMediator _mediator;
 
@@ -42,10 +42,10 @@ public class UsersController : ControllerBase
     }
 
     [Authorize]
-    [HttpPut("{id}/subscription")]
-    public async Task<ActionResult> UpdateSubscription(Guid id, [FromBody] UpdateSubscriptionCommand request)
+    [HttpPut("subscription")]
+    public async Task<ActionResult> UpdateSubscription([FromBody] UpdateSubscriptionCommand request)
     {
-        var command = new UpdateSubscriptionCommand(id, request.NewPlan);
+        var command = new UpdateSubscriptionCommand(CurrentUserId, request.NewPlan);
         var result = await _mediator.Send(command);
         return Ok(result);
     }
