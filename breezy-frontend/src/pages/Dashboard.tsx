@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
-
+import {NavLink} from "react-router-dom";
 interface SoundPack {
     id: string;
     soundPackName: string;
     genre: string;
+    packCategory: string;
+    createdAt: string;
 }
 
 function Dashboard() {
@@ -51,7 +53,9 @@ function Dashboard() {
                 <ul>
                     {soundPacks.map((pack) => (
                         <li key={pack.id}>
-                            {pack.soundPackName} — {pack.genre}
+                            <NavLink to={`/soundpacks/${pack.id}`}>
+                                <strong>{pack.soundPackName}</strong> — {pack.genre} — {pack.packCategory} — {new Date(pack.createdAt).toLocaleDateString()}
+                            </NavLink>
                         </li>
                     ))}
                 </ul>

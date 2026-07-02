@@ -8,6 +8,7 @@ import Sessions from "./pages/Sessions.tsx";
 import AppLayout from "./components/layout/AppLayout.tsx";
 import {AuthProvider} from "./context/AuthContext.tsx";
 import ProtectedRoute from "./components/ProtectedRoute.tsx";
+import SoundPackDetail from "./pages/SoundPackDetail.tsx";
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                             <Route path="/projects" element={<Projects />} />
                             <Route path="/sessions" element={<Sessions />} />
                             <Route path="/soundpacks" element={<SoundPacks />} />
+                            <Route path="/soundpacks/:id" element={<SoundPackDetail />} />
                         </Route>
                     </Route>
                 </Routes>
