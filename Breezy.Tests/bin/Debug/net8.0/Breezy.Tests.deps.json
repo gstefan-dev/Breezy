@@ -255,7 +255,7 @@
           "System.Net.WebSockets.Client": "8.0.0.0",
           "System.Net.WebSockets": "8.0.0.0",
           "System.Numerics": "4.0.0.0",
-          "System.Numerics.Vectors": "8.0.0.0",
+          "System.Numerics.Vectors.Reference": "8.0.0.0",
           "System.ObjectModel.Reference": "8.0.0.0",
           "System.Reflection.DispatchProxy": "8.0.0.0",
           "System.Reflection.Reference": "8.0.0.0",
@@ -341,50 +341,55 @@
           "Breezy.Tests.dll": {}
         }
       },
-      "Azure.Core/1.50.0": {
+      "Azure.Core/1.43.0": {
         "dependencies": {
-          "Microsoft.Bcl.AsyncInterfaces": "8.0.0",
-          "System.ClientModel": "1.8.0",
-          "System.Memory.Data": "8.0.1"
+          "Microsoft.Bcl.AsyncInterfaces": "6.0.0",
+          "System.ClientModel": "1.0.0",
+          "System.Diagnostics.DiagnosticSource": "10.0.0",
+          "System.Memory.Data": "1.0.2",
+          "System.Numerics.Vectors": "4.5.0",
+          "System.Text.Encodings.Web": "10.0.0",
+          "System.Text.Json": "10.0.0",
+          "System.Threading.Tasks.Extensions": "4.5.4"
         },
         "runtime": {
-          "lib/net8.0/Azure.Core.dll": {
-            "assemblyVersion": "1.50.0.0",
-            "fileVersion": "1.5000.25.55604"
+          "lib/net6.0/Azure.Core.dll": {
+            "assemblyVersion": "1.43.0.0",
+            "fileVersion": "1.4300.24.46205"
           }
         },
         "compile": {
-          "lib/net8.0/Azure.Core.dll": {}
+          "lib/net6.0/Azure.Core.dll": {}
         }
       },
-      "Azure.Storage.Blobs/12.27.0": {
+      "Azure.Storage.Blobs/12.22.0": {
         "dependencies": {
-          "Azure.Core": "1.50.0",
-          "Azure.Storage.Common": "12.26.0"
+          "Azure.Storage.Common": "12.21.0",
+          "System.Text.Json": "10.0.0"
         },
         "runtime": {
-          "lib/net8.0/Azure.Storage.Blobs.dll": {
-            "assemblyVersion": "12.27.0.0",
-            "fileVersion": "12.2700.26.5804"
+          "lib/net6.0/Azure.Storage.Blobs.dll": {
+            "assemblyVersion": "12.22.0.0",
+            "fileVersion": "12.2200.24.46805"
           }
         },
         "compile": {
-          "lib/net8.0/Azure.Storage.Blobs.dll": {}
+          "lib/net6.0/Azure.Storage.Blobs.dll": {}
         }
       },
-      "Azure.Storage.Common/12.26.0": {
+      "Azure.Storage.Common/12.21.0": {
         "dependencies": {
-          "Azure.Core": "1.50.0",
-          "System.IO.Hashing": "10.0.1"
+          "Azure.Core": "1.43.0",
+          "System.IO.Hashing": "6.0.0"
         },
         "runtime": {
-          "lib/net8.0/Azure.Storage.Common.dll": {
-            "assemblyVersion": "12.26.0.0",
-            "fileVersion": "12.2600.26.5804"
+          "lib/net6.0/Azure.Storage.Common.dll": {
+            "assemblyVersion": "12.21.0.0",
+            "fileVersion": "12.2100.24.46805"
           }
         },
         "compile": {
-          "lib/net8.0/Azure.Storage.Common.dll": {}
+          "lib/net6.0/Azure.Storage.Common.dll": {}
         }
       },
       "BCrypt.Net-Next/4.2.0": {
@@ -672,11 +677,11 @@
           "lib/net8.0/Microsoft.AspNetCore.TestHost.dll": {}
         }
       },
-      "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
+      "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
         "runtime": {
           "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {
-            "assemblyVersion": "8.0.0.0",
-            "fileVersion": "8.0.23.53103"
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         },
         "compile": {
@@ -1892,19 +1897,19 @@
           "System.Threading": "4.3.0"
         }
       },
-      "System.ClientModel/1.8.0": {
+      "System.ClientModel/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.Logging.Abstractions": "10.0.0",
-          "System.Memory.Data": "8.0.1"
+          "System.Memory.Data": "1.0.2",
+          "System.Text.Json": "10.0.0"
         },
         "runtime": {
-          "lib/net8.0/System.ClientModel.dll": {
-            "assemblyVersion": "1.8.0.0",
-            "fileVersion": "1.800.25.55302"
+          "lib/net6.0/System.ClientModel.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.24.5302"
           }
         },
         "compile": {
-          "lib/net8.0/System.ClientModel.dll": {}
+          "lib/net6.0/System.ClientModel.dll": {}
         }
       },
       "System.Collections/4.3.0": {
@@ -2083,15 +2088,15 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.IO.Hashing/10.0.1": {
+      "System.IO.Hashing/6.0.0": {
         "runtime": {
-          "lib/net8.0/System.IO.Hashing.dll": {
-            "assemblyVersion": "10.0.0.1",
-            "fileVersion": "10.0.125.57005"
+          "lib/net6.0/System.IO.Hashing.dll": {
+            "assemblyVersion": "6.0.0.0",
+            "fileVersion": "6.0.21.52210"
           }
         },
         "compile": {
-          "lib/net8.0/System.IO.Hashing.dll": {}
+          "lib/net6.0/System.IO.Hashing.dll": {}
         }
       },
       "System.IO.Pipelines/10.0.0": {
@@ -2135,15 +2140,19 @@
           "System.Threading": "4.3.0"
         }
       },
-      "System.Memory.Data/8.0.1": {
+      "System.Memory.Data/1.0.2": {
+        "dependencies": {
+          "System.Text.Encodings.Web": "10.0.0",
+          "System.Text.Json": "10.0.0"
+        },
         "runtime": {
-          "lib/net8.0/System.Memory.Data.dll": {
-            "assemblyVersion": "8.0.0.1",
-            "fileVersion": "8.0.1024.46610"
+          "lib/netstandard2.0/System.Memory.Data.dll": {
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.221.20802"
           }
         },
         "compile": {
-          "lib/net8.0/System.Memory.Data.dll": {}
+          "lib/netstandard2.0/System.Memory.Data.dll": {}
         }
       },
       "System.Net.Http/4.3.0": {
@@ -2194,6 +2203,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
+      "System.Numerics.Vectors/4.5.0": {},
       "System.ObjectModel/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -2506,13 +2516,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Threading.Tasks.Extensions/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Threading.Tasks": "4.3.0"
-        }
-      },
+      "System.Threading.Tasks.Extensions/4.5.4": {},
       "System.Threading.Timer/4.3.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0",
@@ -2536,7 +2540,7 @@
           "System.Text.Encoding.Extensions": "4.3.0",
           "System.Text.RegularExpressions": "4.3.0",
           "System.Threading.Tasks": "4.3.0",
-          "System.Threading.Tasks.Extensions": "4.3.0"
+          "System.Threading.Tasks.Extensions": "4.5.4"
         }
       },
       "System.Xml.XDocument/4.3.0": {
@@ -2708,7 +2712,7 @@
       },
       "Breezy.Infrastructure/1.0.0": {
         "dependencies": {
-          "Azure.Storage.Blobs": "12.27.0",
+          "Azure.Storage.Blobs": "12.22.0",
           "BCrypt.Net-Next": "4.2.0",
           "Breezy.Application": "1.0.0",
           "Breezy.Domain": "1.0.0",
@@ -3970,7 +3974,7 @@
         },
         "compileOnly": true
       },
-      "System.Numerics.Vectors/8.0.0.0": {
+      "System.Numerics.Vectors.Reference/8.0.0.0": {
         "compile": {
           "System.Numerics.Vectors.dll": {}
         },
@@ -4446,26 +4450,26 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Azure.Core/1.50.0": {
+    "Azure.Core/1.43.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-GBNKZEhdIbTXxedvD3R7I/yDVFX9jJJEz02kCziFSJxspSQ5RMHc3GktulJ1s7+ffXaXD7kMgrtdQTaggyInLw==",
-      "path": "azure.core/1.50.0",
-      "hashPath": "azure.core.1.50.0.nupkg.sha512"
+      "sha512": "sha512-XE6GHvFAv0djbzNSC3jJPDytcDRmg2CUYlh4V4HjIjX9xLP90OYDPz1KyF02qJJJTF9wLuG4C0XIQm22MGkCww==",
+      "path": "azure.core/1.43.0",
+      "hashPath": "azure.core.1.43.0.nupkg.sha512"
     },
-    "Azure.Storage.Blobs/12.27.0": {
+    "Azure.Storage.Blobs/12.22.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zI5rg1tTtnA8T2g2/21l+1iIUdDjpEQQ0FI1BabJVEQJ1JUyTQKrc41eNabAHs0SBHprl6pu/6OqIMK9Ve+4tQ==",
-      "path": "azure.storage.blobs/12.27.0",
-      "hashPath": "azure.storage.blobs.12.27.0.nupkg.sha512"
+      "sha512": "sha512-ZULEgyKLEeSVdc3k5tM40zts5fwET/CT3RkOn/0kJruPj2dI9XB/R9pT53sqNWCs744qjaPI03Y8UtIYA8p54Q==",
+      "path": "azure.storage.blobs/12.22.0",
+      "hashPath": "azure.storage.blobs.12.22.0.nupkg.sha512"
     },
-    "Azure.Storage.Common/12.26.0": {
+    "Azure.Storage.Common/12.21.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-XaT6CDcSshZb7KaCTwc6m4EouZbLBg7ciOEpsJSdJCvkNsZJQCvPKw7V5TtXno19AA1NpwtsZriYque8mzbQVg==",
-      "path": "azure.storage.common/12.26.0",
-      "hashPath": "azure.storage.common.12.26.0.nupkg.sha512"
+      "sha512": "sha512-4DosxjTeu1BpRJr8iPuUQ0QMGgLHreErKy1DdqsqABkwA5FzzRr/fUD+IfxTpCyi7uhLhcgz5FmDdts+uyrvpQ==",
+      "path": "azure.storage.common/12.21.0",
+      "hashPath": "azure.storage.common.12.21.0.nupkg.sha512"
     },
     "BCrypt.Net-Next/4.2.0": {
       "type": "package",
@@ -4614,12 +4618,12 @@
       "path": "microsoft.aspnetcore.testhost/8.0.27",
       "hashPath": "microsoft.aspnetcore.testhost.8.0.27.nupkg.sha512"
     },
-    "Microsoft.Bcl.AsyncInterfaces/8.0.0": {
+    "Microsoft.Bcl.AsyncInterfaces/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-3WA9q9yVqJp222P3x1wYIGDAkpjAku0TMUaaQV22g6L67AI0LdOIrVS7Ht2vJfLHGSPVuqN94vIr15qn+HEkHw==",
-      "path": "microsoft.bcl.asyncinterfaces/8.0.0",
-      "hashPath": "microsoft.bcl.asyncinterfaces.8.0.0.nupkg.sha512"
+      "sha512": "sha512-UcSjPsst+DfAdJGVDsu346FX0ci0ah+lw3WRtn18NUwEqRt70HaOQ7lI72vy3+1LxtqI3T5GWwV39rQSrCzAeg==",
+      "path": "microsoft.bcl.asyncinterfaces/6.0.0",
+      "hashPath": "microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512"
     },
     "Microsoft.CodeCoverage/17.8.0": {
       "type": "package",
@@ -5237,12 +5241,12 @@
       "path": "system.buffers/4.3.0",
       "hashPath": "system.buffers.4.3.0.nupkg.sha512"
     },
-    "System.ClientModel/1.8.0": {
+    "System.ClientModel/1.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-AqRzhn0v29GGGLj/Z6gKq4lGNtvPHT4nHdG5PDJh9IfVjv/nYUVmX11hwwws1vDFeIAzrvmn0dPu8IjLtu6fAw==",
-      "path": "system.clientmodel/1.8.0",
-      "hashPath": "system.clientmodel.1.8.0.nupkg.sha512"
+      "sha512": "sha512-I3CVkvxeqFYjIVEP59DnjbeoGNfo/+SZrCLpRz2v/g0gpCHaEMPtWSY0s9k/7jR1rAsLNg2z2u1JRB76tPjnIw==",
+      "path": "system.clientmodel/1.0.0",
+      "hashPath": "system.clientmodel.1.0.0.nupkg.sha512"
     },
     "System.Collections/4.3.0": {
       "type": "package",
@@ -5363,12 +5367,12 @@
       "path": "system.io.filesystem.primitives/4.3.0",
       "hashPath": "system.io.filesystem.primitives.4.3.0.nupkg.sha512"
     },
-    "System.IO.Hashing/10.0.1": {
+    "System.IO.Hashing/6.0.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Dy6ULPb2S0GmNndjKrEIpfibNsc8+FTOoZnqygtFDuyun8vWboQbfMpQtKUXpgTxokR5E4zFHETpNnGfeWY6NA==",
-      "path": "system.io.hashing/10.0.1",
-      "hashPath": "system.io.hashing.10.0.1.nupkg.sha512"
+      "sha512": "sha512-Rfm2jYCaUeGysFEZjDe7j1R4x6Z6BzumS/vUT5a1AA/AWJuGX71PoGB0RmpyX3VmrGqVnAwtfMn39OHR8Y/5+g==",
+      "path": "system.io.hashing/6.0.0",
+      "hashPath": "system.io.hashing.6.0.0.nupkg.sha512"
     },
     "System.IO.Pipelines/10.0.0": {
       "type": "package",
@@ -5391,12 +5395,12 @@
       "path": "system.linq.expressions/4.3.0",
       "hashPath": "system.linq.expressions.4.3.0.nupkg.sha512"
     },
-    "System.Memory.Data/8.0.1": {
+    "System.Memory.Data/1.0.2": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-BVYuec3jV23EMRDeR7Dr1/qhx7369dZzJ9IWy2xylvb4YfXsrUxspWc4UWYid/tj4zZK58uGZqn2WQiaDMhmAg==",
-      "path": "system.memory.data/8.0.1",
-      "hashPath": "system.memory.data.8.0.1.nupkg.sha512"
+      "sha512": "sha512-JGkzeqgBsiZwKJZ1IxPNsDFZDhUvuEdX8L8BDC8N3KOj+6zMcNU28CNN59TpZE/VJYy9cP+5M+sbxtWJx3/xtw==",
+      "path": "system.memory.data/1.0.2",
+      "hashPath": "system.memory.data.1.0.2.nupkg.sha512"
     },
     "System.Net.Http/4.3.0": {
       "type": "package",
@@ -5418,6 +5422,13 @@
       "sha512": "sha512-m6icV6TqQOAdgt5N/9I5KNpjom/5NFtkmGseEH+AK/hny8XrytLH3+b5M8zL/Ycg3fhIocFpUMyl/wpFnVRvdw==",
       "path": "system.net.sockets/4.3.0",
       "hashPath": "system.net.sockets.4.3.0.nupkg.sha512"
+    },
+    "System.Numerics.Vectors/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-QQTlPTl06J/iiDbJCiepZ4H//BVraReU4O4EoRw1U02H5TLUIT7xn3GnDp9AXPSlJUDyFs4uWjWafNX6WrAojQ==",
+      "path": "system.numerics.vectors/4.5.0",
+      "hashPath": "system.numerics.vectors.4.5.0.nupkg.sha512"
     },
     "System.ObjectModel/4.3.0": {
       "type": "package",
@@ -5629,12 +5640,12 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "System.Threading.Tasks.Extensions/4.3.0": {
+    "System.Threading.Tasks.Extensions/4.5.4": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-npvJkVKl5rKXrtl1Kkm6OhOUaYGEiF9wFbppFRWSMoApKzt2PiPHT2Bb8a5sAWxprvdOAtvaARS9QYMznEUtug==",
-      "path": "system.threading.tasks.extensions/4.3.0",
-      "hashPath": "system.threading.tasks.extensions.4.3.0.nupkg.sha512"
+      "sha512": "sha512-zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "hashPath": "system.threading.tasks.extensions.4.5.4.nupkg.sha512"
     },
     "System.Threading.Timer/4.3.0": {
       "type": "package",
@@ -6782,7 +6793,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "System.Numerics.Vectors/8.0.0.0": {
+    "System.Numerics.Vectors.Reference/8.0.0.0": {
       "type": "referenceassembly",
       "serviceable": false,
       "sha512": ""

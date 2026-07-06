@@ -10,9 +10,9 @@ C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\o
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.AssemblyInfoInputs.cache
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.AssemblyInfo.cs
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.sourcelink.json
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.I.138BD589.Up2Date
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.dll
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\refint\Breezy.Infrastructure.dll
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.pdb
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\ref\Breezy.Infrastructure.dll
-C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Infrastructure\obj\Debug\net8.0\Breezy.Infrastructure.sourcelink.json

@@ -28,11 +28,34 @@ public class ProjectsController : ApiControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> CreateProject([FromBody] CreateProjectCommand request)
+    [Consumes("multipart/form-data")]
+    public async Task<ActionResult> CreateProject(
+        [FromForm] string projectName,
+        [FromForm] string localPath,
+        [FromForm] string hash,
+        IFormFile file)
     {
-        var command = request with { OwnerId = CurrentUserId };
-        var result = await _mediator.Send(command);
-        return CreatedAtAction(nameof(GetProject), new { id = result.Id }, result);
+        try
+        {
+            await using var stream = file.OpenReadStream();
+        
+            var command = new CreateProjectCommand(
+                CurrentUserId,
+                projectName,
+                localPath,
+                hash,
+                stream,
+                file.ContentType,
+                file.Length
+            );
+        
+            var result = await _mediator.Send(command);
+            return CreatedAtAction(nameof(GetProject), new { id = result.Id }, result);
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(500, new { error = ex.Message, innerError = ex.InnerException?.Message });
+        }
     }
 
     [HttpPost("{id}/versions")]

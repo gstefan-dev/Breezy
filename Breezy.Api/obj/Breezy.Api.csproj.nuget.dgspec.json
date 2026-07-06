@@ -310,7 +310,7 @@
           "dependencies": {
             "Azure.Storage.Blobs": {
               "target": "Package",
-              "version": "[12.27.0, )"
+              "version": "[12.22.0, )"
             },
             "BCrypt.Net-Next": {
               "target": "Package",

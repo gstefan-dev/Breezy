@@ -8,9 +8,9 @@ C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\Breezy.Application.AssemblyInfoInputs.cache
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\Breezy.Application.AssemblyInfo.cs
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\Breezy.Application.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\Breezy.Application.sourcelink.json
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\Breezy.A.A5093A39.Up2Date
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\Breezy.Application.dll
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\refint\Breezy.Application.dll
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\Breezy.Application.pdb
 C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\ref\Breezy.Application.dll
-C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Application\obj\Debug\net8.0\Breezy.Application.sourcelink.json
