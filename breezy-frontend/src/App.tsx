@@ -9,6 +9,7 @@ import AppLayout from "./components/layout/AppLayout.tsx";
 import {AuthProvider} from "./context/AuthContext.tsx";
 import ProtectedRoute from "./components/ProtectedRoute.tsx";
 import SoundPackDetail from "./pages/SoundPackDetail.tsx";
+import ProjectDetail from "./pages/ProjectDetail.tsx";
 
 function App() {
     return (
@@ -26,6 +27,7 @@ function App() {
                             <Route path="/sessions" element={<Sessions />} />
                             <Route path="/soundpacks" element={<SoundPacks />} />
                             <Route path="/soundpacks/:id" element={<SoundPackDetail />} />
+                            <Route path="/projects/:id" element={<ProjectDetail />} />
                         </Route>
                     </Route>
                 </Routes>
