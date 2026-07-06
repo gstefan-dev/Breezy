@@ -28,5 +28,7 @@ public class ProjectVersionConfiguration : IEntityTypeConfiguration<ProjectVersi
             changelog.Property(c => c.Changes)
                 .HasColumnName("Changelog");
         });
+        builder.Navigation(x => x.Changelog).IsRequired(false);
+
     }
 }

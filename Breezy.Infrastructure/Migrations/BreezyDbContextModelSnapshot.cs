@@ -415,8 +415,7 @@ namespace Breezy.Infrastructure.Migrations
                                 .HasForeignKey("ProjectVersionId");
                         });
 
-                    b.Navigation("Changelog")
-                        .IsRequired();
+                    b.Navigation("Changelog");
 
                     b.Navigation("Hash")
                         .IsRequired();
