@@ -10,6 +10,7 @@ import {AuthProvider} from "./context/AuthContext.tsx";
 import ProtectedRoute from "./components/ProtectedRoute.tsx";
 import SoundPackDetail from "./pages/SoundPackDetail.tsx";
 import ProjectDetail from "./pages/ProjectDetail.tsx";
+import SessionDetail from "./pages/SessionDetail.tsx";
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                             <Route path="/soundpacks" element={<SoundPacks />} />
                             <Route path="/soundpacks/:id" element={<SoundPackDetail />} />
                             <Route path="/projects/:id" element={<ProjectDetail />} />
+                            <Route path="/sessions/:code" element={<SessionDetail />} />
                         </Route>
                     </Route>
                 </Routes>
