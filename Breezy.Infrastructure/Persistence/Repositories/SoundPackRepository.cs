@@ -13,6 +13,7 @@ public class SoundPackRepository : ISoundPackRepository
         _context = context;
     }
 
+
     public async Task AddAsync(SoundPack soundPack)
     {
         await _context.SoundPacks.AddAsync(soundPack);
@@ -21,7 +22,9 @@ public class SoundPackRepository : ISoundPackRepository
 
     public async Task<SoundPack?> GetByIdAsync(Guid id)
     {
-        return await _context.SoundPacks.FindAsync(id);
+        return await _context.SoundPacks
+            .Include(s => s.Files)
+            .FirstOrDefaultAsync(s => s.Id == id);
     }
 
     public async Task<IEnumerable<SoundPack>> GetByUserIdAsync(Guid id)
@@ -31,7 +34,13 @@ public class SoundPackRepository : ISoundPackRepository
 
     public async Task UpdateAsync(SoundPack soundPack)
     {
-        _context.SoundPacks.Update(soundPack);
+        await _context.SaveChangesAsync();
+            
+    }
+
+    public async Task AddFileAsync(SoundPackFile file)
+    {
+        await _context.SoundPackFiles.AddAsync(file);
         await _context.SaveChangesAsync();
     }
 }

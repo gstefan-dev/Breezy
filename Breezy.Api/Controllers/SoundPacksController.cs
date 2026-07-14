@@ -2,6 +2,7 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using Breezy.Application.SoundPacks.Commands;
 using Breezy.Application.SoundPacks.Queries;
+using Breezy.Domain.SoundPacks.ValueObjects;
 using MediatR;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -39,12 +40,16 @@ public class SoundPacksController : ApiControllerBase
     }
 
     [HttpPost("{id}/files")]
-    public async Task<ActionResult> AddFile(Guid id, [FromBody] AddFileToSoundPackCommand request)
+    [Consumes("multipart/form-data")]
+    public async Task<ActionResult> AddFile(Guid id, [FromForm] string fileName,
+        [FromForm] SoundCategoryEnum soundCategory,
+        [FromForm] int durationSeconds, [FromForm] int bpm, [FromForm] string key, IFormFile file)
     {
-        var command = new AddFileToSoundPackCommand(id, CurrentUserId, request.FileName, request.SoundCategory,
-            request.FileContent, request.FileType, request.FileSize, request.DurationSeconds, request.BPM, request.Key);
-        var result = await _mediator.Send(command);
+        await using var stream = file.OpenReadStream();
+        var command = new AddFileToSoundPackCommand(id, CurrentUserId, fileName, soundCategory, stream,
+            file.ContentType, file.Length, durationSeconds, bpm, key);
 
+        var result = await _mediator.Send(command);
         return Ok(result);
     }
 
@@ -72,4 +77,4 @@ public class SoundPacksController : ApiControllerBase
         var result = await _mediator.Send(new GetUserSoundPacksQuery(CurrentUserId));
         return Ok(result);
     }
- }
+}
