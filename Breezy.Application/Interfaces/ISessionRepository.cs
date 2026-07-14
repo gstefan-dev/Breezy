@@ -1,5 +1,6 @@
 ﻿using Breezy.Domain.Sessions.Entities;
 using Breezy.Domain.Sessions.ValueObjects;
+using Breezy.Domain.SoundPacks.Entities;
 
 namespace Breezy.Application.Interfaces;
 
@@ -9,4 +10,5 @@ public interface ISessionRepository
     Task<CollaborationSession?> GetByCodeAsync(SessionCode code);
     Task<CollaborationSession?> GetByIdAsync(Guid id);
     Task UpdateAsync(CollaborationSession session);
+    
 }

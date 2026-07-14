@@ -70,7 +70,7 @@ public class AddFileToSoundPackCommandHandler : IRequestHandler<AddFileToSoundPa
             request.DurationSeconds, request.BPM, request.Key, request.FileSize);
         
         soundPack.AddFile(soundPackFile);
-        user.UseStorage(request.FileSize);
+        await _soundPackRepository.AddFileAsync(soundPackFile);
         
         await _soundPackRepository.UpdateAsync(soundPack);
         await _userRepository.UpdateAsync(user);

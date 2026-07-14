@@ -14,6 +14,8 @@ public class BreezyDbContext : DbContext
     public DbSet<DawProject> Projects { get; set; }
     public DbSet<CollaborationSession> Sessions { get; set; }
     public DbSet<SoundPack> SoundPacks { get; set; }
+    
+    public DbSet<SoundPackFile> SoundPackFiles { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

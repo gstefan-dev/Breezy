@@ -8,4 +8,5 @@ public interface ISoundPackRepository
     Task<SoundPack?> GetByIdAsync(Guid id);
     Task<IEnumerable<SoundPack>> GetByUserIdAsync(Guid id);
     Task UpdateAsync(SoundPack soundPack);
+    Task AddFileAsync(SoundPackFile file);
 }
