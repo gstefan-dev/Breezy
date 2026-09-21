@@ -19,9 +19,9 @@ public class SessionsController : ApiControllerBase
     }
 
     [HttpPost]
-    public async Task<ActionResult> CreateSession([FromBody] CreateCollaborationSessionCommand request)
+    public async Task<ActionResult> CreateSession([FromBody] CreateSessionRequest request)
     {
-        var command = request with { HostId = CurrentUserId };
+        var command = new CreateCollaborationSessionCommand(CurrentUserId, request.SessionName, request.MaxParticipants);
         var result = await _mediator.Send(command);
         return CreatedAtAction(nameof(GetSession), new { code = result.Code }, result);
     }
@@ -34,7 +34,7 @@ public class SessionsController : ApiControllerBase
     }
 
     [HttpPost("{code}/participants")]
-    public async Task<ActionResult> AddParticipant(string code, [FromBody] AddParticipantCommand request)
+    public async Task<ActionResult> AddParticipant(string code)
     {
         var command = new AddParticipantCommand(CurrentUserId, code);
         var result = await _mediator.Send(command);
@@ -52,7 +52,7 @@ public class SessionsController : ApiControllerBase
     }
 
     [HttpPut("{code}/close")]
-    public async Task<ActionResult> CloseSession(string code, [FromBody] CloseSessionCommand request)
+    public async Task<ActionResult> CloseSession(string code)
     {
         var command = new CloseSessionCommand(CurrentUserId, code);
         var result = await _mediator.Send(command);
@@ -61,7 +61,7 @@ public class SessionsController : ApiControllerBase
     }
 
     [HttpPut("{code}/reopen")]
-    public async Task<ActionResult> ReopenSession(string code, [FromBody] ReopenSessionCommand request)
+    public async Task<ActionResult> ReopenSession(string code)
     {
         var command = new ReopenSessionCommand(CurrentUserId, code);
         var result = await _mediator.Send(command);
@@ -75,6 +75,13 @@ public class SessionsController : ApiControllerBase
         var query = new GetSessionSubmissionsQuery(code, CurrentUserId);
         var result = await _mediator.Send(query);
 
+        return Ok(result);
+    }
+    
+    [HttpGet("{code}/participants")]
+    public async Task<ActionResult> GetParticipants(string code)
+    {
+        var result = await _mediator.Send(new GetSessionParticipantsQuery(code));
         return Ok(result);
     }
 }

@@ -23,7 +23,7 @@ public class DawProjectConfiguration : IEntityTypeConfiguration<DawProject>
             .IsRequired();
 
         builder.Property(x => x.LocalPath)
-            .IsRequired();
+            .IsRequired(false);
 
         builder.OwnsOne(x => x.CurrentHash, currentHash =>
             {

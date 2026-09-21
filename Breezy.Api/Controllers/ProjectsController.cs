@@ -31,7 +31,6 @@ public class ProjectsController : ApiControllerBase
     [Consumes("multipart/form-data")]
     public async Task<ActionResult> CreateProject(
         [FromForm] string projectName,
-        [FromForm] string localPath,
         [FromForm] string hash,
         IFormFile file)
     {
@@ -42,7 +41,7 @@ public class ProjectsController : ApiControllerBase
             var command = new CreateProjectCommand(
                 CurrentUserId,
                 projectName,
-                localPath,
+                null,
                 hash,
                 stream,
                 file.ContentType,

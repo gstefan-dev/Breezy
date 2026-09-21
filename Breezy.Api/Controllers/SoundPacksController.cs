@@ -77,4 +77,5 @@ public class SoundPacksController : ApiControllerBase
         var result = await _mediator.Send(new GetUserSoundPacksQuery(CurrentUserId));
         return Ok(result);
     }
+    
 }

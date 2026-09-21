@@ -4,7 +4,6 @@ import { useAuth } from "../context/AuthContext";
 function Projects() {
     const { token } = useAuth();
     const [projectName, setProjectName] = useState("");
-    const [localPath, setLocalPath] = useState("");
     const [file, setFile] = useState<File | null>(null);
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
@@ -33,7 +32,6 @@ function Projects() {
 
             const formData = new FormData();
             formData.append("projectName", projectName);
-            formData.append("localPath", localPath);
             formData.append("hash", hash);
             formData.append("file", file);
 
@@ -50,7 +48,6 @@ function Projects() {
             const project = await response.json();
             setSuccess(`Project "${project.projectName}" created successfully!`);
             setProjectName("");
-            setLocalPath("");
             setFile(null);
         } catch (err) {
             console.error(err);
@@ -72,16 +69,6 @@ function Projects() {
                         type="text"
                         value={projectName}
                         onChange={(e) => setProjectName(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="localPath">Local Path</label>
-                    <input
-                        id="localPath"
-                        type="text"
-                        value={localPath}
-                        onChange={(e) => setLocalPath(e.target.value)}
                         required
                     />
                 </div>

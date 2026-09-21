@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { API_BASE_URL } from "../config/api";
 
 interface Session {
     id: string;
@@ -40,27 +41,33 @@ function SessionDetail() {
     useEffect(() => {
         async function fetchSession() {
             try {
-                const [sessionRes, submissionsRes] = await Promise.all([
-                    fetch(`https://localhost:44365/api/sessions/${code}`, {
+                const [sessionRes, participantsRes] = await Promise.all([
+                    fetch(`${API_BASE_URL}/api/sessions/${code}`, {
                         headers: { Authorization: `Bearer ${token}` },
                     }),
-                    fetch(`https://localhost:44365/api/sessions/${code}/submissions`, {
+                    fetch(`${API_BASE_URL}/api/sessions/${code}/participants`, {
                         headers: { Authorization: `Bearer ${token}` },
                     }),
                 ]);
 
-                if (!sessionRes.ok || !submissionsRes.ok) {
+                if (!sessionRes.ok || !participantsRes.ok) {
                     throw new Error("Failed to load session");
                 }
 
                 const sessionData = await sessionRes.json();
-                const submissionsData = await submissionsRes.json();
+                const participantsData = await participantsRes.json();
 
                 setSession(sessionData);
-                setSubmissions(submissionsData);
+                setParticipants(participantsData);
 
-                if (sessionData.participants) {
-                    setParticipants(sessionData.participants);
+                const submissionsRes = await fetch(`${API_BASE_URL}/api/sessions/${code}/submissions`, {
+                    headers: { Authorization: `Bearer ${token}` },
+                });
+
+                if (submissionsRes.ok) {
+                    setSubmissions(await submissionsRes.json());
+                } else {
+                    setSubmissions([]);
                 }
             } catch (err) {
                 console.error(err);

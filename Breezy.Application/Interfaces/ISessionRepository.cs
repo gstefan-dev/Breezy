@@ -10,5 +10,7 @@ public interface ISessionRepository
     Task<CollaborationSession?> GetByCodeAsync(SessionCode code);
     Task<CollaborationSession?> GetByIdAsync(Guid id);
     Task UpdateAsync(CollaborationSession session);
+    Task AddParticipantAsync(SessionParticipant participant);
+    
     
 }

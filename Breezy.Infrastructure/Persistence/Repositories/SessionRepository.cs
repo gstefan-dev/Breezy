@@ -22,7 +22,9 @@ public class SessionRepository : ISessionRepository
 
     public async Task<CollaborationSession?> GetByCodeAsync(SessionCode code)
     {
-        return await _context.Sessions.FirstOrDefaultAsync(s => s.Code.Value == code.Value);
+        return await _context.Sessions
+            .Include(s => s.Participants)
+            .FirstOrDefaultAsync(s => s.Code.Value == code.Value);
     }
 
     public async Task<CollaborationSession?> GetByIdAsync(Guid id)
@@ -31,8 +33,13 @@ public class SessionRepository : ISessionRepository
     }
 
     public async Task UpdateAsync(CollaborationSession session)
-    { 
-        _context.Sessions.Update(session);
+    {
+        await _context.SaveChangesAsync();
+    }
+    
+    public async Task AddParticipantAsync(SessionParticipant participant)
+    {
+        await _context.Set<SessionParticipant>().AddAsync(participant);
         await _context.SaveChangesAsync();
     }
 }

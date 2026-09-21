@@ -7,7 +7,7 @@ public class DawProject : Entity
 {
     public Guid OwnerUserId { get; private set; }
     public string ProjectName { get; private set; }
-    public string LocalPath { get; private set; }
+    public string? LocalPath { get; private set; }
     public ProjectHash CurrentHash { get; private set; }
     public int CurrentVersionNumber { get; private set; }
 
@@ -30,8 +30,8 @@ public class DawProject : Entity
         if (string.IsNullOrWhiteSpace(projectName))
             throw new DomainException("ProjectName cannot be empty");
 
-        if (string.IsNullOrWhiteSpace(localPath))
-            throw new DomainException("LocalPath cannot be empty");
+        // if (string.IsNullOrWhiteSpace(localPath))
+        //     throw new DomainException("LocalPath cannot be empty");
 
         if (initialHash == null)
             throw new DomainException("InitialHash cannot be empty");
@@ -70,7 +70,7 @@ public class DawProject : Entity
     public static DawProject Create(
         Guid ownerUserId,
         string projectName,
-        string localPath,
+        string? localPath,
         ProjectHash initialHash,
         string blobUrl)
     {

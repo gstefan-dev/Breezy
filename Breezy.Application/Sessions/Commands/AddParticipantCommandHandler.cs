@@ -43,11 +43,11 @@ public class AddParticipantCommandHandler : IRequestHandler<AddParticipantComman
         }
         
         session.AddParticipant(user.Id, user.UserName);
-        await _sessionRepository.UpdateAsync(session);
-        
+        var participant = session.Participants.Last();
+        await _sessionRepository.AddParticipantAsync(participant);
+
         _logger.LogInformation("Participant {UserName} was added succesfully to session {SessionCode}", user.UserName, code);
 
-        var participant = session.Participants.Last();
-        return new ParticipantResponse(participant.Id, participant.SessionId,participant.UserId, participant.UserName, participant.JoinedAt);
+        return new ParticipantResponse(participant.Id, participant.SessionId, participant.UserId, participant.UserName, participant.JoinedAt);
     }
 }

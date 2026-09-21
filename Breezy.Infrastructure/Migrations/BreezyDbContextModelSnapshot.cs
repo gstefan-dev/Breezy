@@ -35,7 +35,6 @@ namespace Breezy.Infrastructure.Migrations
                         .HasColumnType("integer");
 
                     b.Property<string>("LocalPath")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<Guid>("OwnerUserId")
