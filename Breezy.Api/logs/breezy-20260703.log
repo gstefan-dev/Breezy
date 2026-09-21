@@ -1,0 +1,253 @@
+2026-07-03 20:00:48.773 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-03 20:00:48.941 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-03 20:00:48.942 +03:00 [INF] Hosting environment: Development
+2026-07-03 20:00:48.942 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-03 20:00:48.968 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-03 20:00:49.219 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 252.4498ms
+2026-07-03 20:01:22.348 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/users/login - null null
+2026-07-03 20:01:22.358 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:22.360 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/users/login - 204 null null 14.0695ms
+2026-07-03 20:01:22.362 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/users/login - application/json 51
+2026-07-03 20:01:22.364 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:22.393 +03:00 [INF] Executing endpoint 'Breezy.Controllers.UsersController.Login (Breezy.Api)'
+2026-07-03 20:01:22.427 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Breezy.Application.Users.Commands.LoginCommand) on controller Breezy.Controllers.UsersController (Breezy.Api).
+2026-07-03 20:01:22.506 +03:00 [INF] Executing action method Breezy.Controllers.UsersController.Login (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:01:23.058 +03:00 [INF] Login attempt for stefan@gmail.com
+2026-07-03 20:01:24.382 +03:00 [INF] Executed DbCommand (61ms) [Parameters=[@__email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+2026-07-03 20:01:24.787 +03:00 [INF] User stefan@gmail.com logged in successfully
+2026-07-03 20:01:24.792 +03:00 [INF] Executed action method Breezy.Controllers.UsersController.Login (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2282.1841ms.
+2026-07-03 20:01:24.801 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-07-03 20:01:24.807 +03:00 [INF] Executed action Breezy.Controllers.UsersController.Login (Breezy.Api) in 2376.1105ms
+2026-07-03 20:01:24.808 +03:00 [INF] Executed endpoint 'Breezy.Controllers.UsersController.Login (Breezy.Api)'
+2026-07-03 20:01:24.831 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/users/login - 200 null text/plain; charset=utf-8 2468.8043ms
+2026-07-03 20:01:24.835 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:24.835 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:24.836 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:24.836 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:24.836 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 1.0535ms
+2026-07-03 20:01:24.836 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 1.0535ms
+2026-07-03 20:01:24.839 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:24.840 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:24.897 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:24.901 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:01:24.902 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:01:24.913 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:24.955 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-03 20:01:24.979 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:24.979 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 77.2285ms.
+2026-07-03 20:01:24.980 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-03 20:01:25.020 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:25.021 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 119.1838ms
+2026-07-03 20:01:25.021 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:25.021 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:25.021 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 182.3201ms
+2026-07-03 20:01:25.025 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:25.026 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:01:25.026 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:01:25.027 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:25.086 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-03 20:01:25.087 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:25.087 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 60.3952ms.
+2026-07-03 20:01:25.087 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-03 20:01:25.087 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 61.5309ms
+2026-07-03 20:01:25.087 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:25.088 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 67.2481ms
+2026-07-03 20:01:57.909 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:57.909 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:57.910 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:57.910 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:57.911 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 1.2686ms
+2026-07-03 20:01:57.911 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 1.2585ms
+2026-07-03 20:01:57.914 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:57.915 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:57.917 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:57.917 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:01:57.918 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:01:57.920 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:57.923 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-03 20:01:57.924 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:57.924 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6.6412ms.
+2026-07-03 20:01:57.925 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-03 20:01:57.925 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 7.6931ms
+2026-07-03 20:01:57.925 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:57.926 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 11.2148ms
+2026-07-03 20:01:57.927 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:57.928 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:57.928 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:57.929 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:01:57.929 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:01:57.929 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:57.932 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-03 20:01:57.933 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:57.934 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.5122ms.
+2026-07-03 20:01:57.934 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-03 20:01:57.934 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 5.3846ms
+2026-07-03 20:01:57.934 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:57.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 7.2585ms
+2026-07-03 20:01:58.983 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:58.983 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:58.984 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:58.984 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:01:58.985 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:01:58.986 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:58.987 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-03 20:01:58.988 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:58.988 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.0771ms.
+2026-07-03 20:01:58.989 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-03 20:01:58.989 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 4.3254ms
+2026-07-03 20:01:58.989 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:58.990 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 6.9318ms
+2026-07-03 20:01:58.993 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:01:58.994 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:01:58.995 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:58.995 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:01:58.995 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:01:58.996 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:58.998 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-03 20:01:58.998 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:01:58.998 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.6503ms.
+2026-07-03 20:01:58.998 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-03 20:01:58.999 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 3.2716ms
+2026-07-03 20:01:58.999 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:01:58.999 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 5.9222ms
+2026-07-03 20:02:00.812 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-03 20:02:00.812 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-03 20:02:00.812 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:00.812 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:00.812 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 0.431ms
+2026-07-03 20:02:00.812 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 0.2991ms
+2026-07-03 20:02:00.814 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-03 20:02:00.814 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:00.815 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-03 20:02:00.820 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:02:00.822 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:02:00.826 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:02:00.875 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-03 20:02:00.875 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-03 20:02:00.875 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 53.362ms.
+2026-07-03 20:02:00.876 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-03 20:02:00.876 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 55.3623ms
+2026-07-03 20:02:00.876 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-03 20:02:00.876 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 61.9196ms
+2026-07-03 20:02:00.878 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-03 20:02:00.878 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:00.878 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-03 20:02:00.878 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:02:00.880 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:02:00.880 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:02:00.882 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-03 20:02:00.883 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-03 20:02:00.883 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.061ms.
+2026-07-03 20:02:00.883 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-03 20:02:00.883 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 4.5689ms
+2026-07-03 20:02:00.883 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-03 20:02:00.883 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 5.5871ms
+2026-07-03 20:02:03.176 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:02:03.176 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:03.176 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:02:03.177 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:03.177 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 1.0662ms
+2026-07-03 20:02:03.177 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 0.7755ms
+2026-07-03 20:02:03.180 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:02:03.180 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:03.181 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:02:03.181 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:02:03.182 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:02:03.182 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:02:03.184 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-03 20:02:03.185 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:02:03.185 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.1062ms.
+2026-07-03 20:02:03.185 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-03 20:02:03.185 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 4.0168ms
+2026-07-03 20:02:03.185 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:02:03.186 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 6.1812ms
+2026-07-03 20:02:03.187 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-03 20:02:03.187 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:03.187 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:02:03.187 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:02:03.188 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:02:03.188 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:02:03.191 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-03 20:02:03.192 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:02:03.192 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4.6364ms.
+2026-07-03 20:02:03.193 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-03 20:02:03.193 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 5.8198ms
+2026-07-03 20:02:03.193 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-03 20:02:03.194 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 6.9417ms
+2026-07-03 20:02:03.837 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/b7d917c1-1faf-45b3-91c1-1007330dd2c2 - null null
+2026-07-03 20:02:03.838 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:03.838 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/b7d917c1-1faf-45b3-91c1-1007330dd2c2 - null null
+2026-07-03 20:02:03.838 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:03.838 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/b7d917c1-1faf-45b3-91c1-1007330dd2c2 - 204 null null 0.6225ms
+2026-07-03 20:02:03.838 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/b7d917c1-1faf-45b3-91c1-1007330dd2c2 - 204 null null 0.3895ms
+2026-07-03 20:02:03.842 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/b7d917c1-1faf-45b3-91c1-1007330dd2c2 - null null
+2026-07-03 20:02:03.842 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:03.843 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-03 20:02:03.843 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:02:03.843 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:02:03.845 +03:00 [INF] Getting SoundPack "b7d917c1-1faf-45b3-91c1-1007330dd2c2" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:02:03.848 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-03 20:02:03.849 +03:00 [INF] SoundPack "b7d917c1-1faf-45b3-91c1-1007330dd2c2" retrieved successfully
+2026-07-03 20:02:03.849 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.2632ms.
+2026-07-03 20:02:03.849 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-03 20:02:03.849 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 6.3059ms
+2026-07-03 20:02:03.849 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-03 20:02:03.850 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/b7d917c1-1faf-45b3-91c1-1007330dd2c2 - 200 null application/json; charset=utf-8 8.0362ms
+2026-07-03 20:02:03.851 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/b7d917c1-1faf-45b3-91c1-1007330dd2c2 - null null
+2026-07-03 20:02:03.852 +03:00 [INF] CORS policy execution successful.
+2026-07-03 20:02:03.852 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-03 20:02:03.852 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-03 20:02:03.852 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-03 20:02:03.853 +03:00 [INF] Getting SoundPack "b7d917c1-1faf-45b3-91c1-1007330dd2c2" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-03 20:02:03.855 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-03 20:02:03.855 +03:00 [INF] SoundPack "b7d917c1-1faf-45b3-91c1-1007330dd2c2" retrieved successfully
+2026-07-03 20:02:03.855 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2.7669ms.
+2026-07-03 20:02:03.855 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-03 20:02:03.856 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 4.1685ms
+2026-07-03 20:02:03.857 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-03 20:02:03.857 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/b7d917c1-1faf-45b3-91c1-1007330dd2c2 - 200 null application/json; charset=utf-8 5.5714ms
+2026-07-03 20:05:38.825 +03:00 [INF] Application is shutting down...

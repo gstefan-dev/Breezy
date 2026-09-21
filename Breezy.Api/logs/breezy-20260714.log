@@ -1,0 +1,1484 @@
+2026-07-14 18:56:11.414 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 18:56:11.646 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 18:56:11.648 +03:00 [INF] Hosting environment: Development
+2026-07-14 18:56:11.648 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 18:56:11.686 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/index.html - null null
+2026-07-14 18:56:11.975 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/swagger-ui-bundle.js - null null
+2026-07-14 18:56:11.975 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/index.css - null null
+2026-07-14 18:56:11.975 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/swagger-ui.css - null null
+2026-07-14 18:56:11.975 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/index.html - 200 null text/html;charset=utf-8 289.0265ms
+2026-07-14 18:56:12.004 +03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2026-07-14 18:56:12.004 +03:00 [INF] Sending file. Request path: '/index.css'. Physical path: 'N/A'
+2026-07-14 18:56:12.005 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/index.css - 200 202 text/css 30.5657ms
+2026-07-14 18:56:12.011 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/swagger-ui-standalone-preset.js - null null
+2026-07-14 18:56:12.013 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/index.js - null null
+2026-07-14 18:56:12.014 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/swagger-ui.css - 200 154949 text/css 39.3586ms
+2026-07-14 18:56:12.015 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/index.js - 200 null application/javascript;charset=utf-8 1.9692ms
+2026-07-14 18:56:12.020 +03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2026-07-14 18:56:12.021 +03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2026-07-14 18:56:12.026 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/swagger-ui-standalone-preset.js - 200 229223 text/javascript 14.3303ms
+2026-07-14 18:56:12.050 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/swagger-ui-bundle.js - 200 1484234 text/javascript 75.6765ms
+2026-07-14 18:56:12.378 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 18:56:12.447 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/favicon-32x32.png - null null
+2026-07-14 18:56:12.448 +03:00 [INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+2026-07-14 18:56:12.448 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/favicon-32x32.png - 200 628 image/png 1.1042ms
+2026-07-14 18:56:12.722 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 344.2724ms
+2026-07-14 18:58:26.343 +03:00 [INF] Application is shutting down...
+2026-07-14 19:06:18.082 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:06:18.211 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:06:18.211 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:06:18.211 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:06:18.233 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/users/login - null null
+2026-07-14 19:06:18.233 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:06:18.268 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:18.280 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/users/login - application/json 51
+2026-07-14 19:06:18.283 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:18.284 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/users/login - 204 null null 52.147ms
+2026-07-14 19:06:18.312 +03:00 [INF] Executing endpoint 'Breezy.Controllers.UsersController.Login (Breezy.Api)'
+2026-07-14 19:06:18.334 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Breezy.Application.Users.Commands.LoginCommand) on controller Breezy.Controllers.UsersController (Breezy.Api).
+2026-07-14 19:06:18.504 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 272.0921ms
+2026-07-14 19:06:18.516 +03:00 [INF] Executing action method Breezy.Controllers.UsersController.Login (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:18.642 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/users/login - application/json 51
+2026-07-14 19:06:18.643 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:18.645 +03:00 [INF] Executing endpoint 'Breezy.Controllers.UsersController.Login (Breezy.Api)'
+2026-07-14 19:06:18.646 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Breezy.Application.Users.Commands.LoginCommand) on controller Breezy.Controllers.UsersController (Breezy.Api).
+2026-07-14 19:06:18.650 +03:00 [INF] Executing action method Breezy.Controllers.UsersController.Login (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:19.202 +03:00 [INF] Login attempt for stefan@gmail.com
+2026-07-14 19:06:19.202 +03:00 [INF] Login attempt for stefan@gmail.com
+2026-07-14 19:06:20.519 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/users/login - application/json 51
+2026-07-14 19:06:20.519 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:20.522 +03:00 [INF] Executing endpoint 'Breezy.Controllers.UsersController.Login (Breezy.Api)'
+2026-07-14 19:06:20.523 +03:00 [INF] Route matched with {action = "Login", controller = "Users"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] Login(Breezy.Application.Users.Commands.LoginCommand) on controller Breezy.Controllers.UsersController (Breezy.Api).
+2026-07-14 19:06:20.527 +03:00 [INF] Executing action method Breezy.Controllers.UsersController.Login (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:20.532 +03:00 [INF] Login attempt for stefan@gmail.com
+2026-07-14 19:06:22.128 +03:00 [INF] Executed DbCommand (95ms) [Parameters=[@__email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+2026-07-14 19:06:22.128 +03:00 [INF] Executed DbCommand (95ms) [Parameters=[@__email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+2026-07-14 19:06:22.128 +03:00 [INF] Executed DbCommand (100ms) [Parameters=[@__email_0='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Email" = @__email_0
+LIMIT 1
+2026-07-14 19:06:22.661 +03:00 [INF] User stefan@gmail.com logged in successfully
+2026-07-14 19:06:22.661 +03:00 [INF] User stefan@gmail.com logged in successfully
+2026-07-14 19:06:22.661 +03:00 [INF] User stefan@gmail.com logged in successfully
+2026-07-14 19:06:22.673 +03:00 [INF] Executed action method Breezy.Controllers.UsersController.Login (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4014.2201ms.
+2026-07-14 19:06:22.673 +03:00 [INF] Executed action method Breezy.Controllers.UsersController.Login (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 4147.2333ms.
+2026-07-14 19:06:22.674 +03:00 [INF] Executed action method Breezy.Controllers.UsersController.Login (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2137.5968ms.
+2026-07-14 19:06:22.693 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-07-14 19:06:22.693 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-07-14 19:06:22.693 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2026-07-14 19:06:22.703 +03:00 [INF] Executed action Breezy.Controllers.UsersController.Login (Breezy.Api) in 2173.6681ms
+2026-07-14 19:06:22.703 +03:00 [INF] Executed action Breezy.Controllers.UsersController.Login (Breezy.Api) in 4050.5417ms
+2026-07-14 19:06:22.703 +03:00 [INF] Executed action Breezy.Controllers.UsersController.Login (Breezy.Api) in 4362.2238ms
+2026-07-14 19:06:22.704 +03:00 [INF] Executed endpoint 'Breezy.Controllers.UsersController.Login (Breezy.Api)'
+2026-07-14 19:06:22.704 +03:00 [INF] Executed endpoint 'Breezy.Controllers.UsersController.Login (Breezy.Api)'
+2026-07-14 19:06:22.704 +03:00 [INF] Executed endpoint 'Breezy.Controllers.UsersController.Login (Breezy.Api)'
+2026-07-14 19:06:22.721 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:22.722 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:22.722 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:22.722 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:22.722 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 0.4943ms
+2026-07-14 19:06:22.722 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 0.874ms
+2026-07-14 19:06:22.722 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/users/login - 200 null text/plain; charset=utf-8 2203.3501ms
+2026-07-14 19:06:22.722 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/users/login - 200 null text/plain; charset=utf-8 4080.1766ms
+2026-07-14 19:06:22.722 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/users/login - 200 null text/plain; charset=utf-8 4441.9124ms
+2026-07-14 19:06:22.725 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:22.726 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:22.800 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:22.804 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:06:22.805 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:22.815 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:22.894 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-14 19:06:22.944 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:22.945 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 139.7804ms.
+2026-07-14 19:06:22.946 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-14 19:06:23.023 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:23.023 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:23.024 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 219.0379ms
+2026-07-14 19:06:23.024 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:23.025 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 299.8017ms
+2026-07-14 19:06:23.027 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:23.027 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:06:23.027 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:23.029 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:23.034 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-14 19:06:23.035 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:23.035 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.7063ms.
+2026-07-14 19:06:23.036 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-14 19:06:23.037 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 9.595ms
+2026-07-14 19:06:23.037 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:23.037 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 14.3719ms
+2026-07-14 19:06:23.228 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:23.229 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:23.231 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:23.232 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:06:23.232 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:23.233 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:23.238 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-14 19:06:23.239 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:23.239 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.5294ms.
+2026-07-14 19:06:23.240 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-14 19:06:23.240 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 8.5611ms
+2026-07-14 19:06:23.240 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:23.241 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 12.2375ms
+2026-07-14 19:06:23.242 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:23.243 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:23.244 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:23.244 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:06:23.244 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:23.244 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:23.246 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-14 19:06:23.247 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:23.248 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.5361ms.
+2026-07-14 19:06:23.248 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-14 19:06:23.248 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 4.5206ms
+2026-07-14 19:06:23.248 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:23.249 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 6.6831ms
+2026-07-14 19:06:30.895 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:30.895 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:30.896 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:30.896 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:30.897 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 1.2324ms
+2026-07-14 19:06:30.897 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/user - 204 null null 1.4122ms
+2026-07-14 19:06:30.899 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:30.900 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:30.901 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:30.901 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:06:30.901 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:30.902 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:30.907 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-14 19:06:30.909 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:30.909 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7.8609ms.
+2026-07-14 19:06:30.909 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-14 19:06:30.910 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 9.052ms
+2026-07-14 19:06:30.910 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:30.910 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 10.9712ms
+2026-07-14 19:06:30.912 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/user - null null
+2026-07-14 19:06:30.912 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:30.913 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:30.913 +03:00 [INF] Route matched with {action = "GetUserSoundPacks", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetUserSoundPacks() on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:06:30.913 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:30.914 +03:00 [INF] Getting SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:30.916 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."OwnerUserId" = @__id_0
+2026-07-14 19:06:30.919 +03:00 [INF] Found 2 SoundPacks for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:30.919 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 5.9944ms.
+2026-07-14 19:06:30.920 +03:00 [INF] Executing OkObjectResult, writing value of type 'System.Linq.Enumerable+SelectListIterator`2[[Breezy.Domain.SoundPacks.Entities.SoundPack, Breezy.Domain, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null],[Breezy.Application.SoundPacks.DTOs.SoundPackResponse, Breezy.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]'.
+2026-07-14 19:06:30.921 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api) in 8.3143ms
+2026-07-14 19:06:30.922 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetUserSoundPacks (Breezy.Api)'
+2026-07-14 19:06:30.923 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/user - 200 null application/json; charset=utf-8 10.5434ms
+2026-07-14 19:06:32.718 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:06:32.718 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:06:32.719 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:32.719 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:32.719 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 1.3601ms
+2026-07-14 19:06:32.719 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 1.5921ms
+2026-07-14 19:06:32.724 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:06:32.725 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:32.727 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:06:32.742 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:06:32.744 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:32.753 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:32.843 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:06:32.845 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-14 19:06:32.845 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 100.2731ms.
+2026-07-14 19:06:32.845 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-14 19:06:32.846 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 103.1745ms
+2026-07-14 19:06:32.846 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:06:32.846 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 122.1847ms
+2026-07-14 19:06:32.849 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:06:32.850 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:06:32.850 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:06:32.850 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:06:32.851 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:06:32.853 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:06:32.859 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:06:32.860 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-14 19:06:32.860 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 8.8824ms.
+2026-07-14 19:06:32.860 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-14 19:06:32.861 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 10.6048ms
+2026-07-14 19:06:32.861 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:06:32.862 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 12.5588ms
+2026-07-14 19:07:20.072 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:07:20.073 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:07:20.073 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 1.0969ms
+2026-07-14 19:07:20.082 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundarygpw4SSbqCJdplyeQ 8095717
+2026-07-14 19:07:20.083 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:07:20.084 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:07:20.091 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:07:20.231 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:07:20.239 +03:00 [INF] Adding file TestFile to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:07:20.242 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:07:20.258 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:08:00.172 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 40080.9152ms
+2026-07-14 19:08:00.172 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:08:00.202 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 40120.4129ms
+2026-07-14 19:09:59.008 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:09:59.008 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:09:59.009 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 0.7727ms
+2026-07-14 19:09:59.013 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryhO8cYUiuNMnOgehp 8095717
+2026-07-14 19:09:59.013 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:09:59.014 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:09:59.014 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:09:59.053 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:09:59.054 +03:00 [INF] Adding file TestFile to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:09:59.055 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:09:59.056 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:09:59.398 +03:00 [INF] Executed DbCommand (14ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p20='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?', @p13='?', @p14='?', @p15='?', @p16='?' (DbType = Guid), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p22='?' (DbType = Guid), @p21='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "CreatedAt" = @p11, "Description" = @p12, "Genre" = @p13, "Mood" = @p14, "OwnerName" = @p15, "OwnerUserId" = @p16, "PackCategory" = @p17, "PackName" = @p18, "UpdatedAt" = @p19
+WHERE "Id" = @p20;
+UPDATE "Users" SET "UsedStorageBytes" = @p21
+WHERE "Id" = @p22;
+2026-07-14 19:09:59.414 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 400.2581ms
+2026-07-14 19:09:59.414 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:09:59.416 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 402.2999ms
+2026-07-14 19:10:00.901 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:10:00.901 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:10:00.902 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 0.8786ms
+2026-07-14 19:10:00.905 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryXHgrWAY9AJ886ig5 8095717
+2026-07-14 19:10:00.906 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:10:00.907 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:10:00.907 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:10:00.951 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:10:00.952 +03:00 [INF] Adding file TestFile to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:10:00.953 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:10:00.955 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:10:01.016 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p20='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?', @p13='?', @p14='?', @p15='?', @p16='?' (DbType = Guid), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p22='?' (DbType = Guid), @p21='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "CreatedAt" = @p11, "Description" = @p12, "Genre" = @p13, "Mood" = @p14, "OwnerName" = @p15, "OwnerUserId" = @p16, "PackCategory" = @p17, "PackName" = @p18, "UpdatedAt" = @p19
+WHERE "Id" = @p20;
+UPDATE "Users" SET "UsedStorageBytes" = @p21
+WHERE "Id" = @p22;
+2026-07-14 19:10:01.017 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 109.645ms
+2026-07-14 19:10:01.017 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:10:01.019 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 114.1238ms
+2026-07-14 19:10:02.190 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:10:02.191 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:10:02.191 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 0.4543ms
+2026-07-14 19:10:02.193 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundary4SEvlj41EpYB5Dfw 8095717
+2026-07-14 19:10:02.193 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:10:02.194 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:10:02.194 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:10:02.259 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:10:02.259 +03:00 [INF] Adding file TestFile to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:10:02.261 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:10:02.263 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:10:02.383 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p20='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?', @p13='?', @p14='?', @p15='?', @p16='?' (DbType = Guid), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p22='?' (DbType = Guid), @p21='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "CreatedAt" = @p11, "Description" = @p12, "Genre" = @p13, "Mood" = @p14, "OwnerName" = @p15, "OwnerUserId" = @p16, "PackCategory" = @p17, "PackName" = @p18, "UpdatedAt" = @p19
+WHERE "Id" = @p20;
+UPDATE "Users" SET "UsedStorageBytes" = @p21
+WHERE "Id" = @p22;
+2026-07-14 19:10:02.384 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 190.131ms
+2026-07-14 19:10:02.384 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:10:02.387 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 194.1826ms
+2026-07-14 19:10:43.664 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:10:43.664 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:10:43.665 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 0.83ms
+2026-07-14 19:10:43.671 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundarySIAm2LAAra18eWUb 8095718
+2026-07-14 19:10:43.671 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:10:43.673 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:10:43.673 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:10:43.731 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:10:43.731 +03:00 [INF] Adding file TestFile1 to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:10:43.732 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:10:43.733 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:10:43.784 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p20='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?', @p13='?', @p14='?', @p15='?', @p16='?' (DbType = Guid), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p22='?' (DbType = Guid), @p21='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "CreatedAt" = @p11, "Description" = @p12, "Genre" = @p13, "Mood" = @p14, "OwnerName" = @p15, "OwnerUserId" = @p16, "PackCategory" = @p17, "PackName" = @p18, "UpdatedAt" = @p19
+WHERE "Id" = @p20;
+UPDATE "Users" SET "UsedStorageBytes" = @p21
+WHERE "Id" = @p22;
+2026-07-14 19:10:43.785 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 112.374ms
+2026-07-14 19:10:43.785 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:10:43.787 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 116.1494ms
+2026-07-14 19:10:50.114 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:10:50.114 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:10:50.115 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 0.6449ms
+2026-07-14 19:10:50.117 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryNe49Ie1uaAB5dfOV 17930024
+2026-07-14 19:10:50.118 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:10:50.119 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:10:50.119 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:10:50.313 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:10:50.314 +03:00 [INF] Adding file TestFile1 to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:10:50.315 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:10:50.316 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:10:50.427 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p20='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?', @p13='?', @p14='?', @p15='?', @p16='?' (DbType = Guid), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p22='?' (DbType = Guid), @p21='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "CreatedAt" = @p11, "Description" = @p12, "Genre" = @p13, "Mood" = @p14, "OwnerName" = @p15, "OwnerUserId" = @p16, "PackCategory" = @p17, "PackName" = @p18, "UpdatedAt" = @p19
+WHERE "Id" = @p20;
+UPDATE "Users" SET "UsedStorageBytes" = @p21
+WHERE "Id" = @p22;
+2026-07-14 19:10:50.428 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 309.214ms
+2026-07-14 19:10:50.428 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:10:50.430 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 312.793ms
+2026-07-14 19:11:18.818 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryNhsvl8GKwzkubIl2 3368610
+2026-07-14 19:11:18.818 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:11:18.819 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:11:18.819 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:11:18.857 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:11:18.858 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:11:18.860 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:11:18.862 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:11:18.939 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 119.1769ms
+2026-07-14 19:11:18.939 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:11:18.941 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 400 null application/json; charset=utf-8 123.091ms
+2026-07-14 19:11:29.550 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundary0BW35Od5xxUs2vK3 3368612
+2026-07-14 19:11:29.550 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:11:29.551 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:11:29.551 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:11:29.583 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:11:29.584 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:11:29.621 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:11:29.623 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:11:29.660 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 109.4166ms
+2026-07-14 19:11:29.661 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:11:29.662 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 400 null application/json; charset=utf-8 111.3881ms
+2026-07-14 19:11:35.520 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryjaJMHmpFuDSIAHHO 3368614
+2026-07-14 19:11:35.521 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:11:35.521 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:11:35.521 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:11:35.544 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:11:35.544 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:11:35.547 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+FROM "SoundPacks" AS s
+WHERE s."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:11:35.549 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:11:35.625 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p20='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?', @p13='?', @p14='?', @p15='?', @p16='?' (DbType = Guid), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p22='?' (DbType = Guid), @p21='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "CreatedAt" = @p11, "Description" = @p12, "Genre" = @p13, "Mood" = @p14, "OwnerName" = @p15, "OwnerUserId" = @p16, "PackCategory" = @p17, "PackName" = @p18, "UpdatedAt" = @p19
+WHERE "Id" = @p20;
+UPDATE "Users" SET "UsedStorageBytes" = @p21
+WHERE "Id" = @p22;
+2026-07-14 19:11:35.628 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 107.0601ms
+2026-07-14 19:11:35.628 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:11:35.630 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 109.9068ms
+2026-07-14 19:14:04.170 +03:00 [INF] Application is shutting down...
+2026-07-14 19:16:12.344 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:16:12.501 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:16:12.501 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:16:12.501 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:16:12.515 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:16:12.681 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 166.7133ms
+2026-07-14 19:16:22.652 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:16:22.660 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:16:22.661 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 10.1427ms
+2026-07-14 19:16:22.664 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryVz3M6iBdhOVAy5nr 17930024
+2026-07-14 19:16:22.666 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:16:22.725 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:16:22.743 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:16:22.877 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:16:23.676 +03:00 [INF] Adding file TestFile1 to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:16:26.437 +03:00 [INF] Executed DbCommand (115ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:16:26.720 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:16:27.604 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p20='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?', @p13='?', @p14='?', @p15='?', @p16='?' (DbType = Guid), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p22='?' (DbType = Guid), @p21='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "CreatedAt" = @p11, "Description" = @p12, "Genre" = @p13, "Mood" = @p14, "OwnerName" = @p15, "OwnerUserId" = @p16, "PackCategory" = @p17, "PackName" = @p18, "UpdatedAt" = @p19
+WHERE "Id" = @p20;
+UPDATE "Users" SET "UsedStorageBytes" = @p21
+WHERE "Id" = @p22;
+2026-07-14 19:16:27.666 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 4915.5783ms
+2026-07-14 19:16:27.667 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:16:27.784 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 5119.7001ms
+2026-07-14 19:17:06.460 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundary56uAnfNtSGf8LWiA 3368614
+2026-07-14 19:17:06.461 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:17:06.466 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:17:06.466 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:17:06.490 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:17:06.492 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:17:06.515 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:17:06.518 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:17:06.565 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p20='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p12='?', @p13='?', @p14='?', @p15='?', @p16='?' (DbType = Guid), @p17='?', @p18='?', @p19='?' (DbType = DateTime), @p22='?' (DbType = Guid), @p21='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "CreatedAt" = @p11, "Description" = @p12, "Genre" = @p13, "Mood" = @p14, "OwnerName" = @p15, "OwnerUserId" = @p16, "PackCategory" = @p17, "PackName" = @p18, "UpdatedAt" = @p19
+WHERE "Id" = @p20;
+UPDATE "Users" SET "UsedStorageBytes" = @p21
+WHERE "Id" = @p22;
+2026-07-14 19:17:06.569 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 102.8202ms
+2026-07-14 19:17:06.569 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:17:06.571 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 111.8075ms
+2026-07-14 19:19:38.158 +03:00 [INF] Application is shutting down...
+2026-07-14 19:19:46.152 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:19:46.257 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:19:46.258 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:19:46.258 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:19:46.271 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:19:46.455 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 184.9934ms
+2026-07-14 19:19:50.777 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:19:50.783 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:19:50.784 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 8.409ms
+2026-07-14 19:19:50.787 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundarysPhEfu7zWwO4ABMq 17930024
+2026-07-14 19:19:50.789 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:19:50.846 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:19:50.862 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:19:50.996 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:19:51.087 +03:00 [INF] Adding file TestFile1 to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:19:52.360 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:19:52.469 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:19:52.986 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:19:53.031 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 2160.9113ms
+2026-07-14 19:19:53.033 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:19:53.145 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 2358.4878ms
+2026-07-14 19:20:00.729 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryL4XGOm54YqeDxXT1 3368614
+2026-07-14 19:20:00.731 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:20:00.738 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:20:00.738 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:20:00.766 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:20:00.768 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:20:00.799 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:20:00.803 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:20:00.873 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:20:00.888 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 150.2414ms
+2026-07-14 19:20:00.889 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:20:00.892 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 162.8639ms
+2026-07-14 19:20:27.481 +03:00 [INF] Application is shutting down...
+2026-07-14 19:20:42.067 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:20:42.279 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:20:42.280 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:20:42.281 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:20:42.317 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:20:42.653 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 336.2997ms
+2026-07-14 19:22:25.942 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryqDIeMHcZcrB3J0ba 3368615
+2026-07-14 19:22:25.990 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:22:26.294 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:22:26.343 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:22:26.630 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:22:59.520 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:23:01.202 +03:00 [INF] Executed DbCommand (104ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:23:01.385 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:23:01.957 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:23:38.951 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:23:39.087 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:23:39.088 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:23:39.088 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:23:39.127 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:23:39.363 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 236.6527ms
+2026-07-14 19:23:39.903 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundary7iFD5hfWHp4yvJFu 3368615
+2026-07-14 19:23:39.923 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:23:40.052 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:23:40.074 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:23:40.211 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:23:54.769 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:24:03.979 +03:00 [INF] Executed DbCommand (72ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:24:04.094 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:24:04.595 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:24:11.796 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 31718.3124ms
+2026-07-14 19:24:11.798 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:24:11.926 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 32024.7733ms
+2026-07-14 19:24:44.345 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:24:44.481 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:24:44.481 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:24:44.482 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:24:44.514 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:24:44.754 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 240.6427ms
+2026-07-14 19:24:51.693 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryTqgnFCYemp9foQHA 627
+2026-07-14 19:24:51.732 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:24:51.928 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:24:51.983 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:24:52.080 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2026-07-14 19:24:52.202 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 213.7166ms
+2026-07-14 19:24:52.203 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:24:52.206 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 400 null application/problem+json; charset=utf-8 513.4962ms
+2026-07-14 19:25:04.772 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundarynxpeaGqRhaPXJzzB 3368615
+2026-07-14 19:25:04.774 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:25:04.778 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:25:04.778 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:25:04.989 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:25:37.033 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:25:38.475 +03:00 [INF] Executed DbCommand (79ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:25:38.600 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:25:39.035 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:25:59.941 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:26:00.024 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:26:00.025 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:26:00.025 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:26:00.040 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:26:00.225 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 185.8648ms
+2026-07-14 19:26:24.608 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryt1027DLbxnsfXG4U 15421645
+2026-07-14 19:26:24.624 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:26:24.672 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-14 19:26:24.681 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-14 19:26:24.683 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 401 null null 76.1211ms
+2026-07-14 19:26:44.794 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundary3rwbbQixRPmRb9Wl 15421646
+2026-07-14 19:26:44.802 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:26:44.813 +03:00 [INF] Authorization failed. These requirements were not met:
+DenyAnonymousAuthorizationRequirement: Requires an authenticated user.
+2026-07-14 19:26:44.814 +03:00 [INF] AuthenticationScheme: Bearer was challenged.
+2026-07-14 19:26:44.815 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 401 null null 20.5556ms
+2026-07-14 19:27:16.954 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryNoNpI6BzZvz7oVU1 3368615
+2026-07-14 19:27:16.956 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:27:17.088 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:27:17.129 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:27:17.226 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:27:17.450 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:27:19.892 +03:00 [INF] Executed DbCommand (132ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:27:20.167 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:27:21.049 +03:00 [INF] Executed DbCommand (15ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:27:21.132 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 3993.9808ms
+2026-07-14 19:27:21.134 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:27:21.291 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 4337.3582ms
+2026-07-14 19:29:10.936 +03:00 [INF] Application is shutting down...
+2026-07-14 19:29:19.227 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:29:19.297 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:29:19.297 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:29:19.298 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:29:19.311 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:29:19.490 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 180.0451ms
+2026-07-14 19:29:20.396 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryuqK67g4lm4YzxP17 3368615
+2026-07-14 19:29:20.406 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:29:20.466 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:29:20.484 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:29:20.545 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:29:20.647 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:29:22.052 +03:00 [INF] Executed DbCommand (64ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:29:22.178 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:29:22.544 +03:00 [INF] Executed DbCommand (10ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?', @p7='?' (DbType = Int64), @p8='?', @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SoundPackFiles" ("Id", "BlobUrl", "Bpm", "Category", "CreatedAt", "DurationInSeconds", "FileName", "FileSize", "Key", "SoundPackId", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:29:22.571 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Int64), @p7='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = @p0, "Email" = @p1, "PasswordHash" = @p2, "Plan" = @p3, "Role" = @p4, "UpdatedAt" = @p5, "UsedStorageBytes" = @p6, "UserName" = @p7
+WHERE "Id" = @p8;
+2026-07-14 19:29:22.571 +03:00 [INF] File string added successfully to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:29:22.576 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2026.4119ms.
+2026-07-14 19:29:22.585 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackFileResponse'.
+2026-07-14 19:29:22.635 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 2147.7513ms
+2026-07-14 19:29:22.636 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:29:22.648 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 200 null application/json; charset=utf-8 2253.9723ms
+2026-07-14 19:29:28.849 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:29:28.854 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:29:28.858 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 9.1099ms
+2026-07-14 19:29:28.861 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundarymusYUcAKrx4Uvkmt 17930024
+2026-07-14 19:29:28.862 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:29:28.867 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:29:28.868 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:29:28.997 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:29:28.999 +03:00 [INF] Adding file TestFile1 to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:29:29.024 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:29:29.035 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:29:29.270 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:29:29.294 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 426.0883ms
+2026-07-14 19:29:29.294 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:29:29.315 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 454.6424ms
+2026-07-14 19:29:31.793 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:29:31.793 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:29:31.793 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:29:31.793 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 0.7292ms
+2026-07-14 19:29:31.794 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:29:31.794 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 0.4097ms
+2026-07-14 19:29:31.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:29:31.795 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:29:31.796 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:29:31.796 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:29:31.801 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:29:31.801 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:29:31.808 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:29:31.808 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:29:31.808 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:29:31.809 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:29:31.813 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:29:31.813 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:29:31.913 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:29:31.914 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-14 19:29:31.917 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 108.006ms.
+2026-07-14 19:29:31.918 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-14 19:29:31.935 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 127.1729ms
+2026-07-14 19:29:31.935 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:29:31.935 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 140.1797ms
+2026-07-14 19:29:31.955 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:29:31.956 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-14 19:29:31.956 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 147.856ms.
+2026-07-14 19:29:31.957 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-14 19:29:31.957 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 149.3281ms
+2026-07-14 19:29:31.957 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:29:31.958 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 162.3117ms
+2026-07-14 19:29:46.722 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:29:46.723 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:29:46.723 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 0.836ms
+2026-07-14 19:29:46.726 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryDsnItDQfYiNhAFps 17930016
+2026-07-14 19:29:46.726 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:29:46.727 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:29:46.727 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:29:46.819 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:29:46.823 +03:00 [INF] Adding file 11 to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:29:46.825 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:29:46.827 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:29:47.027 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:29:47.029 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 301.5505ms
+2026-07-14 19:29:47.029 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:29:47.034 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 307.7609ms
+2026-07-14 19:30:38.028 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:30:38.028 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:30:38.029 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 0.6472ms
+2026-07-14 19:30:38.033 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryfmMafwCiFnfT8AhD 17930016
+2026-07-14 19:30:38.033 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:30:38.034 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:30:38.034 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:30:38.125 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:30:38.126 +03:00 [INF] Adding file 11 to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:30:38.127 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:30:38.128 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:30:38.246 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:30:38.248 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 213.8608ms
+2026-07-14 19:30:38.249 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:30:38.251 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 218.3413ms
+2026-07-14 19:31:26.241 +03:00 [INF] Application is shutting down...
+2026-07-14 19:31:34.022 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:31:34.094 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:31:34.095 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:31:34.095 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:31:34.110 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:31:34.329 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 219.4396ms
+2026-07-14 19:31:39.085 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:31:39.098 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:31:39.100 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 16.0143ms
+2026-07-14 19:31:39.104 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryBiixz0BV5pOLhFSQ 17930016
+2026-07-14 19:31:39.107 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:31:39.232 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:31:39.269 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:31:39.474 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:31:39.641 +03:00 [INF] Adding file 11 to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:31:42.470 +03:00 [INF] Executed DbCommand (116ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:31:42.693 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:31:43.421 +03:00 [INF] Executed DbCommand (11ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:31:43.491 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 4211.946ms
+2026-07-14 19:31:43.493 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:31:43.632 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 4528.3961ms
+2026-07-14 19:32:09.709 +03:00 [INF] Application is shutting down...
+2026-07-14 19:32:24.015 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:32:24.091 +03:00 [INF] Now listening on: http://localhost:5182
+2026-07-14 19:32:24.095 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:32:24.096 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:32:24.097 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:33:44.183 +03:00 [INF] Application is shutting down...
+2026-07-14 19:33:48.357 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:33:48.438 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:33:48.438 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:33:48.438 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:33:48.453 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:33:48.654 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 201.6842ms
+2026-07-14 19:33:51.359 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:33:51.359 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:33:51.369 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:33:51.369 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:33:51.371 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 12.8613ms
+2026-07-14 19:33:51.371 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 12.861ms
+2026-07-14 19:33:51.373 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:33:51.373 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:33:51.375 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:33:51.375 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:33:51.442 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:33:51.442 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:33:51.461 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:33:51.461 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:33:51.481 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:33:51.481 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:33:51.581 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:33:51.581 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:33:53.029 +03:00 [INF] Executed DbCommand (114ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:33:53.029 +03:00 [INF] Executed DbCommand (114ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:33:53.233 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-14 19:33:53.233 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-14 19:33:53.240 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1754.0353ms.
+2026-07-14 19:33:53.240 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1753.9553ms.
+2026-07-14 19:33:53.252 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-14 19:33:53.252 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-14 19:33:53.370 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 1901.2429ms
+2026-07-14 19:33:53.370 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 1901.2375ms
+2026-07-14 19:33:53.371 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:33:53.371 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:33:53.395 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 2021.8073ms
+2026-07-14 19:33:53.395 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 2021.8643ms
+2026-07-14 19:34:12.199 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:34:12.200 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:34:12.200 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 1.5505ms
+2026-07-14 19:34:12.208 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryBsrr4Cq1FA0A3ZAx 3368612
+2026-07-14 19:34:12.214 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:34:12.221 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:34:12.241 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:34:12.341 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:34:12.350 +03:00 [INF] Adding file test123 to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:34:12.455 +03:00 [INF] Executed DbCommand (7ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:34:12.496 +03:00 [INF] Executed DbCommand (5ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:34:13.174 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:34:13.213 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 972.0963ms
+2026-07-14 19:34:13.214 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:34:13.235 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 1027.3635ms
+2026-07-14 19:35:26.521 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:35:26.588 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:35:26.589 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:35:26.589 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:35:26.605 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:35:26.605 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:35:26.605 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:35:26.637 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:35:26.637 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:35:26.643 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:35:26.643 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:35:26.647 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 43.1579ms
+2026-07-14 19:35:26.647 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 43.138ms
+2026-07-14 19:35:26.649 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:35:26.649 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:35:26.781 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:35:26.781 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:35:26.793 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 189.9414ms
+2026-07-14 19:35:26.800 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:35:26.800 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:35:26.822 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:35:26.822 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:35:27.283 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:35:27.283 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:35:29.861 +03:00 [INF] Executed DbCommand (104ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:35:29.861 +03:00 [INF] Executed DbCommand (105ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:35:30.057 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-14 19:35:30.057 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-14 19:35:30.063 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3236.2857ms.
+2026-07-14 19:35:30.063 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3236.2065ms.
+2026-07-14 19:35:30.077 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-14 19:35:30.078 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-14 19:35:30.161 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 3356.1801ms
+2026-07-14 19:35:30.161 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 3356.2358ms
+2026-07-14 19:35:30.163 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:35:30.163 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:35:30.178 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 3535.2871ms
+2026-07-14 19:35:30.179 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 3535.1779ms
+2026-07-14 19:35:50.904 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:35:50.905 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:35:50.906 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 1.3204ms
+2026-07-14 19:35:50.911 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryYdjhaOF1Cv5T8icU 3368612
+2026-07-14 19:35:50.914 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:35:50.919 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:35:50.925 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:35:50.988 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:35:50.995 +03:00 [INF] Adding file test to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:35:51.086 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:35:51.111 +03:00 [INF] Executed DbCommand (3ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:35:51.785 +03:00 [INF] Executed DbCommand (13ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:35:51.831 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 904.9571ms
+2026-07-14 19:35:51.831 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:35:51.847 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 936.828ms
+2026-07-14 19:36:42.740 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundarymNgsASA1SaVZJrTJ 4790899
+2026-07-14 19:36:42.741 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:36:42.741 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:36:42.742 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:36:42.798 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:36:42.800 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:36:42.802 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:36:42.804 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:36:42.850 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 107.4993ms
+2026-07-14 19:36:42.850 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:36:42.852 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 400 null application/json; charset=utf-8 111.4862ms
+2026-07-14 19:36:54.034 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundarysNwyhALluzqJjPAm 22954105
+2026-07-14 19:36:54.035 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:36:54.035 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:36:54.035 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:36:54.212 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:36:54.216 +03:00 [INF] Adding file string to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:36:54.217 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:36:54.219 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:36:54.584 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 548.5609ms
+2026-07-14 19:36:54.584 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:36:54.591 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 400 null application/json; charset=utf-8 556.7258ms
+2026-07-14 19:37:04.801 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryM5AebEqqD5D7Vhmm 22954102
+2026-07-14 19:37:04.801 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:37:04.802 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:37:04.802 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:37:04.936 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:37:04.936 +03:00 [INF] Adding file www to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:37:04.938 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:37:04.940 +03:00 [INF] Executed DbCommand (0ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:37:05.275 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:37:05.278 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 476.1145ms
+2026-07-14 19:37:05.278 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:37:05.281 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/SoundPacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 480.4416ms
+2026-07-14 19:37:43.188 +03:00 [INF] Application is shutting down...
+2026-07-14 19:37:50.916 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:37:50.986 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:37:50.987 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:37:50.987 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:37:51.000 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:37:51.189 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 188.8362ms
+2026-07-14 19:38:07.889 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:38:07.897 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:38:07.899 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 11.3794ms
+2026-07-14 19:38:07.902 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryyeIgQRRXBd3rntej 22954103
+2026-07-14 19:38:07.905 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:38:07.962 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:38:07.979 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:38:08.126 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:38:08.215 +03:00 [INF] Adding file gggg to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:38:09.330 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:38:09.456 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:38:09.860 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p10='?' (DbType = Guid), @p0='?', @p1='?' (DbType = Int32), @p2='?', @p3='?' (DbType = DateTime), @p4='?' (DbType = Int32), @p5='?', @p6='?' (DbType = Int64), @p7='?', @p8='?' (DbType = Guid), @p9='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+UPDATE "SoundPackFiles" SET "BlobUrl" = @p0, "Bpm" = @p1, "Category" = @p2, "CreatedAt" = @p3, "DurationInSeconds" = @p4, "FileName" = @p5, "FileSize" = @p6, "Key" = @p7, "SoundPackId" = @p8, "UpdatedAt" = @p9
+WHERE "Id" = @p10;
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:38:09.883 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 1901.2247ms
+2026-07-14 19:38:09.884 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:38:09.944 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 500 null application/json; charset=utf-8 2041.6701ms
+2026-07-14 19:39:13.778 +03:00 [INF] Application is shutting down...
+2026-07-14 19:39:22.174 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:39:22.252 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:39:22.253 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:39:22.253 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:39:22.275 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:39:22.482 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 207.9704ms
+2026-07-14 19:39:23.804 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:39:23.811 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:39:23.812 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 8.8532ms
+2026-07-14 19:39:23.815 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryRgPHqw6AO0WlZiYH 22954103
+2026-07-14 19:39:23.817 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:39:23.879 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:39:23.896 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:39:24.043 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:39:24.136 +03:00 [INF] Adding file gggg to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:39:25.301 +03:00 [INF] Executed DbCommand (51ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:39:25.431 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:39:26.017 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__file_Id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1
+    FROM "SoundPackFiles" AS s
+    WHERE s."Id" = @__file_Id_0)
+2026-07-14 19:39:26.218 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?', @p7='?' (DbType = Int64), @p8='?', @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime), @p14='?' (DbType = Guid), @p13='?' (DbType = Int64)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SoundPackFiles" ("Id", "BlobUrl", "Bpm", "Category", "CreatedAt", "DurationInSeconds", "FileName", "FileSize", "Key", "SoundPackId", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+UPDATE "Users" SET "UsedStorageBytes" = @p13
+WHERE "Id" = @p14;
+2026-07-14 19:39:26.277 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Int64), @p7='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = @p0, "Email" = @p1, "PasswordHash" = @p2, "Plan" = @p3, "Role" = @p4, "UpdatedAt" = @p5, "UsedStorageBytes" = @p6, "UserName" = @p7
+WHERE "Id" = @p8;
+2026-07-14 19:39:26.278 +03:00 [INF] File gggg added successfully to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:39:26.286 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2237.4576ms.
+2026-07-14 19:39:26.300 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackFileResponse'.
+2026-07-14 19:39:26.385 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 2482.9437ms
+2026-07-14 19:39:26.386 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:39:26.409 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 200 null application/json; charset=utf-8 2593.8062ms
+2026-07-14 19:41:57.118 +03:00 [INF] Application is shutting down...
+2026-07-14 19:50:28.599 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:50:28.678 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:50:28.679 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:50:28.679 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:50:28.695 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:50:28.892 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 197.8448ms
+2026-07-14 19:50:57.532 +03:00 [INF] Application is shutting down...
+2026-07-14 19:51:55.515 +03:00 [INF] User profile is available. Using 'C:\Users\Administrator\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-07-14 19:51:55.599 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2026-07-14 19:51:55.600 +03:00 [INF] Hosting environment: Development
+2026-07-14 19:51:55.600 +03:00 [INF] Content root path: C:\Users\Administrator\Documents\Practica\Backend\Breezy\Breezy.Api
+2026-07-14 19:51:55.615 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - null null
+2026-07-14 19:51:55.823 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 209.4669ms
+2026-07-14 19:52:21.517 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:52:21.533 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:52:21.539 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 23.5694ms
+2026-07-14 19:52:21.545 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryas33qCMiBrdSvB2Y 3813733
+2026-07-14 19:52:21.548 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:52:21.676 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:52:21.716 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:52:21.812 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:52:21.988 +03:00 [INF] Adding file vbbbb to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:52:24.267 +03:00 [INF] Executed DbCommand (122ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:52:24.510 +03:00 [INF] Executed DbCommand (16ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:52:25.073 +03:00 [INF] Executed DbCommand (8ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?', @p7='?' (DbType = Int64), @p8='?', @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SoundPackFiles" ("Id", "BlobUrl", "Bpm", "Category", "CreatedAt", "DurationInSeconds", "FileName", "FileSize", "Key", "SoundPackId", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+2026-07-14 19:52:25.118 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Int64), @p7='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = @p0, "Email" = @p1, "PasswordHash" = @p2, "Plan" = @p3, "Role" = @p4, "UpdatedAt" = @p5, "UsedStorageBytes" = @p6, "UserName" = @p7
+WHERE "Id" = @p8;
+2026-07-14 19:52:25.123 +03:00 [INF] File vbbbb added successfully to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:52:25.133 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3313.8986ms.
+2026-07-14 19:52:25.147 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackFileResponse'.
+2026-07-14 19:52:25.251 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 3527.6428ms
+2026-07-14 19:52:25.253 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:52:25.273 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 200 null application/json; charset=utf-8 3728.0249ms
+2026-07-14 19:54:07.470 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:54:07.475 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:54:07.478 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 204 null null 7.5722ms
+2026-07-14 19:54:07.481 +03:00 [INF] Request starting HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - null null
+2026-07-14 19:54:07.482 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:54:07.490 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:54:07.504 +03:00 [INF] Route matched with {action = "GetSoundPack", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] GetSoundPack(System.Guid) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:54:07.508 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:54:07.517 +03:00 [INF] Getting SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" for UserId: "319873e6-fda5-4641-9da4-2e6e8902e1a2"
+2026-07-14 19:54:07.581 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:54:07.585 +03:00 [INF] SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f" retrieved successfully
+2026-07-14 19:54:07.594 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 85.6627ms.
+2026-07-14 19:54:07.595 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackResponse'.
+2026-07-14 19:54:07.627 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api) in 122.4767ms
+2026-07-14 19:54:07.627 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.GetSoundPack (Breezy.Api)'
+2026-07-14 19:54:07.628 +03:00 [INF] Request finished HTTP/2 GET https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f - 200 null application/json; charset=utf-8 146.5932ms
+2026-07-14 19:54:26.684 +03:00 [INF] Request starting HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - null null
+2026-07-14 19:54:26.685 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:54:26.685 +03:00 [INF] Request finished HTTP/2 OPTIONS https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 204 null null 1.1306ms
+2026-07-14 19:54:26.694 +03:00 [INF] Request starting HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - multipart/form-data; boundary=----WebKitFormBoundaryRE1RvTKQiUzTmGOz 6675554
+2026-07-14 19:54:26.694 +03:00 [INF] CORS policy execution successful.
+2026-07-14 19:54:26.706 +03:00 [INF] Executing endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:54:26.707 +03:00 [INF] Route matched with {action = "AddFile", controller = "SoundPacks"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult] AddFile(System.Guid, System.String, Breezy.Domain.SoundPacks.ValueObjects.SoundCategoryEnum, Int32, Int32, System.String, Microsoft.AspNetCore.Http.IFormFile) on controller Breezy.Controllers.SoundPacksController (Breezy.Api).
+2026-07-14 19:54:26.813 +03:00 [INF] Executing action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) - Validation state: "Valid"
+2026-07-14 19:54:26.815 +03:00 [INF] Adding file faaaaa to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:54:26.902 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__id_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT t."Id", t."CreatedAt", t."Description", t."Genre", t."Mood", t."OwnerName", t."OwnerUserId", t."PackCategory", t."PackName", t."UpdatedAt", t."LastExport_BlobUrl", t."LastExport_ExportedAt", t."LastExport_Format", s0."Id", s0."BlobUrl", s0."Bpm", s0."Category", s0."CreatedAt", s0."DurationInSeconds", s0."FileName", s0."FileSize", s0."Key", s0."SoundPackId", s0."UpdatedAt"
+FROM (
+    SELECT s."Id", s."CreatedAt", s."Description", s."Genre", s."Mood", s."OwnerName", s."OwnerUserId", s."PackCategory", s."PackName", s."UpdatedAt", s."LastExport_BlobUrl", s."LastExport_ExportedAt", s."LastExport_Format"
+    FROM "SoundPacks" AS s
+    WHERE s."Id" = @__id_0
+    LIMIT 1
+) AS t
+LEFT JOIN "SoundPackFiles" AS s0 ON t."Id" = s0."SoundPackId"
+ORDER BY t."Id"
+2026-07-14 19:54:26.906 +03:00 [INF] Executed DbCommand (1ms) [Parameters=[@__get_Item_0='?' (DbType = Guid)], CommandType='"Text"', CommandTimeout='30']
+SELECT u."Id", u."CreatedAt", u."Email", u."PasswordHash", u."Plan", u."Role", u."UpdatedAt", u."UsedStorageBytes", u."UserName", u."StorageQuotaBytes"
+FROM "Users" AS u
+WHERE u."Id" = @__get_Item_0
+LIMIT 1
+2026-07-14 19:54:27.003 +03:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (DbType = Guid), @p1='?', @p2='?' (DbType = Int32), @p3='?', @p4='?' (DbType = DateTime), @p5='?' (DbType = Int32), @p6='?', @p7='?' (DbType = Int64), @p8='?', @p9='?' (DbType = Guid), @p10='?' (DbType = DateTime), @p12='?' (DbType = Guid), @p11='?' (DbType = DateTime)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "SoundPackFiles" ("Id", "BlobUrl", "Bpm", "Category", "CreatedAt", "DurationInSeconds", "FileName", "FileSize", "Key", "SoundPackId", "UpdatedAt")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10);
+UPDATE "SoundPacks" SET "UpdatedAt" = @p11
+WHERE "Id" = @p12;
+2026-07-14 19:54:27.013 +03:00 [INF] Executed DbCommand (4ms) [Parameters=[@p8='?' (DbType = Guid), @p0='?' (DbType = DateTime), @p1='?', @p2='?', @p3='?', @p4='?', @p5='?' (DbType = DateTime), @p6='?' (DbType = Int64), @p7='?'], CommandType='"Text"', CommandTimeout='30']
+UPDATE "Users" SET "CreatedAt" = @p0, "Email" = @p1, "PasswordHash" = @p2, "Plan" = @p3, "Role" = @p4, "UpdatedAt" = @p5, "UsedStorageBytes" = @p6, "UserName" = @p7
+WHERE "Id" = @p8;
+2026-07-14 19:54:27.015 +03:00 [INF] File faaaaa added successfully to SoundPack "a82ba721-7f2e-4ed6-abfb-631c6329d91f"
+2026-07-14 19:54:27.015 +03:00 [INF] Executed action method Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 201.6216ms.
+2026-07-14 19:54:27.016 +03:00 [INF] Executing OkObjectResult, writing value of type 'Breezy.Application.SoundPacks.DTOs.SoundPackFileResponse'.
+2026-07-14 19:54:27.017 +03:00 [INF] Executed action Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api) in 310.112ms
+2026-07-14 19:54:27.017 +03:00 [INF] Executed endpoint 'Breezy.Controllers.SoundPacksController.AddFile (Breezy.Api)'
+2026-07-14 19:54:27.021 +03:00 [INF] Request finished HTTP/2 POST https://localhost:44365/api/soundpacks/a82ba721-7f2e-4ed6-abfb-631c6329d91f/files - 200 null application/json; charset=utf-8 326.9178ms
+2026-07-14 19:54:48.941 +03:00 [INF] Application is shutting down...
