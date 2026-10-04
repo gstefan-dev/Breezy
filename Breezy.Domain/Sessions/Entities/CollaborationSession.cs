@@ -13,6 +13,7 @@ public class CollaborationSession : Entity
     public SessionCode Code { get; private set; }
     public int MaxParticipants { get; private set; }
     public bool IsClosedByOwner { get; private set; }
+    public SessionVisibility Visibility { get; private set; }
 
     private readonly List<SessionParticipant> _participants = new();
     private readonly List<SessionSubmission> _submissions = new();
@@ -29,7 +30,8 @@ public class CollaborationSession : Entity
         SessionCode code,
         string name,
         DateTime? expiresAt = null,
-        int maxParticipants = -1) : base(Guid.NewGuid())
+        int maxParticipants = -1,
+        SessionVisibility visibility = SessionVisibility.Curated) : base(Guid.NewGuid())
     {
         if (ownerUserId == Guid.Empty)
             throw new SessionDomainException("OwnerUserId cannot be empty", Id, ownerUserId);
@@ -50,6 +52,7 @@ public class CollaborationSession : Entity
         MaxParticipants = maxParticipants;
         Code = code;
         IsClosedByOwner = false;
+        Visibility = visibility;
         
         _participants.Add(new SessionParticipant(Id, ownerUserId, ownerName));
 
@@ -60,10 +63,11 @@ public class CollaborationSession : Entity
         string ownerName,
         string name,
         int maxParticipants = -1,
-        DateTime? expiresAt = null)
+        DateTime? expiresAt = null,
+        SessionVisibility visibility = SessionVisibility.Curated)
     {
         var code = SessionCode.Generate();
-        return new CollaborationSession(ownerUserId, ownerName, code, name, expiresAt, maxParticipants);
+        return new CollaborationSession(ownerUserId, ownerName, code, name, expiresAt, maxParticipants, visibility);
     }
 
     public bool IsExpired => ExpiresAt.HasValue && DateTime.UtcNow > ExpiresAt.Value;
@@ -88,7 +92,7 @@ public class CollaborationSession : Entity
     {
         if (submission.SessionId != Id)
             throw new SessionDomainException("Submissions does not belong to this session", Id);
-        if (_participants.Any(p => p.UserId == submission.SubmittedByUserId))
+        if (!_participants.Any(p => p.UserId == submission.SubmittedByUserId))
             throw new SessionDomainException("User is not participant of this session", Id, submission.SubmittedByUserId);
 
         if (!IsActive)
@@ -133,6 +137,14 @@ public class CollaborationSession : Entity
 
     public IReadOnlyList<SessionSubmission> GetVisibleSubmissions(Guid requestingUserId)
     {
+        if (Visibility == SessionVisibility.Collaborative)
+        {
+            if (!_participants.Any(p => p.UserId == requestingUserId))
+                throw new SessionDomainException("Only session participants can view submissions", Id, requestingUserId);
+
+            return _submissions.AsReadOnly();
+        }
+
         if (requestingUserId != OwnerUserId)
             throw new SessionDomainException("Only session owner can view submissions", Id, requestingUserId);
 

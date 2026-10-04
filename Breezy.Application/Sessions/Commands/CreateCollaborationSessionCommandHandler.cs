@@ -36,13 +36,14 @@ public class CreateCollaborationSessionCommandHandler : IRequestHandler<CreateCo
             user.Id,
             user.UserName,
             request.SessionName,
-            request.MaxParticipants);
+            request.MaxParticipants,
+            visibility: request.Visibility);
 
         await _sessionRepository.AddAsync(session);
         _logger.LogInformation("Session created successfully with Code: {Code} for HostId: {HostId}", 
             session.Code.Value, request.HostId);
         
-        return new SessionResponse(session.Id, session.Code.Value, session.Name, session.IsActive, session.OwnerUserId, session.CreatedAt);
+        return new SessionResponse(session.Id, session.Code.Value, session.Name, session.IsActive, session.OwnerUserId, session.CreatedAt, session.Visibility);
     }
     
 }

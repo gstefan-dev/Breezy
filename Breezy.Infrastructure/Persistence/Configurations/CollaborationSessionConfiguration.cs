@@ -45,6 +45,11 @@ public class CollaborationSessionConfiguration : IEntityTypeConfiguration<Collab
         builder.Property(x => x.UpdatedAt)
             .IsRequired();
         
+        builder.Property(x => x.Visibility)
+            .HasConversion<string>()
+            .HasMaxLength(20)
+            .IsRequired();
+        
         builder.HasMany(x => x.Participants)  
             .WithOne()                         
             .HasForeignKey(x => x.SessionId)   

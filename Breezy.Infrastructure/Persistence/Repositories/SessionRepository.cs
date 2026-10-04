@@ -24,6 +24,7 @@ public class SessionRepository : ISessionRepository
     {
         return await _context.Sessions
             .Include(s => s.Participants)
+            .Include(s => s.Submissions)
             .FirstOrDefaultAsync(s => s.Code.Value == code.Value);
     }
 
@@ -40,6 +41,11 @@ public class SessionRepository : ISessionRepository
     public async Task AddParticipantAsync(SessionParticipant participant)
     {
         await _context.Set<SessionParticipant>().AddAsync(participant);
+        await _context.SaveChangesAsync();
+    }
+    public async Task AddSubmissionAsync(SessionSubmission submission)
+    {
+        await _context.Set<SessionSubmission>().AddAsync(submission);
         await _context.SaveChangesAsync();
     }
 }

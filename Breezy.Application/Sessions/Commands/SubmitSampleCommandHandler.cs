@@ -65,9 +65,9 @@ public class SubmitSampleCommandHandler : IRequestHandler<SubmitSampleCommand, S
         var submission = new SessionSubmission(session.Id, user.Id, user.UserName, url, submissionMetadata);
         
         session.AddSubmission(submission);
+        await _sessionRepository.AddSubmissionAsync(submission);
+
         user.UseStorage(request.FileSize);
-        
-        await _sessionRepository.UpdateAsync(session);
         await _userRepository.UpdateAsync(user);
 
         _logger.LogInformation("File {FileName} submitted successfully to session {SessionCode} by user {UserId}", 

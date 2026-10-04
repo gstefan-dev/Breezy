@@ -32,6 +32,6 @@ public class GetSessionByCodeQueryHandler : IRequestHandler<GetSessionByCodeQuer
         }
 
         return new SessionResponse(session.Id, sessionCode.Value, session.Name, session.IsActive, session.OwnerUserId,
-            session.CreatedAt);
+            session.CreatedAt, session.Visibility);
     }
 }

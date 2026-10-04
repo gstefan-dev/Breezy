@@ -119,6 +119,11 @@ namespace Breezy.Infrastructure.Migrations
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("timestamp with time zone");
 
+                    b.Property<string>("Visibility")
+                        .IsRequired()
+                        .HasMaxLength(20)
+                        .HasColumnType("character varying(20)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Sessions", (string)null);

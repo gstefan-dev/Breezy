@@ -9,10 +9,12 @@ function Sessions() {
 
     const [sessionName, setSessionName] = useState("");
     const [maxParticipants, setMaxParticipants] = useState("5");
+    const [visibility, setVisibility] = useState("0");
     const [createError, setCreateError] = useState("");
 
     const [joinCode, setJoinCode] = useState("");
     const [joinError, setJoinError] = useState("");
+
 
     async function handleCreate(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -28,6 +30,7 @@ function Sessions() {
                 body: JSON.stringify({
                     SessionName: sessionName,
                     MaxParticipants: Number(maxParticipants),
+                    Visibility: Number(visibility),
                 }),
             });
 
@@ -92,6 +95,17 @@ function Sessions() {
                         onChange={(e) => setMaxParticipants(e.target.value)}
                         required
                     />
+                </div>
+                <div>
+                    <label htmlFor="visibility">Session Type</label>
+                    <select
+                        id="visibility"
+                        value={visibility}
+                        onChange={(e) => setVisibility(e.target.value)}
+                    >
+                        <option value="0">Curated (only you see submissions)</option>
+                        <option value="1">Collaborative (everyone sees submissions)</option>
+                    </select>
                 </div>
                 {createError && <p style={{ color: "red" }}>{createError}</p>}
                 <button type="submit">Create</button>

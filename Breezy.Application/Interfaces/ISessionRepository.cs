@@ -11,6 +11,8 @@ public interface ISessionRepository
     Task<CollaborationSession?> GetByIdAsync(Guid id);
     Task UpdateAsync(CollaborationSession session);
     Task AddParticipantAsync(SessionParticipant participant);
+    Task AddSubmissionAsync(SessionSubmission submission);
+    
     
     
 }

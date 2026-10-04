@@ -1,6 +1,7 @@
 using Breezy.Application.Interfaces;
 using Breezy.Application.Sessions.Commands;
 using Breezy.Domain.Sessions.Entities;
+using Breezy.Domain.Sessions.ValueObjects;
 using Breezy.Domain.Shared;
 using Breezy.Domain.Users.Entities;
 using Breezy.Domain.Users.ValueObjects;
@@ -32,7 +33,8 @@ public class CreateCollaborationSessionCommandHandlerTests
         var command = new CreateCollaborationSessionCommand(
             Guid.NewGuid(),
             "TestSession",
-            3);
+            3,
+            Visibility: SessionVisibility.Curated);
         
         _userRepositoryMock.Setup(x => x.GetUserByIdAsync(It.IsAny<Guid>()))
             .ReturnsAsync(_user);
@@ -53,7 +55,7 @@ public class CreateCollaborationSessionCommandHandlerTests
     [Fact]
     public async Task Handle_WithNonExistentHost_ThrowsDomainException()
     {
-        var command = new CreateCollaborationSessionCommand(Guid.NewGuid(), "TestName", 4);
+        var command = new CreateCollaborationSessionCommand(Guid.NewGuid(), "TestName", 4, Visibility: SessionVisibility.Curated);
 
         _userRepositoryMock.Setup(x => x.GetUserByIdAsync(It.IsAny<Guid>()))
             .ReturnsAsync((User?)null);
@@ -67,7 +69,7 @@ public class CreateCollaborationSessionCommandHandlerTests
     [Fact]
     public async Task Handle_WithValidCommand_SessionIsActive()
     {
-        var command = new CreateCollaborationSessionCommand(Guid.NewGuid(), "TestName", 4);
+        var command = new CreateCollaborationSessionCommand(Guid.NewGuid(), "TestName", 4, Visibility: SessionVisibility.Curated);
         CollaborationSession? createdSession = null;
         
         _userRepositoryMock.Setup(x => x.GetUserByIdAsync(It.IsAny<Guid>()))

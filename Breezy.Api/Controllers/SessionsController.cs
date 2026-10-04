@@ -21,7 +21,7 @@ public class SessionsController : ApiControllerBase
     [HttpPost]
     public async Task<ActionResult> CreateSession([FromBody] CreateSessionRequest request)
     {
-        var command = new CreateCollaborationSessionCommand(CurrentUserId, request.SessionName, request.MaxParticipants);
+        var command = new CreateCollaborationSessionCommand(CurrentUserId, request.SessionName, request.MaxParticipants, request.Visibility);
         var result = await _mediator.Send(command);
         return CreatedAtAction(nameof(GetSession), new { code = result.Code }, result);
     }
@@ -42,10 +42,29 @@ public class SessionsController : ApiControllerBase
     }
 
     [HttpPost("{code}/samples")]
-    public async Task<ActionResult> SubmitSample(string code, [FromBody] SubmitSampleCommand request)
+    [Consumes("multipart/form-data")]
+    public async Task<ActionResult> SubmitSample(string code,
+        [FromForm] string fileName,
+        [FromForm] int durationSeconds,
+        [FromForm] string key,
+        [FromForm] string genre,
+        [FromForm] int bpm,
+        IFormFile file)
     {
-        var command = new SubmitSampleCommand(code, CurrentUserId, request.FileName, request.FileSize,
-            request.DurationSeconds, request.Key, request.Genre, request.BPM, request.FileContent, request.ContentType);
+        await using var stream = file.OpenReadStream();
+
+        var command = new SubmitSampleCommand(
+            code,
+            CurrentUserId,
+            fileName,
+            file.Length,
+            durationSeconds,
+            key,
+            genre,
+            bpm,
+            stream,
+            file.ContentType
+        );
 
         var result = await _mediator.Send(command);
         return Ok(result);
