@@ -1,5 +1,13 @@
 import { useState } from "react";
 import { useAuth } from "../context/AuthContext";
+import { API_BASE_URL } from "../config/api";
+
+async function computeHash(file: File): Promise<string> {
+    const buffer = await file.arrayBuffer();
+    const hashBuffer = await crypto.subtle.digest("SHA-256", buffer);
+    const hashArray = Array.from(new Uint8Array(hashBuffer));
+    return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
+}
 
 function Projects() {
     const { token } = useAuth();
@@ -8,13 +16,6 @@ function Projects() {
     const [error, setError] = useState("");
     const [success, setSuccess] = useState("");
     const [loading, setLoading] = useState(false);
-
-    async function computeHash(file: File): Promise<string> {
-        const buffer = await file.arrayBuffer();
-        const hashBuffer = await crypto.subtle.digest("SHA-256", buffer);
-        const hashArray = Array.from(new Uint8Array(hashBuffer));
-        return hashArray.map(b => b.toString(16).padStart(2, "0")).join("");
-    }
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
@@ -35,7 +36,7 @@ function Projects() {
             formData.append("hash", hash);
             formData.append("file", file);
 
-            const response = await fetch("https://localhost:44365/api/projects", {
+            const response = await fetch(`${API_BASE_URL}/api/projects`, {
                 method: "POST",
                 headers: { Authorization: `Bearer ${token}` },
                 body: formData,
@@ -59,34 +60,37 @@ function Projects() {
 
     return (
         <div>
-            <h1>Projects</h1>
-            <h2>Create New Project</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label htmlFor="projectName">Project Name</label>
-                    <input
-                        id="projectName"
-                        type="text"
-                        value={projectName}
-                        onChange={(e) => setProjectName(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="file">Project File</label>
-                    <input
-                        id="file"
-                        type="file"
-                        onChange={(e) => setFile(e.target.files?.[0] ?? null)}
-                        required
-                    />
-                </div>
-                {error && <p style={{ color: "red" }}>{error}</p>}
-                {success && <p style={{ color: "green" }}>{success}</p>}
-                <button type="submit" disabled={loading}>
-                    {loading ? "Creating..." : "Create Project"}
-                </button>
-            </form>
+            <h1 style={{ fontSize: 22, fontWeight: 600, marginBottom: 20 }}>Projects</h1>
+
+            <div className="section-title" style={{ marginTop: 0 }}>Create New Project</div>
+            <div className="card" style={{ maxWidth: 420 }}>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label htmlFor="projectName">Project Name</label>
+                        <input
+                            id="projectName"
+                            type="text"
+                            value={projectName}
+                            onChange={(e) => setProjectName(e.target.value)}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="file">Project File</label>
+                        <input
+                            id="file"
+                            type="file"
+                            onChange={(e) => setFile(e.target.files?.[0] ?? null)}
+                            required
+                        />
+                    </div>
+                    {error && <p style={{ color: "var(--text-danger)" }}>{error}</p>}
+                    {success && <p style={{ color: "var(--text-success)" }}>{success}</p>}
+                    <button type="submit" disabled={loading}>
+                        {loading ? "Creating..." : "Create Project"}
+                    </button>
+                </form>
+            </div>
         </div>
     );
 }

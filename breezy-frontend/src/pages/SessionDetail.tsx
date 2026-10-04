@@ -10,7 +10,7 @@ interface Session {
     isActive: boolean;
     hostId: string;
     createdAt: string;
-    visibility: number
+    visibility: number;
 }
 
 interface Participant {
@@ -148,29 +148,81 @@ function SessionDetail() {
         }
     }
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p style={{ color: "red" }}>{error}</p>;
-    if (!session) return <p>Session not found.</p>;
+    if (loading) return <p style={{ color: "var(--text-muted)" }}>Loading...</p>;
+    if (error) return <p style={{ color: "var(--text-danger)" }}>{error}</p>;
+    if (!session) return <p style={{ color: "var(--text-muted)" }}>Session not found.</p>;
 
     return (
         <div>
-            <h1>{session.name}</h1>
-            <p>Code: <strong>{session.code}</strong></p>
-            <p>Status: {session.isActive ? "Active" : "Closed"}</p>
-            <p>Type: {session.visibility === 1 ? "Collaborative" : "Curated"}</p>
-            <p>Created: {new Date(session.createdAt).toLocaleDateString()}</p>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+                <h1 style={{ fontSize: 22, fontWeight: 600 }}>{session.name}</h1>
+                <span className={session.isActive ? "badge badge-green" : "badge badge-red"}>
+          {session.isActive ? "Active" : "Closed"}
+        </span>
+                <span className="badge badge-blue">
+          {session.visibility === 1 ? "Collaborative" : "Curated"}
+        </span>
+            </div>
 
-            <h2>Participants</h2>
-            {participants.length === 0 && <p>No participants yet.</p>}
-            <ul>
+            <div className="code-box">
+                <div className="session-code">{session.code}</div>
+                <button type="button" onClick={() => navigator.clipboard.writeText(session.code)}>
+                    Copy
+                </button>
+            </div>
+
+            <div className="grid-3">
+                <div className="stat-mini">
+                    <div className="label">Participants</div>
+                    <div className="value">{participants.length}</div>
+                </div>
+                <div className="stat-mini">
+                    <div className="label">Submissions</div>
+                    <div className="value">{submissions.length}</div>
+                </div>
+                <div className="stat-mini">
+                    <div className="label">Created</div>
+                    <div className="value" style={{ fontSize: 13 }}>
+                        {new Date(session.createdAt).toLocaleDateString()}
+                    </div>
+                </div>
+            </div>
+
+            <div className="section-title">Participants</div>
+            <div className="card">
+                {participants.length === 0 && (
+                    <p style={{ color: "var(--text-muted)", fontSize: 13 }}>No participants yet.</p>
+                )}
                 {participants.map((p) => (
-                    <li key={p.id}>
-                        {p.userName} — joined {new Date(p.joinedAt).toLocaleDateString()}
-                    </li>
+                    <div key={p.id} className="participant">
+                        <div className="avatar">{p.userName[0]?.toUpperCase()}</div>
+                        <div style={{ fontSize: 13 }}>{p.userName}</div>
+                        <span style={{ marginLeft: "auto", fontSize: 11, color: "var(--text-muted)" }}>
+              joined {new Date(p.joinedAt).toLocaleDateString()}
+            </span>
+                    </div>
                 ))}
-            </ul>
+            </div>
 
-            <h2>Submit Sample</h2>
+            <div className="section-title">Submissions</div>
+            <div className="card">
+                {submissions.length === 0 && (
+                    <p style={{ color: "var(--text-muted)", fontSize: 13 }}>No submissions yet.</p>
+                )}
+                {submissions.map((s) => (
+                    <div key={s.id} className="audio-file">
+                        <div className="play-btn">
+                            <i className="ti ti-player-play" style={{ fontSize: 12 }} />
+                        </div>
+                        <div className="audio-info">
+                            <div className="audio-name">{s.fileName}</div>
+                            <div className="audio-meta">{new Date(s.createdAt).toLocaleDateString()}</div>
+                        </div>
+                    </div>
+                ))}
+            </div>
+
+            <div className="section-title">Submit Sample</div>
             <form onSubmit={handleSubmitSample}>
                 <div>
                     <label htmlFor="fileName">File Name</label>
@@ -191,24 +243,18 @@ function SessionDetail() {
                 <div>
                     <label htmlFor="file">Audio File</label>
                     <input id="file" type="file" accept="audio/*" onChange={handleFileChange} required />
-                    {durationSeconds > 0 && <p>Duration detected: {durationSeconds} seconds</p>}
+                    {durationSeconds > 0 && (
+                        <p style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 4 }}>
+                            Duration detected: {durationSeconds}s
+                        </p>
+                    )}
                 </div>
-                {submitError && <p style={{ color: "red" }}>{submitError}</p>}
-                {submitSuccess && <p style={{ color: "green" }}>{submitSuccess}</p>}
+                {submitError && <p style={{ color: "var(--text-danger)" }}>{submitError}</p>}
+                {submitSuccess && <p style={{ color: "var(--text-success)" }}>{submitSuccess}</p>}
                 <button type="submit" disabled={submitting}>
                     {submitting ? "Submitting..." : "Submit Sample"}
                 </button>
             </form>
-
-            <h2>Submissions</h2>
-            {submissions.length === 0 && <p>No submissions yet.</p>}
-            <ul>
-                {submissions.map((s) => (
-                    <li key={s.id}>
-                        {s.fileName} — {new Date(s.createdAt).toLocaleDateString()}
-                    </li>
-                ))}
-            </ul>
         </div>
     );
 }

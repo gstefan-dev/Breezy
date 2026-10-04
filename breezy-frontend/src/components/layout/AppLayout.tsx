@@ -3,11 +3,16 @@ import Sidebar from "./Sidebar";
 
 function AppLayout() {
     return (
-        <div style={{ display: "flex" }}>
+        <div className="app">
             <Sidebar />
-            <main style={{ flex: 1, padding: "1rem" }}>
-                <Outlet />
-            </main>
+            <div className="main">
+                <div className="topbar">
+                    <div className="page-title">Breezy</div>
+                </div>
+                <div className="content">
+                    <Outlet />
+                </div>
+            </div>
         </div>
     );
 }
