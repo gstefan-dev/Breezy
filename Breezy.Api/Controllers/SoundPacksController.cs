@@ -29,11 +29,11 @@ public class SoundPacksController : ApiControllerBase
 
         return Ok(result);
     }
-
+    
     [HttpPost]
-    public async Task<ActionResult> CreateSoundPack([FromBody] CreateSoundPackCommand request)
+    public async Task<ActionResult> CreateSoundPack([FromBody] CreateSoundPackRequest request)
     {
-        var command = request with { UserId = CurrentUserId };
+        var command = new CreateSoundPackCommand(CurrentUserId, request.PackName, request.Description, request.Mood, request.Genre, request.PackCategory);
         var result = await _mediator.Send(command);
 
         return CreatedAtAction(nameof(GetSoundPack), new { id = result.Id }, result);
