@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+import { API_BASE_URL } from "../config/api";
 
 interface SoundPackDetail {
     id: string;
@@ -38,7 +39,7 @@ function SoundPackDetail() {
     useEffect(() => {
         async function fetchSoundPack() {
             try {
-                const response = await fetch(`https://localhost:44365/api/soundpacks/${id}`, {
+                const response = await fetch(`${API_BASE_URL}/api/soundpacks/${id}`, {
                     headers: { Authorization: `Bearer ${token}` },
                 });
 
@@ -46,8 +47,7 @@ function SoundPackDetail() {
                     throw new Error("Failed to load sound pack");
                 }
 
-                const data = await response.json();
-                setSoundPack(data);
+                setSoundPack(await response.json());
             } catch (err) {
                 console.error(err);
                 setError("Could not load sound pack.");
@@ -89,7 +89,7 @@ function SoundPackDetail() {
             formData.append("key", key);
             formData.append("file", file);
 
-            const response = await fetch(`https://localhost:44365/api/soundpacks/${id}/files`, {
+            const response = await fetch(`${API_BASE_URL}/api/soundpacks/${id}/files`, {
                 method: "POST",
                 headers: { Authorization: `Bearer ${token}` },
                 body: formData,
@@ -114,84 +114,76 @@ function SoundPackDetail() {
         }
     }
 
-    if (loading) return <p>Loading...</p>;
-    if (error) return <p style={{ color: "red" }}>{error}</p>;
-    if (!soundPack) return <p>Sound pack not found.</p>;
+    if (loading) return <p style={{ color: "var(--text-muted)" }}>Loading...</p>;
+    if (error) return <p style={{ color: "var(--text-danger)" }}>{error}</p>;
+    if (!soundPack) return <p style={{ color: "var(--text-muted)" }}>Sound pack not found.</p>;
 
     return (
         <div>
-            <h1>{soundPack.soundPackName}</h1>
-            <p>Owner: {soundPack.ownerName}</p>
-            <p>Genre: {soundPack.genre}</p>
-            <p>Category: {soundPack.packCategory}</p>
-            <p>Created: {new Date(soundPack.createdAt).toLocaleDateString()}</p>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 16 }}>
+                <h1 style={{ fontSize: 22, fontWeight: 600 }}>{soundPack.soundPackName}</h1>
+                <span className="badge badge-blue">{soundPack.packCategory}</span>
+            </div>
 
-            <h2>Add File</h2>
-            <form onSubmit={handleUpload}>
-                <div>
-                    <label htmlFor="fileName">File Name</label>
-                    <input
-                        id="fileName"
-                        type="text"
-                        value={fileName}
-                        onChange={(e) => setFileName(e.target.value)}
-                        required
-                    />
+            <div className="grid-3">
+                <div className="stat-mini">
+                    <div className="label">Owner</div>
+                    <div className="value" style={{ fontSize: 14 }}>{soundPack.ownerName}</div>
                 </div>
-                <div>
-                    <label htmlFor="soundCategory">Sound Category</label>
-                    <select
-                        id="soundCategory"
-                        value={soundCategory}
-                        onChange={(e) => setSoundCategory(e.target.value)}
-                    >
-                        <option value="0">Drums</option>
-                        <option value="1">Bass</option>
-                        <option value="2">Melody</option>
-                        <option value="3">FX</option>
-                        <option value="4">Vocal</option>
-                        <option value="5">Other</option>
-                    </select>
+                <div className="stat-mini">
+                    <div className="label">Genre</div>
+                    <div className="value" style={{ fontSize: 14 }}>{soundPack.genre}</div>
                 </div>
-                <div>
-                    <label htmlFor="bpm">BPM</label>
-                    <input
-                        id="bpm"
-                        type="number"
-                        value={bpm}
-                        onChange={(e) => setBpm(e.target.value)}
-                        required
-                    />
+                <div className="stat-mini">
+                    <div className="label">Created</div>
+                    <div className="value" style={{ fontSize: 13 }}>
+                        {new Date(soundPack.createdAt).toLocaleDateString()}
+                    </div>
                 </div>
-                <div>
-                    <label htmlFor="key">Key</label>
-                    <input
-                        id="key"
-                        type="text"
-                        value={key}
-                        onChange={(e) => setKey(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="file">Audio File</label>
-                    <input
-                        id="file"
-                        type="file"
-                        accept="audio/*"
-                        onChange={handleFileChange}
-                        required
-                    />
-                    {durationSeconds > 0 && (
-                        <p>Duration detected: {durationSeconds} seconds</p>
-                    )}
-                </div>
-                {uploadError && <p style={{ color: "red" }}>{uploadError}</p>}
-                {uploadSuccess && <p style={{ color: "green" }}>{uploadSuccess}</p>}
-                <button type="submit" disabled={uploading}>
-                    {uploading ? "Uploading..." : "Add File"}
-                </button>
-            </form>
+            </div>
+
+            <div className="section-title">Add File</div>
+            <div className="card" style={{ maxWidth: 420 }}>
+                <form onSubmit={handleUpload}>
+                    <div>
+                        <label htmlFor="fileName">File Name</label>
+                        <input id="fileName" type="text" value={fileName} onChange={(e) => setFileName(e.target.value)} required />
+                    </div>
+                    <div>
+                        <label htmlFor="soundCategory">Sound Category</label>
+                        <select id="soundCategory" value={soundCategory} onChange={(e) => setSoundCategory(e.target.value)}>
+                            <option value="0">Drums</option>
+                            <option value="1">Bass</option>
+                            <option value="2">Melody</option>
+                            <option value="3">FX</option>
+                            <option value="4">Vocal</option>
+                            <option value="5">Other</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label htmlFor="bpm">BPM</label>
+                        <input id="bpm" type="number" value={bpm} onChange={(e) => setBpm(e.target.value)} required />
+                    </div>
+                    <div>
+                        <label htmlFor="key">Key</label>
+                        <input id="key" type="text" value={key} onChange={(e) => setKey(e.target.value)} required />
+                    </div>
+                    <div>
+                        <label htmlFor="file">Audio File</label>
+                        <input id="file" type="file" accept="audio/*" onChange={handleFileChange} required />
+                        {durationSeconds > 0 && (
+                            <p style={{ fontSize: 12, color: "var(--text-muted)", marginTop: 4 }}>
+                                Duration detected: {durationSeconds}s
+                            </p>
+                        )}
+                    </div>
+                    {uploadError && <p style={{ color: "var(--text-danger)" }}>{uploadError}</p>}
+                    {uploadSuccess && <p style={{ color: "var(--text-success)" }}>{uploadSuccess}</p>}
+                    <button type="submit" disabled={uploading}>
+                        {uploading ? "Uploading..." : "Add File"}
+                    </button>
+                </form>
+            </div>
         </div>
     );
 }

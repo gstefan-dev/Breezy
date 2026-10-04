@@ -15,7 +15,6 @@ function Sessions() {
     const [joinCode, setJoinCode] = useState("");
     const [joinError, setJoinError] = useState("");
 
-
     async function handleCreate(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
         setCreateError("");
@@ -71,61 +70,42 @@ function Sessions() {
 
     return (
         <div>
-            <h1>Sessions</h1>
+            <h1 style={{ fontSize: 22, fontWeight: 600, marginBottom: 20 }}>Sessions</h1>
 
-            <h2>Create Session</h2>
-            <form onSubmit={handleCreate}>
-                <div>
-                    <label htmlFor="sessionName">Session Name</label>
-                    <input
-                        id="sessionName"
-                        type="text"
-                        value={sessionName}
-                        onChange={(e) => setSessionName(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="maxParticipants">Max Participants</label>
-                    <input
-                        id="maxParticipants"
-                        type="number"
-                        min="2"
-                        value={maxParticipants}
-                        onChange={(e) => setMaxParticipants(e.target.value)}
-                        required
-                    />
-                </div>
-                <div>
-                    <label htmlFor="visibility">Session Type</label>
-                    <select
-                        id="visibility"
-                        value={visibility}
-                        onChange={(e) => setVisibility(e.target.value)}
-                    >
-                        <option value="0">Curated (only you see submissions)</option>
-                        <option value="1">Collaborative (everyone sees submissions)</option>
-                    </select>
-                </div>
-                {createError && <p style={{ color: "red" }}>{createError}</p>}
-                <button type="submit">Create</button>
-            </form>
+            <div className="section-title" style={{ marginTop: 0 }}>Create Session</div>
+            <div className="card" style={{ maxWidth: 420 }}>
+                <form onSubmit={handleCreate}>
+                    <div>
+                        <label htmlFor="sessionName">Session Name</label>
+                        <input id="sessionName" type="text" value={sessionName} onChange={(e) => setSessionName(e.target.value)} required />
+                    </div>
+                    <div>
+                        <label htmlFor="maxParticipants">Max Participants</label>
+                        <input id="maxParticipants" type="number" min="2" value={maxParticipants} onChange={(e) => setMaxParticipants(e.target.value)} required />
+                    </div>
+                    <div>
+                        <label htmlFor="visibility">Session Type</label>
+                        <select id="visibility" value={visibility} onChange={(e) => setVisibility(e.target.value)}>
+                            <option value="0">Curated (only you see submissions)</option>
+                            <option value="1">Collaborative (everyone sees submissions)</option>
+                        </select>
+                    </div>
+                    {createError && <p style={{ color: "var(--text-danger)" }}>{createError}</p>}
+                    <button type="submit">Create</button>
+                </form>
+            </div>
 
-            <h2>Join Session</h2>
-            <form onSubmit={handleJoin}>
-                <div>
-                    <label htmlFor="joinCode">Session Code</label>
-                    <input
-                        id="joinCode"
-                        type="text"
-                        value={joinCode}
-                        onChange={(e) => setJoinCode(e.target.value)}
-                        required
-                    />
-                </div>
-                {joinError && <p style={{ color: "red" }}>{joinError}</p>}
-                <button type="submit">Join</button>
-            </form>
+            <div className="section-title">Join Session</div>
+            <div className="card" style={{ maxWidth: 420 }}>
+                <form onSubmit={handleJoin}>
+                    <div>
+                        <label htmlFor="joinCode">Session Code</label>
+                        <input id="joinCode" type="text" value={joinCode} onChange={(e) => setJoinCode(e.target.value)} required />
+                    </div>
+                    {joinError && <p style={{ color: "var(--text-danger)" }}>{joinError}</p>}
+                    <button type="submit">Join</button>
+                </form>
+            </div>
         </div>
     );
 }
