@@ -96,4 +96,11 @@ public class ProjectsController : ApiControllerBase
 
         return Ok(result);
     }
+    
+    [HttpGet("user")]
+    public async Task<ActionResult> GetUserProjects()
+    {
+        var result = await _mediator.Send(new GetUserProjectsQuery(CurrentUserId));
+        return Ok(result);
+    }
 }
