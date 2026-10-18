@@ -21,7 +21,9 @@ public class ProjectRepository : IProjectRepository
 
     public async Task<DawProject?> GetByIdAsync(Guid id)
     {
-        return await _context.Projects.FindAsync(id);
+        return await _context.Projects
+            .Include(p => p.Versions)
+            .FirstOrDefaultAsync(p => p.Id == id);
     }
 
     public async Task<IEnumerable<DawProject>> GetByUserIdAsync(Guid id)
@@ -31,7 +33,11 @@ public class ProjectRepository : IProjectRepository
 
     public async Task UpdateAsync(DawProject project)
     {
-        _context.Projects.Update(project);
+        await _context.SaveChangesAsync();
+    }
+    public async Task AddVersionAsync(ProjectVersion version)
+    {
+        await _context.Set<ProjectVersion>().AddAsync(version);
         await _context.SaveChangesAsync();
     }
 }

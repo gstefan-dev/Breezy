@@ -56,31 +56,25 @@ public class ExportSoundPackCommandHandler : IRequestHandler<ExportSoundPackComm
             throw new DomainException("SoundPack has no files to export");
         }
 
-        var blobName = $"{request.UserId}/exports/{Guid.NewGuid()}_{soundPack.PackName}";
+        if (request.ExportFormat != ExportFormatEnum.Zip)
+            throw new DomainException("Only ZIP export is supported for now");
 
-        var contentType = request.ExportFormat switch
-        {
-            ExportFormatEnum.Zip => "application/zip",
-            ExportFormatEnum.Rar => "application/x-rar-compressed",
-            ExportFormatEnum.Tar => "application/x-tar",
-            _ => "application/zip"
-        };
+        var blobName = $"{request.UserId}/exports/{Guid.NewGuid()}_{soundPack.PackName}.zip";
 
-        var archiveStream = new MemoryStream();
+        await using var archiveStream = new MemoryStream();
         using (var archive = new ZipArchive(archiveStream, ZipArchiveMode.Create, leaveOpen: true))
         {
             foreach (var file in soundPack.Files)
             {
-                var fileStream = await _azureBlobService.DownloadAsync(file.BlobUrl);
+                await using var fileStream = await _azureBlobService.DownloadAsync(file.BlobUrl);
                 var entry = archive.CreateEntry(file.FileName);
-                using var entryStream = entry.Open();
-                await fileStream.CopyToAsync(entryStream);
+                await using var entryStream = entry.Open();
+                await fileStream.CopyToAsync(entryStream, cancellationToken);
             }
         }
 
         archiveStream.Position = 0;
-
-        await _azureBlobService.UploadAsync(blobName, archiveStream, contentType);
+        await _azureBlobService.UploadAsync(blobName, archiveStream, "application/zip");
 
         var url = await _azureBlobService.GetUrlAsync(blobName);
         if (url == null)

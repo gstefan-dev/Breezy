@@ -30,6 +30,12 @@ public class AddChangelogToVersionCommandHandler : IRequestHandler<AddChangelogT
             _logger.LogWarning("Project {ProjectId} not found", request.ProjectId);
             throw new DomainException("Project not found");
         }
+        
+        if (project.OwnerUserId != request.UserId)
+        {
+            _logger.LogWarning("User {UserId} is not the owner of project {ProjectId}", request.UserId, request.ProjectId);
+            throw new DomainException("User is not the project owner");
+        }
 
         project.AddChangeLogToVersion(request.VersionNumber, request.Changelog);
         await _projectRepository.UpdateAsync(project);

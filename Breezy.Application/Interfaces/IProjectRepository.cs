@@ -8,4 +8,5 @@ public interface IProjectRepository
     Task<DawProject?> GetByIdAsync(Guid id);
     Task<IEnumerable<DawProject>> GetByUserIdAsync(Guid id);
     Task UpdateAsync(DawProject project);
+    Task AddVersionAsync(ProjectVersion version);
 }

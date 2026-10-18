@@ -58,10 +58,12 @@ public class ProjectsController : ApiControllerBase
     }
 
     [HttpPost("{id}/versions")]
-    public async Task<ActionResult> CreateNewVersion(Guid id, [FromBody] CreateProjectVersionCommand request)
+    [Consumes("multipart/form-data")]
+    public async Task<ActionResult> CreateNewVersion(Guid id, [FromForm] string hash, IFormFile file)
     {
-        var command = new CreateProjectVersionCommand(id, CurrentUserId, request.NewHash, request.FileContent,
-            request.FileType, request.FileSize);
+        await using var stream = file.OpenReadStream();
+        var command = new CreateProjectVersionCommand(id, CurrentUserId, hash, stream,
+            file.ContentType, file.Length);
         var result = await _mediator.Send(command);
 
         return Ok(result);
@@ -69,7 +71,7 @@ public class ProjectsController : ApiControllerBase
 
     [HttpPut("{id}/versions/{versionNumber}/changelog")]
     public async Task<ActionResult> AddChangelog(Guid id, int versionNumber,
-        [FromBody] AddChangelogToVersionCommand request)
+        [FromBody] AddChangelogRequest request)
     {
         var command = new AddChangelogToVersionCommand(id, CurrentUserId, versionNumber, request.Changelog);
         var result = await _mediator.Send(command);

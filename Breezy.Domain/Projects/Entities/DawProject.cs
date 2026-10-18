@@ -19,7 +19,7 @@ public class DawProject : Entity
     public DawProject(
         Guid ownerUserId,
         string projectName,
-        string localPath,
+        string? localPath,
         ProjectHash initialHash,
         int currentVersionNumber,
         string blobUrl) : base(Guid.NewGuid())
@@ -54,16 +54,15 @@ public class DawProject : Entity
         if (newHash == null)
             throw new DomainException("NewHash cannot be null");
 
-        if (newHash == CurrentHash)
-            throw new DomainException("Hash noot changed - new version not needed");
+        if (newHash.Value == CurrentHash.Value)
+            throw new DomainException("Hash not changed - new version not needed");
 
         if (string.IsNullOrWhiteSpace(blobUrl))
             throw new DomainException("BlobUrl cannot be empty");
 
-        var newVersion = new ProjectVersion(Id, CurrentVersionNumber, newHash, blobUrl);
-        _versions.Add(newVersion);
-        CurrentVersionNumber++; 
-        CurrentHash = newHash; 
+        CurrentVersionNumber++;
+        _versions.Add(new ProjectVersion(Id, CurrentVersionNumber, newHash, blobUrl));
+        CurrentHash = newHash;
         UpdatedAt = DateTime.UtcNow;
     }
 
@@ -87,7 +86,8 @@ public class DawProject : Entity
 
     public ProjectVersion GetLatestVersion()
     {
-        return _versions.OrderByDescending(v => v.VersionNumber).FirstOrDefault();
+        return _versions.OrderByDescending(v => v.VersionNumber).FirstOrDefault()
+               ?? throw new DomainException("Project has no versions");
         
     }
 

@@ -54,9 +54,9 @@ public class SoundPacksController : ApiControllerBase
     }
 
     [HttpDelete("{id}/files/{fileId}")]
-    public async Task<ActionResult> RemoveFile(Guid id, Guid fileId, [FromBody] RemoveFileFromSoundPackCommand request)
+    public async Task<ActionResult> RemoveFile(Guid id, Guid fileId)
     {
-        var command = new RemoveFileFromSoundPackCommand(id, CurrentUserId, fileId, request.FileSize);
+        var command = new RemoveFileFromSoundPackCommand(id, CurrentUserId, fileId);
         var result = await _mediator.Send(command);
 
         return Ok(result);

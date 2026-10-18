@@ -17,7 +17,7 @@ public class GetSoundPackQueryHandler : IRequestHandler<GetSoundPackQuery, Sound
         _logger = logger;
     }
 
-    public async Task<SoundPackResponse> Handle(GetSoundPackQuery query, CancellationToken CancellationToken)
+    public async Task<SoundPackResponse> Handle(GetSoundPackQuery query, CancellationToken cancellationToken)
     {
         _logger.LogInformation("Getting SoundPack {SoundPackId} for UserId: {UserId}", query.SoundPackId, query.UserId);
 
