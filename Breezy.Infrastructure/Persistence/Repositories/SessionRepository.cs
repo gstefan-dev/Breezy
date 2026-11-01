@@ -49,10 +49,11 @@ public class SessionRepository : ISessionRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task<IEnumerable<CollaborationSession>> GetByParticipantAsync(Guid userId)
+    public async Task<IEnumerable<CollaborationSession>> GetByParticipantAsync(Guid userId, bool includeArchived)
     {
-        return await _context.Sessions.Include(s => s.Participants)
-            .Where(s => s.Participants.Any(p => p.UserId == userId))
+        return await _context.Sessions
+            .Include(s => s.Participants)
+            .Where(s => s.Participants.Any(p => p.UserId == userId && (includeArchived || p.ArchivedAt == null)))
             .OrderByDescending(s => s.CreatedAt)
             .ToListAsync();
     }

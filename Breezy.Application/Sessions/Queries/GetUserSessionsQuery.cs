@@ -3,4 +3,4 @@ using MediatR;
 
 namespace Breezy.Application.Sessions.Queries;
 
-public record GetUserSessionsQuery(Guid UserId) : IRequest<IEnumerable<SessionResponse>>;
+public record GetUserSessionsQuery(Guid UserId, bool IncludeArchived) : IRequest<IEnumerable<UserSessionResponse>>;

@@ -105,9 +105,37 @@ public class SessionsController : ApiControllerBase
     }
     
     [HttpGet("user")]
-    public async Task<ActionResult> GetUserSessions()
+    public async Task<ActionResult> GetUserSessions([FromQuery] bool includeArchived = false)
     {
-        var result = await _mediator.Send(new GetUserSessionsQuery(CurrentUserId));
+        var result = await _mediator.Send(new GetUserSessionsQuery(CurrentUserId, includeArchived));
         return Ok(result);
+    }
+
+    [HttpPost("{code}/leave")]
+    public async Task<ActionResult> LeaveSession(string code)
+    {
+        await _mediator.Send(new LeaveSessionCommand(CurrentUserId, code));
+        return NoContent();
+    }
+
+    [HttpPost("{code}/participants/{participantUserId}/remove")]
+    public async Task<ActionResult> RemoveParticipant(string code, Guid participantUserId)
+    {
+        await _mediator.Send(new RemoveParticipantCommand(CurrentUserId, code, participantUserId));
+        return NoContent();
+    }
+
+    [HttpPost("{code}/archive")]
+    public async Task<ActionResult> ArchiveSession(string code)
+    {
+        await _mediator.Send(new ArchiveSessionCommand(CurrentUserId, code));
+        return NoContent();
+    }
+
+    [HttpPost("{code}/restore")]
+    public async Task<ActionResult> RestoreSession(string code)
+    {
+        await _mediator.Send(new RestoreSessionCommand(CurrentUserId, code));
+        return NoContent();
     }
 }

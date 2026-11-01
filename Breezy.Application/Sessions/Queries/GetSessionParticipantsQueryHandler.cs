@@ -15,7 +15,8 @@ public class GetSessionParticipantsQueryHandler : IRequestHandler<GetSessionPart
         _sessionRepository = sessionRepository;
     }
 
-    public async Task<IEnumerable<ParticipantResponse>> Handle(GetSessionParticipantsQuery request, CancellationToken cancellationToken)
+    public async Task<IEnumerable<ParticipantResponse>> Handle(GetSessionParticipantsQuery request,
+        CancellationToken cancellationToken)
     {
         var code = new SessionCode(request.Code);
         var session = await _sessionRepository.GetByCodeAsync(code);
@@ -24,6 +25,7 @@ public class GetSessionParticipantsQueryHandler : IRequestHandler<GetSessionPart
             throw new DomainException("Session not found");
 
         return session.Participants.Select(p =>
-            new ParticipantResponse(p.Id, p.SessionId, p.UserId, p.UserName, p.JoinedAt));
+            new ParticipantResponse(p.Id, p.SessionId, p.UserId, p.UserName, p.JoinedAt,
+                p.LeftAt, p.ExitReason?.ToString()));
     }
 }

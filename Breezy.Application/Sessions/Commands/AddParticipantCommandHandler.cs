@@ -42,12 +42,19 @@ public class AddParticipantCommandHandler : IRequestHandler<AddParticipantComman
             throw new DomainException("User not found");
         }
         
+        var wasParticipantBefore = session.Participants.Any(p => p.UserId == user.Id);
+
         session.AddParticipant(user.Id, user.UserName);
-        var participant = session.Participants.Last();
-        await _sessionRepository.AddParticipantAsync(participant);
+        var participant = session.Participants.Single(p => p.UserId == user.Id);
 
-        _logger.LogInformation("Participant {UserName} was added succesfully to session {SessionCode}", user.UserName, code);
+        if (wasParticipantBefore)
+            await _sessionRepository.UpdateAsync(session);
+        else
+            await _sessionRepository.AddParticipantAsync(participant);
 
-        return new ParticipantResponse(participant.Id, participant.SessionId, participant.UserId, participant.UserName, participant.JoinedAt);
+        _logger.LogInformation("Participant {UserName} joined session {SessionCode}", user.UserName, code);
+
+        return new ParticipantResponse(participant.Id, participant.SessionId, participant.UserId, participant.UserName,
+            participant.JoinedAt, participant.LeftAt, participant.ExitReason?.ToString());
     }
 }
