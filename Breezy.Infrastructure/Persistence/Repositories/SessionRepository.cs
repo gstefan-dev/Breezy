@@ -48,4 +48,12 @@ public class SessionRepository : ISessionRepository
         await _context.Set<SessionSubmission>().AddAsync(submission);
         await _context.SaveChangesAsync();
     }
+
+    public async Task<IEnumerable<CollaborationSession>> GetByParticipantAsync(Guid userId)
+    {
+        return await _context.Sessions.Include(s => s.Participants)
+            .Where(s => s.Participants.Any(p => p.UserId == userId))
+            .OrderByDescending(s => s.CreatedAt)
+            .ToListAsync();
+    }
 }

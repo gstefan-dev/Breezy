@@ -103,4 +103,11 @@ public class SessionsController : ApiControllerBase
         var result = await _mediator.Send(new GetSessionParticipantsQuery(code));
         return Ok(result);
     }
+    
+    [HttpGet("user")]
+    public async Task<ActionResult> GetUserSessions()
+    {
+        var result = await _mediator.Send(new GetUserSessionsQuery(CurrentUserId));
+        return Ok(result);
+    }
 }

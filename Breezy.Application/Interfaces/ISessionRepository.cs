@@ -12,7 +12,8 @@ public interface ISessionRepository
     Task UpdateAsync(CollaborationSession session);
     Task AddParticipantAsync(SessionParticipant participant);
     Task AddSubmissionAsync(SessionSubmission submission);
-    
-    
-    
+    Task<IEnumerable<CollaborationSession>> GetByParticipantAsync(Guid userId);
+
+
+
 }
