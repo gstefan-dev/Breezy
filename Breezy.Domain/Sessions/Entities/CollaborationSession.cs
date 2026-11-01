@@ -78,12 +78,24 @@ public class CollaborationSession : Entity
         if (!IsActive)
             throw new SessionDomainException("Cannot add participant to an inactive session", Id, userId);
 
-        if (_participants.Any(p => p.UserId == userId))
-            throw new SessionDomainException("User is already participant", Id, userId);
-        
-        if (MaxParticipants > 0 && _participants.Count >= MaxParticipants)
+        if (MaxParticipants > 0 && _participants.Count(p => p.IsActive) >= MaxParticipants)
             throw new SessionDomainException($"Session has reached maximum participants ({MaxParticipants})", Id, userId);
-        
+
+        var existing = _participants.FirstOrDefault(p => p.UserId == userId);
+        if (existing != null)
+        {
+            if (existing.IsActive)
+                throw new SessionDomainException("User is already participant", Id, userId);
+
+            if (existing.ExitReason == ParticipantExitReason.RemovedByOwner)
+                throw new SessionDomainException("You were removed from this session by the owner", Id, userId);
+
+            existing.Rejoin();
+            existing.Restore();
+            UpdatedAt = DateTime.UtcNow;
+            return;
+        }
+
         _participants.Add(new SessionParticipant(Id, userId, userName));
         UpdatedAt = DateTime.UtcNow;
     }
@@ -92,12 +104,13 @@ public class CollaborationSession : Entity
     {
         if (submission.SessionId != Id)
             throw new SessionDomainException("Submissions does not belong to this session", Id);
-        if (!_participants.Any(p => p.UserId == submission.SubmittedByUserId))
-            throw new SessionDomainException("User is not participant of this session", Id, submission.SubmittedByUserId);
 
         if (!IsActive)
             throw new SessionDomainException("Cannot add submissions to an inactive session", Id);
-        
+
+        if (!_participants.Any(p => p.UserId == submission.SubmittedByUserId && p.IsActive))
+            throw new SessionDomainException("User is not an active participant of this session", Id, submission.SubmittedByUserId);
+
         _submissions.Add(submission);
         UpdatedAt = DateTime.UtcNow;
     }
@@ -139,8 +152,8 @@ public class CollaborationSession : Entity
     {
         if (Visibility == SessionVisibility.Collaborative)
         {
-            if (!_participants.Any(p => p.UserId == requestingUserId))
-                throw new SessionDomainException("Only session participants can view submissions", Id, requestingUserId);
+            if (!_participants.Any(p => p.UserId == requestingUserId && p.IsActive))
+                throw new SessionDomainException("Only active participants can view submissions", Id, requestingUserId);
 
             return _submissions.AsReadOnly();
         }
@@ -150,10 +163,56 @@ public class CollaborationSession : Entity
 
         return _submissions.AsReadOnly();
     }
+    
+    public void Leave(Guid userId)
+    {
+        if (userId == OwnerUserId)
+            throw new SessionDomainException("Owner cannot leave the session. Close it instead.", Id, userId);
+
+        var participant = _participants.FirstOrDefault(p => p.UserId == userId && p.IsActive)
+                          ?? throw new SessionDomainException("User is not an active participant of this session", Id, userId);
+
+        participant.Leave();
+        UpdatedAt = DateTime.UtcNow;
+    }
+
+    public void RemoveParticipant(Guid requestingUserId, Guid participantUserId)
+    {
+        if (requestingUserId != OwnerUserId)
+            throw new SessionDomainException("Only session owner can remove participants", Id, requestingUserId);
+
+        if (participantUserId == OwnerUserId)
+            throw new SessionDomainException("Owner cannot remove themselves", Id, requestingUserId);
+
+        var participant = _participants.FirstOrDefault(p => p.UserId == participantUserId && p.IsActive)
+                          ?? throw new SessionDomainException("User is not an active participant of this session", Id, participantUserId);
+
+        participant.RemoveByOwner();
+        UpdatedAt = DateTime.UtcNow;
+    }
+
+    public void ArchiveForUser(Guid userId)
+    {
+        if (userId == OwnerUserId && IsActive)
+            throw new SessionDomainException("Close the session before archiving it", Id, userId);
+
+        var participant = _participants.FirstOrDefault(p => p.UserId == userId)
+                          ?? throw new SessionDomainException("User was never part of this session", Id, userId);
+
+        participant.Archive();
+    }
+
+    public void RestoreForUser(Guid userId)
+    {
+        var participant = _participants.FirstOrDefault(p => p.UserId == userId)
+                          ?? throw new SessionDomainException("User was never part of this session", Id, userId);
+
+        participant.Restore();
+    }
 
     public string GetDisplayName() => $"{Name} (Code: {Code.Value})";
 
-    public int GetParticipantCount() => _participants.Count;
+    public int GetParticipantCount() => _participants.Count(p => p.IsActive);
 
     public int GetSubmissionCount() => _submissions.Count;
 }
