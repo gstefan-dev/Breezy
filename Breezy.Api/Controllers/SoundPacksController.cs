@@ -43,7 +43,7 @@ public class SoundPacksController : ApiControllerBase
     [Consumes("multipart/form-data")]
     public async Task<ActionResult> AddFile(Guid id, [FromForm] string fileName,
         [FromForm] SoundCategoryEnum soundCategory,
-        [FromForm] int durationSeconds, [FromForm] int bpm, [FromForm] string key, IFormFile file)
+        [FromForm] int durationSeconds, [FromForm] int? bpm, [FromForm] string? key, IFormFile file)
     {
         await using var stream = file.OpenReadStream();
         var command = new AddFileToSoundPackCommand(id, CurrentUserId, fileName, soundCategory, stream,

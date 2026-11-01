@@ -62,7 +62,7 @@ public class RemoveFileFromSoundPackCommandHandler : IRequestHandler<RemoveFileF
         
         _logger.LogInformation("File {FileId} removed successfully from SoundPack {SoundPackId}", request.FileId, request.SoundPackId);
         return new SoundPackFileResponse(file.Id, file.SoundPackId, file.FileName, file.BlobUrl,
-            file.Category.ToString());
+            file.Category.ToString(), file.DurationInSeconds, file.Bpm, file.Key, file.FileSize);
 
     }
 }

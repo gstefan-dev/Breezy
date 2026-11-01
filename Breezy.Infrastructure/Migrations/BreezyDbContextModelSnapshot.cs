@@ -256,7 +256,7 @@ namespace Breezy.Infrastructure.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int>("Bpm")
+                    b.Property<int?>("Bpm")
                         .HasColumnType("integer");
 
                     b.Property<string>("Category")
@@ -279,7 +279,6 @@ namespace Breezy.Infrastructure.Migrations
                         .HasColumnType("bigint");
 
                     b.Property<string>("Key")
-                        .IsRequired()
                         .HasMaxLength(10)
                         .HasColumnType("character varying(10)");
 

@@ -3,4 +3,4 @@ using MediatR;
 
 namespace Breezy.Application.SoundPacks.Queries;
 
-public record GetSoundPackQuery(Guid SoundPackId, Guid UserId) : IRequest<SoundPackResponse>;
+public record GetSoundPackQuery(Guid SoundPackId, Guid UserId) : IRequest<SoundPackDetailResponse>;

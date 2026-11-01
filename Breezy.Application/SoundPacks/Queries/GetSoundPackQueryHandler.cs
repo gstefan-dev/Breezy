@@ -6,7 +6,7 @@ using Microsoft.Extensions.Logging;
 
 namespace Breezy.Application.SoundPacks.Queries;
 
-public class GetSoundPackQueryHandler : IRequestHandler<GetSoundPackQuery, SoundPackResponse>
+public class GetSoundPackQueryHandler : IRequestHandler<GetSoundPackQuery, SoundPackDetailResponse>
 {
     private readonly ISoundPackRepository _soundPackRepository;
     private readonly ILogger<GetSoundPackQueryHandler> _logger;
@@ -17,7 +17,7 @@ public class GetSoundPackQueryHandler : IRequestHandler<GetSoundPackQuery, Sound
         _logger = logger;
     }
 
-    public async Task<SoundPackResponse> Handle(GetSoundPackQuery query, CancellationToken cancellationToken)
+    public async Task<SoundPackDetailResponse> Handle(GetSoundPackQuery query, CancellationToken cancellationToken)
     {
         _logger.LogInformation("Getting SoundPack {SoundPackId} for UserId: {UserId}", query.SoundPackId, query.UserId);
 
@@ -38,8 +38,12 @@ public class GetSoundPackQueryHandler : IRequestHandler<GetSoundPackQuery, Sound
         _logger.LogInformation("SoundPack {SoundPackId} retrieved successfully", query.SoundPackId);
 
 
-        return new SoundPackResponse(soundPack.Id, soundPack.PackName, soundPack.OwnerName,
-            soundPack.Genre, soundPack.PackCategory, soundPack.CreatedAt);
+        return new SoundPackDetailResponse(
+            soundPack.Id, soundPack.PackName, soundPack.OwnerName, soundPack.Description,
+            soundPack.Genre, soundPack.Mood, soundPack.PackCategory, soundPack.CreatedAt,
+            soundPack.Files.Select(f => new SoundPackFileResponse(
+                f.Id, f.SoundPackId, f.FileName, f.BlobUrl, f.Category.ToString(),
+                f.DurationInSeconds, f.Bpm, f.Key, f.FileSize)));
 
     }
 }

@@ -16,7 +16,7 @@ public class SoundPackFileConfiguration : IEntityTypeConfiguration<SoundPackFile
         builder.Property(x => x.FileName).IsRequired().HasMaxLength(255);
         builder.Property(x => x.BlobUrl).IsRequired();
         builder.Property(x => x.DurationInSeconds).IsRequired();
-        builder.Property(x => x.Bpm).IsRequired();
+        builder.Property(x => x.Bpm);
         builder.Property(x => x.Key).HasMaxLength(10);
         builder.Property(x => x.FileSize).IsRequired();
         

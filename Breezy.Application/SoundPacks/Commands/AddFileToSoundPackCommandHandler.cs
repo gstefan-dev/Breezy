@@ -78,7 +78,8 @@ public class AddFileToSoundPackCommandHandler : IRequestHandler<AddFileToSoundPa
         _logger.LogInformation("File {FileName} added successfully to SoundPack {SoundPackId}", request.FileName, request.SoundPackId);
 
         return new SoundPackFileResponse(soundPackFile.Id, soundPackFile.SoundPackId, soundPackFile.FileName,
-            soundPackFile.BlobUrl, soundPackFile.Category.ToString());
+            soundPackFile.BlobUrl, soundPackFile.Category.ToString(), soundPackFile.DurationInSeconds,
+            soundPackFile.Bpm, soundPackFile.Key, soundPackFile.FileSize);
 
     }
 }
