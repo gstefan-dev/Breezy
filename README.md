@@ -14,7 +14,6 @@ and collect ideas from other producers in collaboration sessions, all in one des
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-16-4169E1?logo=postgresql&logoColor=white)
 ![Azure Blob Storage](https://img.shields.io/badge/Azure-Blob%20Storage-0078D4?logo=microsoftazure&logoColor=white)
 
-<img src="docs/screenshots/session-detail.png" alt="Breezy collaboration session" width="900" />
 
 </div>
 
@@ -148,8 +147,7 @@ For licensing, collaboration or any other use, please contact the author.
 
 **Stefan Galit**: .NET developer and music producer, Information Technology student at the Technical University of Moldova.
 
-- GitHub: [@stefangalit21](https://github.com/stefangalit21)
-- LinkedIn: *add your link*
-- Email: *add your email*
+- GitHub: [@gstefan-dev](https://github.com/gstefan-dev)
+- Email: stefangalit1@gmail.com
 
 Breezy started as my bachelor's thesis and grew out of my own experience as a producer.
