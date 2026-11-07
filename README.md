@@ -56,15 +56,6 @@ Music producers work with large binary files that tools like Git were never desi
 - JWT authentication with protected routes.
 - Every resource is **ownership-checked on the server**. The user identity is always taken from the validated token, never from client input (see [Engineering highlights](#-engineering-highlights)).
 
-## 📸 Screenshots
-
-| Sound pack | Project versions |
-|---|---|
-| <img src="docs/screenshots/soundpack-detail.png" alt="Sound pack detail" /> | <img src="docs/screenshots/project-detail.png" alt="Project version history" /> |
-
-| Sessions | Login |
-|---|---|
-| <img src="docs/screenshots/sessions.png" alt="Sessions list" /> | <img src="docs/screenshots/login.png" alt="Login" /> |
 
 ## 🛠️ Tech stack
 
