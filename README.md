@@ -150,4 +150,3 @@ For licensing, collaboration or any other use, please contact the author.
 - GitHub: [@gstefan-dev](https://github.com/gstefan-dev)
 - Email: stefangalit1@gmail.com
 
-Breezy started as my bachelor's thesis and grew out of my own experience as a producer.
